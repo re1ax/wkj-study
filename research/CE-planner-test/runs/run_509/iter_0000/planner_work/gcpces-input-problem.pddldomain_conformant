@@ -1,0 +1,15 @@
+(define (domain uts_cycle_3)
+;(:requirements  :typing :conditional-effects)
+(:types  object - object  node - object  label - object  interpretation - object )
+(:constants 
+   n0  - node 
+   n1  - node 
+   n2  - node 
+)
+
+(:predicates (true)   (visited ?n - node  ?x - interpretation)  (at_node ?n - node  ?x - interpretation)  (edge_label ?n1 - node  ?n2 - node  ?l - label  ?x - interpretation)) 
+(:action follow_label
+:parameters (?label  - label )
+:effect (and (forall (?interpr - interpretation) (when (and   (at_node n0 ?interpr)  (edge_label n0 n1 ?label ?interpr)) (and   (at_node n1 ?interpr)(not   (at_node n0 ?interpr))  (visited n1 ?interpr))))(forall (?interpr - interpretation) (when (and   (at_node n0 ?interpr)  (edge_label n0 n2 ?label ?interpr)) (and   (at_node n2 ?interpr)(not   (at_node n0 ?interpr))  (visited n2 ?interpr))))(forall (?interpr - interpretation) (when (and   (at_node n1 ?interpr)  (edge_label n1 n2 ?label ?interpr)) (and   (at_node n2 ?interpr)(not   (at_node n1 ?interpr))  (visited n2 ?interpr))))(forall (?interpr - interpretation) (when (and   (at_node n1 ?interpr)  (edge_label n1 n0 ?label ?interpr)) (and   (at_node n0 ?interpr)(not   (at_node n1 ?interpr))  (visited n0 ?interpr))))(forall (?interpr - interpretation) (when (and   (at_node n2 ?interpr)  (edge_label n2 n0 ?label ?interpr)) (and   (at_node n0 ?interpr)(not   (at_node n2 ?interpr))  (visited n0 ?interpr))))(forall (?interpr - interpretation) (when (and   (at_node n2 ?interpr)  (edge_label n2 n1 ?label ?interpr)) (and   (at_node n1 ?interpr)(not   (at_node n2 ?interpr))  (visited n1 ?interpr))))))
+
+)

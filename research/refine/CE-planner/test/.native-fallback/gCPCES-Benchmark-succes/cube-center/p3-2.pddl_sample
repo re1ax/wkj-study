@@ -1,0 +1,36 @@
+(define (problem temp)(:domain cube)(:objects 
+   p1  - pos 
+   p2  - pos 
+   p3  - pos 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+)
+(:init (true)
+  (x p1 int1)
+  (y p2 int1)
+  (z p2 int1)
+  (x p1 int2)
+  (y p1 int2)
+  (z p2 int2)
+  (y p3 int3)
+  (x p1 int3)
+  (z p2 int3)
+  (y p2 int4)
+  (x p2 int4)
+  (z p2 int4)
+  (x p3 int5)
+  (y p3 int5)
+  (z p2 int5)
+  (z p1 int6)
+  (x p2 int6)
+  (y p1 int6)
+  (z p3 int7)
+  (y p2 int7)
+  (x p1 int7)
+)
+(:goal (forall (?interpr - interpretation)(and   (x p2 ?interpr)  (y p2 ?interpr)  (z p2 ?interpr)))))

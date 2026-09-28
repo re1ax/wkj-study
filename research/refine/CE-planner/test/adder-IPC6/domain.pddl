@@ -1,0 +1,57 @@
+(define (domain adder)
+   (:requirements :typing :equality)
+   (:types bit)
+   (:predicates (high ?b - bit) (low ?b - bit) (constant ?b - bit)
+                (in ?b - bit) (out ?b - bit) 
+   )
+   (:action and_gate
+     :parameters (?x ?y ?z - bit)
+     :precondition (and (constant ?x) (constant ?y) (not (constant ?z)) 
+                        (not (= ?x ?y)) (not (= ?x ?z)) (not (= ?y ?z)) 
+                        (not (out ?x)) (not (out ?y)) (not (in ?z)))
+     :effect (and (when (and (high ?x) (high ?y)) (and (not (low ?z)) (high ?z)))
+                  (when (low ?x) (and (not (high ?z)) (low ?z)))
+                  (when (low ?y) (and (not (high ?z)) (low ?z)))
+		  (constant ?z)
+             )
+   )
+   (:action or_gate
+     :parameters (?x ?y ?z - bit)
+     :precondition (and (constant ?x) (constant ?y) (not (constant ?z)) 
+                        (not (= ?x ?y)) (not (= ?x ?z)) (not (= ?y ?z)) 
+                        (not (out ?x)) (not (out ?y)) (not (in ?z)))
+     :effect (and (when (high ?x) (and (not (low ?z)) (high ?z)))
+                  (when (high ?y) (and (not (low ?z)) (high ?z)))
+                  (when (and (low ?x) (low ?y)) (and (not (high ?z)) (low ?z)))
+		  (constant ?z)
+		)
+   )
+   (:action xor_gate
+     :parameters (?x ?y ?z - bit)
+     :precondition (and (constant ?x) (constant ?y) (not (constant ?z)) 
+                        (not (= ?x ?y)) (not (= ?x ?z)) (not (= ?y ?z)) 
+                        (not (out ?x)) (not (out ?y)) (not (in ?z)))
+     :effect (and (when (and (high ?x) (low ?y)) (and (not (low ?z)) (high ?z)))
+                  (when (and (low ?x) (high ?y)) (and (not (low ?z)) (high ?z)))
+                  (when (and (low ?x) (low ?y)) (and (not (high ?z)) (low ?z)))
+                  (when (and (high ?x) (high ?y)) (and (not (high ?z)) (low ?z)))
+		  (constant ?z)
+		)
+   )
+   (:action not_gate
+     :parameters (?x ?z - bit)
+     :precondition (and (constant ?x) (not (constant ?z)) 
+                        (not (= ?x ?z)) 
+                        (not (out ?x)) (not (in ?z)))
+     :effect (and (when (low ?x) (and (not (low ?z)) (high ?z)))
+                  (when (high ?x) (and (not (high ?z)) (low ?z)))
+		  (constant ?z)
+		)
+   )
+
+
+)
+
+
+ 
+ 

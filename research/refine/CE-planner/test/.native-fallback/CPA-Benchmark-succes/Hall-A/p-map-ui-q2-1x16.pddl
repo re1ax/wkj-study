@@ -1,0 +1,19 @@
+(define (problem p)
+  (:domain hall)
+(:objects p1 p10 p11 p12 p13 p14 p15 p2 p3 p4 p5 p6 p7 p8 p9)
+  (:init
+(and
+
+    (q0)
+    (y-agent p1)
+    (oneof (x-agent p1) (x-agent p2) (x-agent p3) (x-agent p4) (x-agent p5) (x-agent p6) (x-agent p7) (x-agent p8) (x-agent p9) (x-agent p10) (x-agent p11) (x-agent p12) (x-agent p13) (x-agent p14) (x-agent p15))
+    (not-obsA-q0)
+    (not-obsA-q1)
+    (not-obsB-q0)
+    (not-obsB-q1)
+    (not-obs--q0)
+    (not-obs--q1)
+  )
+)
+  (:goal (and (x-agent p1) (visited-A) (visited-B)))
+)

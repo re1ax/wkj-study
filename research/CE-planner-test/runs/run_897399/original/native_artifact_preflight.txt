@@ -1,0 +1,7 @@
+version=v16-cff-cee-native-library
+planner=t1
+available=0
+status=UNSUPPORTED_INPUT
+artifact_type=NONE
+execution_mode=CE_ONLY
+message=NATIVE_BENCHMARK_NOT_FOUND planner=T1 domain=uts-cycle problem=p4.pddl roots=2 aliases=2 first_attempt=/root/workspace/research/CE-planner/test/T1-Benchmark-succes/uts-cycle

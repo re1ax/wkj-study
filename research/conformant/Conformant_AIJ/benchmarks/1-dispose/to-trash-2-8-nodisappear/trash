@@ -1,0 +1,37 @@
+    Time 0: 0 actions
+Time 0: 0 actions and 42 fluents
+    Time _16452: 4 actions
+Time _16452: 4 actions and 52 fluents 
+    Time _25050: 12 actions
+Time _25050: 12 actions and 53 fluents 
+    Time _33249: 16 actions
+Time _33249: 16 actions and 53 fluents 
+    Time _41341: 16 actions
+Time _41341: 16 actions and 53 fluents 
+There are 0 new fluents
+There are 53 true and 53 false 
+There are 8 fluents that are always true.
+There are 8 fluents that are always false.
+Reduced from 16 to 16 actions
+Forward Simplfication: 
+    Original # of Actions and Fluents: 24/61
+    Reduced  # of Actions and Fluents: 16/61
+    Execution Time: 30ms.
+Backward Simplification: 
+    Original # of Actions and Fluents: 16/61
+    Reduced  # of Actions and Fluents: 16/61
+    Execution Time: 0ms.
+Independent Goals Detection:
+    Original Number of Goals: 8
+    Number of Goals/Theories: 1
+    Execution Time: 10ms.
+Time 1 has 2 actions
+Time 2 has 10 actions
+Time 3 has 16 actions
+Time 4 has 16 actions
+starting 'theory_0.al'
+completed theory
+Combination of Initial States:
+    Original Number of States: 65536
+    Final Number of States:    65536
+    Execution Time: 220ms.

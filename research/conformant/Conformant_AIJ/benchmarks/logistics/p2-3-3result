@@ -1,0 +1,76 @@
+
+ff: parsing domain file
+domain 'LOGISTICS-STRIPS' defined
+ ... done.
+ff: parsing problem file
+problem 'LOGISTICS-C3-S2-P3-A2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   20 into depth [1]
+                                  19            [1]
+                                  18            [1]
+                                  17            [1][2]
+                                  16            [1]
+                                  15            [1]
+                                  14            [1][2]
+                                  13            [1]
+                                  12            [1]
+                                  11            [1]
+                                  10            [1]
+                                   9            [1][2][3]
+                                   8            [1]
+                                   7            [1]
+                                   6            [1]
+                                   5            [1]
+                                   4            [1][2]
+                                   3            [1]
+                                   2            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: LOAD-TRUCK P2 T1 L10
+        1: LOAD-TRUCK P1 T0 L00
+        2: LOAD-TRUCK P0 T1 L10
+        3: DRIVE-TRUCK T0 L00 L01 C0
+        4: LOAD-TRUCK P1 T0 L01
+        5: DRIVE-TRUCK T0 L01 L00 C0
+        6: UNLOAD-TRUCK P1 T0 L00
+        7: DRIVE-TRUCK T1 L10 L11 C1
+        8: LOAD-TRUCK P2 T1 L11
+        9: LOAD-TRUCK P0 T1 L11
+       10: DRIVE-TRUCK T1 L11 L10 C1
+       11: UNLOAD-TRUCK P0 T1 L10
+       12: UNLOAD-TRUCK P2 T1 L10
+       13: FLY-AIRPLANE A1 L20 L10
+       14: LOAD-AIRPLANE P0 A1 L10
+       15: FLY-AIRPLANE A1 L10 L00
+       16: LOAD-AIRPLANE P1 A1 L00
+       17: UNLOAD-AIRPLANE P0 A1 L00
+       18: FLY-AIRPLANE A1 L00 L20
+       19: UNLOAD-AIRPLANE P1 A1 L20
+       20: FLY-AIRPLANE A1 L20 L10
+       21: LOAD-AIRPLANE P2 A1 L10
+       22: FLY-AIRPLANE A1 L10 L20
+       23: UNLOAD-AIRPLANE P2 A1 L20
+     
+
+statistics:    0.00 seconds instantiating 234 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 334 facts and 102 actions
+               0.00 seconds creating final representation with 75 relevant facts (15 max U, 9 CNF max U)
+               0.00 seconds building connectivity graph
+               0.00 seconds (   0.00 pure) evaluating 46 states, to a max depth of 3
+               0.00 seconds in DP for 146 RPG ini state implication checks
+               0.00 seconds in DP for 0 RPlan extract ini state implication checks (0 lits removed)
+               0.00 seconds generating,    0.00 seconds encoding 183 state transition base CNFs
+               0.00 seconds in DP solving 32 state transition CNFs
+               0.00 seconds checking for self-contradictions, including 0 DP calls
+               0.00 seconds checking for stagnating states (19 hits), including 28 DP calls
+               0.00 seconds altogether checking for dominated states making 26 comparisons (11 conformant, 11 hits),
+                    spending    0.00 seconds doing 58 DP calls
+                264 total DP calls, 568 total UP calls,    0.00 sec membership
+               0.00 seconds for remaining searching duties
+               0.00 seconds total time (+    0.03 secs for CNF memory allocation)
+

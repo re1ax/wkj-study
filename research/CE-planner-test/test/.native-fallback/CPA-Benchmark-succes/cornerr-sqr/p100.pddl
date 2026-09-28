@@ -1,0 +1,15 @@
+
+(define (problem emptyroom-emptyroom-d100-g50-corners)
+ (:domain emptyroom)
+ (:objects p1 p100 p51)
+ (:init
+(and
+      (oneof (x p1) (x p100) 
+      ) 
+      (oneof (y p1) (y p100) 
+      ) 
+       )) 
+ (:goal
+       (and (x p51)(y p51))
+       ))
+

@@ -1,0 +1,39 @@
+(define (problem temp)(:domain uts_cycle_3)(:objects 
+   n0  - node 
+   n1  - node 
+   n2  - node 
+   l1  - label 
+   l2  - label 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+)
+(:init (true)
+  (edge_label n0 n2 l1 int1)
+  (edge_label n1 n0 l1 int1)
+  (edge_label n1 n2 l2 int1)
+  (visited n2 int1)
+  (edge_label n2 n0 l2 int1)
+  (edge_label n2 n1 l1 int1)
+  (edge_label n0 n1 l2 int1)
+  (at_node n2 int1)
+  (at_node n2 int2)
+  (edge_label n1 n0 l1 int2)
+  (visited n2 int2)
+  (edge_label n1 n2 l2 int2)
+  (edge_label n2 n1 l2 int2)
+  (edge_label n0 n2 l1 int2)
+  (edge_label n2 n0 l1 int2)
+  (edge_label n0 n1 l2 int2)
+  (at_node n2 int3)
+  (edge_label n1 n0 l1 int3)
+  (visited n2 int3)
+  (visited n0 int3)
+  (at_node n0 int3)
+  (edge_label n1 n2 l2 int3)
+  (edge_label n2 n1 l2 int3)
+  (edge_label n0 n2 l1 int3)
+  (edge_label n2 n0 l1 int3)
+  (edge_label n0 n1 l2 int3)
+)
+(:goal (forall (?interpr - interpretation)(and   (visited n0 ?interpr)  (visited n1 ?interpr)  (visited n2 ?interpr)))))

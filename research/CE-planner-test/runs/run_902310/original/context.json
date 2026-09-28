@@ -1,0 +1,8 @@
+{
+  "schema_version": "igc-context-v1",
+  "context_id": "fnv1a64:f08fd1a7e4304ba6",
+  "domain_path": "/tmp/igc-normalized-pddl-902296/domain.normalized.pddl",
+  "problem_path": "/tmp/igc-normalized-pddl-902296/problem.normalized.pddl",
+  "variables": [
+  ]
+}

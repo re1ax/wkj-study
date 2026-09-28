@@ -1,0 +1,57 @@
+(define (problem temp)(:domain blocks)(:objects 
+   A  - block 
+   B  - block 
+   C  - block 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+   int9  - interpretation 
+)
+(:init (true)
+  (clear A int1)
+  (holding C int1)
+  (on A B int1)
+  (ontable B int1)
+  (ontable B int2)
+  (on C B int2)
+  (holding A int2)
+  (clear C int2)
+  (ontable B int3)
+  (clear C int3)
+  (on C A int3)
+  (on A B int3)
+  (handempty int3)
+  (ontable B int4)
+  (on C B int4)
+  (on A C int4)
+  (handempty int4)
+  (clear A int4)
+  (ontable A int5)
+  (clear C int5)
+  (holding B int5)
+  (on C A int5)
+  (ontable C int6)
+  (clear B int6)
+  (holding A int6)
+  (on B C int6)
+  (ontable C int7)
+  (holding B int7)
+  (on A C int7)
+  (clear A int7)
+  (on C A int8)
+  (clear B int8)
+  (ontable A int8)
+  (handempty int8)
+  (on B C int8)
+  (on B A int9)
+  (ontable C int9)
+  (on A C int9)
+  (clear B int9)
+  (handempty int9)
+)
+(:goal (forall (?interpr - interpretation)(and   (ontable A ?interpr)  (on B A ?interpr)  (on C B ?interpr)))))

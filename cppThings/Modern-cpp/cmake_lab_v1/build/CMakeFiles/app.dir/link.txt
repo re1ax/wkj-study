@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/app.dir/src/add.cpp.o CMakeFiles/app.dir/src/del.cpp.o CMakeFiles/app.dir/src/main.cpp.o -o /root/workspace/cppThings/Modern-cpp/cmake_lab/app 

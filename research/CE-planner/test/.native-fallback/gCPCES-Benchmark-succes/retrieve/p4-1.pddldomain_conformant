@@ -1,0 +1,14 @@
+(define (domain retrieve)
+;(:requirements  :strips)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (obj-located ?o - object  ?i - object  ?x - interpretation)  (located ?i - object  ?x - interpretation)  (adj ?i - object  ?j - object  ?x - interpretation)  (holding ?i - object  ?x - interpretation)) 
+(:action move
+:parameters (?i  - object ?j  - object )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?j ?interpr))(forall (?interpr - interpretation) (not   (located ?i ?interpr)))))
+(:action pickup
+:parameters (?o  - object ?i  - object )
+:precondition (forall (?interpr - interpretation)(and   (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (obj-located ?o ?i ?interpr) (and   (holding ?o ?interpr)(not   (obj-located ?o ?i ?interpr)))))))
+
+)

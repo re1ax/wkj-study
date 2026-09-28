@@ -1,0 +1,56 @@
+(define (problem temp)(:domain raos_keys)(:objects 
+   k0  - key 
+   k1  - key 
+   k2  - key 
+   l1  - light 
+   l2  - light 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+)
+(:init (true)
+  (opens k0 l1 int1)
+  (not_wearing_sunglasses int1)
+  (have_key k0 int1)
+  (located l1 int1)
+  (key_at k1 l1 int1)
+  (opens k1 l2 int1)
+  (neq l2 l1 int1)
+  (key_at k2 l2 int1)
+  (opens k2 l1 int1)
+  (neq l1 l2 int1)
+  (not_wearing_sunglasses int2)
+  (neq l1 l2 int2)
+  (located l1 int2)
+  (have_key k0 int2)
+  (key_at k1 l1 int2)
+  (key_at k2 l2 int2)
+  (opens k2 l1 int2)
+  (neq l2 l1 int2)
+  (opens k1 l2 int2)
+  (opens k0 l2 int2)
+  (not_wearing_sunglasses int3)
+  (opens k1 l1 int3)
+  (located l1 int3)
+  (opens k0 l1 int3)
+  (open l1 int3)
+  (opens k2 l2 int3)
+  (have_key k0 int3)
+  (key_at k1 l2 int3)
+  (neq l1 l2 int3)
+  (neq l2 l1 int3)
+  (key_at k2 l1 int3)
+  (open l2 int4)
+  (not_wearing_sunglasses int4)
+  (opens k1 l1 int4)
+  (located l1 int4)
+  (opens k2 l2 int4)
+  (have_key k0 int4)
+  (key_at k1 l2 int4)
+  (neq l1 l2 int4)
+  (neq l2 l1 int4)
+  (opens k0 l2 int4)
+  (key_at k2 l1 int4)
+)
+(:goal (forall (?interpr - interpretation)(and   (have_key k1 ?interpr)  (have_key k2 ?interpr)))))

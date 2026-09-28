@@ -1,0 +1,59 @@
+[开始时间] 2026-09-25 18:09:47
+[项目根目录] /root/workspace/research/refine/CE-planner
+[候选规划器] t0
+[启动脚本] /root/workspace/research/refine/CE-planner/plan-cegis-t0
+[benchmark] blocks
+[case_name] b2
+[domain] /root/workspace/research/refine/CE-planner/test/blocks/domain.pddl
+[problem] /root/workspace/research/refine/CE-planner/test/blocks/b2.pddl
+[result_file] /root/workspace/research/refine/CE-planner/result_output_batch_ce/t0_20260925_180942/blocks/b2/result.plan
+[display_flag] false
+[timeout_sec] 3600
+[memory_limit] 1G
+[memory_limit_kb] 1048576
+[success_marker_configured] yes
+[快捷键] Ctrl+B=跳过本例；Ctrl+C=终止整批
+
+[IGC-PDDL-NORMALIZE] typed_dash_rewrites=0 domain=/tmp/igc-normalized-pddl-13266/domain.normalized.pddl problem=/tmp/igc-normalized-pddl-13266/problem.normalized.pddl
+[IGC-FALLBACK-CONFIG] version=v16-cff-cee-native-library profile=stable planner=t0 runtime=isolated
+[IGC-FALLBACK-CONFIG] state_machine=NATIVE_PREFLIGHT,CE_ONLY_OR_CE_PROBE,PROBE_BUDGET_TO_NATIVE fallback_counts_as_iteration=1
+[IGC-FALLBACK-CONFIG] native_only=1 native_direct=1 generated_full_fallback=0
+[IGC-FALLBACK-CONFIG] new_counterexample_triggers_native=0 force_native_first=0
+[IGC-FALLBACK-CONFIG] refined_time_gate=1 legacy_refined_timeout=180 candidate_timeout=3600
+[IGC-FALLBACK-CONFIG] ce_only_total_budget=3600 probe_single_override=auto probe_max_iterations_override=auto probe_total_override=auto
+[IGC-FALLBACK-CONFIG] native_benchmark_root=/root/workspace/research/refine/CE-planner/test public_domain=blocks public_problem=b2.pddl
+[IGC-FALLBACK-CONFIG] public_source_domain=/root/workspace/research/refine/CE-planner/test/blocks/domain.pddl public_source_problem=/root/workspace/research/refine/CE-planner/test/blocks/b2.pddl
+1. Running translator
+[TRANSLATOR-FAILED] rc=127
+/usr/bin/env: ‘python2\r’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+Command exited with non-zero status 127
+	Command being timed: "/usr/bin/timeout --signal=TERM --kill-after=10s 3600 bash /root/workspace/research/refine/CE-planner/plan-cegis-t0 /root/workspace/research/refine/CE-planner/test/blocks/domain.pddl /root/workspace/research/refine/CE-planner/test/blocks/b2.pddl /root/workspace/research/refine/CE-planner/result_output_batch_ce/t0_20260925_180942/blocks/b2/result.plan false"
+	User time (seconds): 0.04
+	System time (seconds): 0.05
+	Percent of CPU this job got: 49%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11776
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 5689
+	Voluntary context switches: 50
+	Involuntary context switches: 27
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 127
+
+[结束时间] 2026-09-25 18:09:47
+[耗时秒] 0
+[退出码] 127
+[final_status] NA
+[最终状态] FAIL

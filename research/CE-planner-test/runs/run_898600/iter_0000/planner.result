@@ -1,0 +1,37 @@
+;; t1 - A Heuristic Search Conformant Planner
+;; Alexandre Albore, Hector Geffner & Miquel Ramirez (c) 2010
+;; preprocessing=0.000132
+;; domain=UTS_CYCLE_6
+;; problem=UTS_CYCLE_6
+;; fluents=19
+;; operators=16
+;; size_of_b0_approx=1
+;; heuristic_setup_time=0.0146
+;; initial_heuristic_value=0
+;; search_time=0.00015
+;; Plan found:
+(FOLLOW_LABEL L2)
+(FOLLOW_LABEL L2)
+(FOLLOW_LABEL L2)
+(FOLLOW_LABEL L2)
+(FOLLOW_LABEL L2)
+;; plan_length=5
+;; heuristic_computations=5
+;; expanded_ehc=0
+;; generated_ehc=0
+;; expanded_bfs=4
+;; generated_bfs=20
+;; primary_expansions=2
+;; secondary_expansions=2
+;; tertiary_expansions=0
+;; entailment_tests=0
+;; sat_solver_calls=0
+;; max_num_clauses=0
+;; problem_inconsistent=no
+;; initial_sample_h=5
+;; initial_card_h=5
+;; avg_dead_models=0
+;; dead_samples_replaced=0
+;; width_1=yes
+;; nodes_mem=0.0359
+;; b0_mc=0

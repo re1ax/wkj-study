@@ -1,0 +1,18 @@
+(define (domain push-to)
+;(:requirements  :strips :typing)
+(:types  object - object  pos - object  obj - object  interpretation - object )
+(:predicates (true)   (pick-loc ?i - pos  ?x - interpretation)  (located ?i - pos  ?x - interpretation)  (holding ?o - obj  ?x - interpretation)  (obj-located ?o - obj  ?i - pos  ?x - interpretation)  (adj ?i - pos  ?j - pos  ?x - interpretation)) 
+(:action move
+:parameters (?i  - pos ?j  - pos )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?j ?interpr))(forall (?interpr - interpretation) (not   (located ?i ?interpr)))))
+(:action pickup
+:parameters (?o  - obj ?i  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?i ?interpr)  (pick-loc ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (obj-located ?o ?i ?interpr) (and   (holding ?o ?interpr)(not   (obj-located ?o ?i ?interpr)))))))
+(:action push
+:parameters (?o  - obj ?i  - pos ?j  - pos )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (obj-located ?o ?i ?interpr) (and   (obj-located ?o ?j ?interpr)(not   (obj-located ?o ?i ?interpr)))))))
+
+)

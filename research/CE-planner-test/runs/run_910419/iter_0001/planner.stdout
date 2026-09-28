@@ -1,0 +1,41 @@
+
+ff: parsing domain file
+domain 'BLOCKS' defined
+
+ test test ff ... done.
+ff: parsing problem file
+problem 'B2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:    3 into depth [1]
+                                   2            [1]
+                                   1            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: PUT-DOWN A
+        1: PICK-UP B
+        2: STACK B A
+     
+
+statistics:    0.00 seconds instantiating 12 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 22 facts and 12 actions
+               0.00 seconds creating final representation with 22 relevant facts (22 max U, 11 CNF max U)
+               0.00 seconds building connectivity graph
+               0.00 seconds (   0.00 pure) evaluating 4 states, to a max depth of 1
+               0.00 seconds generating,    0.00 seconds encoding Rplan S-CNFs
+               0.00 seconds in DP for 42 RPG S-CNF implication checks
+               0.00 seconds in DP for 13 RPlan extract S-CNF implication checks (4 lits removed)
+               0.00 seconds generating,    0.00 seconds encoding 7 state transition base CNFs
+               0.00 seconds in DP solving 27 state transition CNFs
+               0.00 seconds checking for self-contradictions, including 0 DP calls
+               0.00 seconds checking for stagnating states (0 hits), including 0 DP calls
+               0.00 seconds altogether checking for dominated states making 0 comparisons (0 conformant, 0 hits),
+                    spending    0.00 seconds doing 0 DP calls
+                 82 total DP calls, 185 total UP calls,    0.00 sec membership
+               0.00 seconds for remaining searching duties
+               0.00 seconds total time (+    0.01 secs for CNF memory allocation)
+

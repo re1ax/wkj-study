@@ -1,0 +1,8 @@
+(define (domain safe)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (right-combination ?x - object  ?x - interpretation)  (safe-open ?x - interpretation)) 
+(:action try
+:parameters (?x  - object )
+:effect (and (forall (?interpr - interpretation) (when   (right-combination ?x ?interpr) (and   (safe-open ?interpr))))))
+
+)

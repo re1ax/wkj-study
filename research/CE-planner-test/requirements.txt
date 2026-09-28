@@ -1,0 +1,2 @@
+setuptools==69.5.1
+z3-solver==4.12.2.0

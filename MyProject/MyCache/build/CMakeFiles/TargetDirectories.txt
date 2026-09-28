@@ -1,0 +1,10 @@
+/root/workspace/MyProject/MyCache/build/CMakeFiles/main.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_lru.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_lfu.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_all_cache_policy.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_thread_safety.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_hash_lru.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_hash_lfu.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/test_lfu_aging.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/edit_cache.dir
+/root/workspace/MyProject/MyCache/build/CMakeFiles/rebuild_cache.dir

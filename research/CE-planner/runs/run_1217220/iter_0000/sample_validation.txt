@@ -1,0 +1,4 @@
+status=OK
+worlds=1
+actions=2
+message=explicit SAS sample-goal check skipped for this planner/goal shape; full verifier remains authoritative

@@ -1,0 +1,52 @@
+
+
+
+(define (problem bomb-10-1)
+(:domain bomb)
+(:objects bomb1 bomb2 bomb3 bomb4 bomb5 bomb6 bomb7 bomb8 bomb9 bomb10 toilet1 )
+(:init
+(and
+
+
+(bomb bomb1)
+(bomb bomb2)
+(bomb bomb3)
+(bomb bomb4)
+(bomb bomb5)
+(bomb bomb6)
+(bomb bomb7)
+(bomb bomb8)
+(bomb bomb9)
+(bomb bomb10)
+(toilet toilet1)
+
+(unknown (armed bomb1))
+(unknown (armed bomb2))
+(unknown (armed bomb3))
+(unknown (armed bomb4))
+(unknown (armed bomb5))
+(unknown (armed bomb6))
+(unknown (armed bomb7))
+(unknown (armed bomb8))
+(unknown (armed bomb9))
+(unknown (armed bomb10))
+
+)
+)
+(:goal
+(and
+(not (armed bomb1))
+(not (armed bomb2))
+(not (armed bomb3))
+(not (armed bomb4))
+(not (armed bomb5))
+(not (armed bomb6))
+(not (armed bomb7))
+(not (armed bomb8))
+(not (armed bomb9))
+(not (armed bomb10))
+)
+)
+)
+
+

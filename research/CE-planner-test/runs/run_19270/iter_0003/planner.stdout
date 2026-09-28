@@ -1,0 +1,47 @@
+
+ff: parsing domain file
+domain 'UTS_CYCLE_4' defined
+
+ test test ff ... done.
+ff: parsing problem file
+problem 'UTS_CYCLE_4' defined
+ ... done.
+
+
+warning: empty con/disjunction in domain definition. simplifying.
+
+
+
+Cueing down from goal distance:    3 into depth [1][2][3][4]
+                                   1            [1][2][3]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: FOLLOW_LABEL L1
+        1: FOLLOW_LABEL L2
+        2: FOLLOW_LABEL L1
+        3: FOLLOW_LABEL L1
+        4: FOLLOW_LABEL L2
+        5: FOLLOW_LABEL L2
+        6: FOLLOW_LABEL L2
+     
+
+statistics:    0.00 seconds instantiating 2 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 56 facts and 2 actions
+               0.00 seconds creating final representation with 35 relevant facts (35 max U, 19 CNF max U)
+               0.00 seconds building connectivity graph
+               0.00 seconds (   0.00 pure) evaluating 22 states, to a max depth of 4
+               0.00 seconds generating,    0.00 seconds encoding Rplan S-CNFs
+               0.00 seconds in DP for 148 RPG S-CNF implication checks
+               0.00 seconds in DP for 249 RPlan extract S-CNF implication checks (153 lits removed)
+               0.00 seconds generating,    0.01 seconds encoding 41 state transition base CNFs
+               0.00 seconds in DP solving 216 state transition CNFs
+               0.00 seconds checking for self-contradictions, including 0 DP calls
+               0.00 seconds checking for stagnating states (0 hits), including 311 DP calls
+               0.01 seconds altogether checking for dominated states making 160 comparisons (101 conformant, 0 hits),
+                    spending    0.01 seconds doing 2568 DP calls
+               3492 total DP calls, 11165 total UP calls,    0.00 sec membership
+               0.00 seconds for remaining searching duties
+               0.02 seconds total time (+    0.03 secs for CNF memory allocation)
+

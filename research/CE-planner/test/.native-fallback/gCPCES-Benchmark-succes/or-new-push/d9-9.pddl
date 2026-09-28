@@ -1,0 +1,42 @@
+
+(define (domain or-push-new) 
+
+   (:requirements :strips :typing)
+   (:types pos obj)
+   (:constants  o1 o2 o3 o4 o5 o6 o7 o8 o9 - obj) 
+   (:predicates (adj ?i ?j - pos) (located ?i - pos) (ncleared ?i - pos) (holding ?o - obj) (obj-located ?o - obj ?i - pos)
+                (pick-loc ?i - pos))
+   (:action move
+      :parameters (?i - pos ?j - pos )
+      :precondition (and (adj ?i ?j) (located ?i) (ncleared ?j))
+      :effect (and (not (located ?i)) (located ?j)))
+   (:action pickup
+      :parameters (?i - pos )
+      :precondition (and (located ?i) (pick-loc ?i))
+      :effect (and 
+		   (when (obj-located o1 ?i) (and (holding o1) (not (obj-located o1 ?i))))
+		   (when (obj-located o2 ?i) (and (holding o2) (not (obj-located o2 ?i))))
+		   (when (obj-located o3 ?i) (and (holding o3) (not (obj-located o3 ?i))))
+		   (when (obj-located o4 ?i) (and (holding o4) (not (obj-located o4 ?i))))
+		   (when (obj-located o5 ?i) (and (holding o5) (not (obj-located o5 ?i))))
+		   (when (obj-located o6 ?i) (and (holding o6) (not (obj-located o6 ?i))))
+		   (when (obj-located o7 ?i) (and (holding o7) (not (obj-located o7 ?i))))
+		   (when (obj-located o8 ?i) (and (holding o8) (not (obj-located o8 ?i))))
+		   (when (obj-located o9 ?i) (and (holding o9) (not (obj-located o9 ?i)))))
+   )
+   (:action push
+      :parameters (?i - pos  ?j - pos )
+      :precondition (and (adj ?i ?j) (located ?i))
+      :effect (and (not (ncleared ?i)) 
+                 (when (obj-located o1 ?i) (and (obj-located o1 ?j) (not (obj-located o1 ?i)) (ncleared ?j)))
+                 (when (obj-located o2 ?i) (and (obj-located o2 ?j) (not (obj-located o2 ?i)) (ncleared ?j)))
+                 (when (obj-located o3 ?i) (and (obj-located o3 ?j) (not (obj-located o3 ?i)) (ncleared ?j)))
+                 (when (obj-located o4 ?i) (and (obj-located o4 ?j) (not (obj-located o4 ?i)) (ncleared ?j)))
+                 (when (obj-located o5 ?i) (and (obj-located o5 ?j) (not (obj-located o5 ?i)) (ncleared ?j)))
+                 (when (obj-located o6 ?i) (and (obj-located o6 ?j) (not (obj-located o6 ?i)) (ncleared ?j)))
+                 (when (obj-located o7 ?i) (and (obj-located o7 ?j) (not (obj-located o7 ?i)) (ncleared ?j)))
+                 (when (obj-located o8 ?i) (and (obj-located o8 ?j) (not (obj-located o8 ?i)) (ncleared ?j)))
+                 (when (obj-located o9 ?i) (and (obj-located o9 ?j) (not (obj-located o9 ?i)) (ncleared ?j))))
+   )
+)
+

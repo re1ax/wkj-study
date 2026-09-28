@@ -1,0 +1,12 @@
+(define (domain btc)
+(:types  object - object  package - object  bomb - object  toilet - object  interpretation - object )
+(:predicates (true)   (clog ?toilet - toilet  ?x - interpretation)  (defused ?b - bomb  ?x - interpretation)  (in ?p - package  ?b - bomb  ?x - interpretation)) 
+(:action dunk
+:parameters (?p  - package ?b  - bomb ?t  - toilet )
+:precondition (forall (?interpr - interpretation)(and (not   (clog ?t ?interpr))))
+:effect (and (forall (?interpr - interpretation)   (clog ?t ?interpr))(forall (?interpr - interpretation) (when (and   (in ?p ?b ?interpr)(not   (defused ?b ?interpr))) (and   (defused ?b ?interpr))))))
+(:action flush
+:parameters (?t  - toilet )
+:effect (and (forall (?interpr - interpretation) (when   (clog ?t ?interpr) (and (not   (clog ?t ?interpr)))))))
+
+)

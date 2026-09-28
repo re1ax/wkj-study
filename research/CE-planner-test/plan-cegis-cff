@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+export IGC_CANDIDATE_PLANNER=cff
+export IGC_REFINED_MODE="${IGC_REFINED_MODE:-structured}"
+export IGC_CFF_DIR="${IGC_CFF_DIR:-$PWD/conformant-ff}"
+export IGC_CFF_EXEC="${IGC_CFF_EXEC:-$IGC_CFF_DIR/ff}"
+export IGC_GC_FAMILY_GOAL_COMPILATION="${IGC_GC_FAMILY_GOAL_COMPILATION:-on}"
+export IGC_CANDIDATE_TIMEOUT="${IGC_CANDIDATE_TIMEOUT:-${IGC_CFF_TIMEOUT:-3600}}"
+exec ./plan-cegis "$@"

@@ -1,0 +1,1 @@
+{"mode":"NATIVE_BENCHMARK_DIRECT","status":"OK","renderer":"NATIVE_BENCHMARK_DIRECT","profile":"cff_adaptive_generalized_cgcff_onf_dnf","input_counterexamples":1,"oneof_groups":0,"or_groups":2,"message":"NATIVE_BENCHMARK_DIRECT: byte-identical planner-native benchmark pair; generated writer and all CE PDDL adapters are bypassed; final CNF/Kissat verifier remains authoritative"}

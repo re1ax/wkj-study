@@ -1,0 +1,12 @@
+(define (domain uts)
+(:types  object - object  node - object  interpretation - object )
+(:predicates (true)   (visited ?x - node  ?x - interpretation)  (located ?x - node  ?x - interpretation)  (started ?x - interpretation)  (edge ?x - node  ?y - node  ?x - interpretation)) 
+(:action starting
+:parameters (?x  - node )
+:effect (and (forall (?interpr - interpretation) (when   (located ?x ?interpr) (and   (started ?interpr)  (visited ?x ?interpr))))))
+(:action travel
+:parameters (?x  - node ?y  - node )
+:precondition (forall (?interpr - interpretation)(and   (started ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (located ?x ?interpr)  (edge ?x ?y ?interpr)) (and   (visited ?y ?interpr)  (located ?y ?interpr)(not   (located ?x ?interpr)))))))
+
+)

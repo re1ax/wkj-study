@@ -1,0 +1,143 @@
+(define (domain hall)
+(:types  object - object  interpretation - object )
+(:constants 
+   p1  - object 
+   p2  - object 
+   p3  - object 
+   p4  - object 
+)
+
+(:predicates (true)   (obs--q0-Left-q0 ?x - interpretation)  (not-obsA-q0 ?x - interpretation)  (obsA-q0-Left-q0 ?x - interpretation)  (obsB-q0-Left-q1 ?x - interpretation)  (obsB-q1-Left-q0 ?x - interpretation)  (q0 ?x - interpretation)  (obsA-q1-Right-q1 ?x - interpretation)  (y-agent ?p - object  ?x - interpretation)  (obsB-q1-Right-q1 ?x - interpretation)  (obs--q1-Right-q0 ?x - interpretation)  (obsA-q1-Left-q1 ?x - interpretation)  (obsB-q0-Right-q0 ?x - interpretation)  (not-obsB-q0 ?x - interpretation)  (obs--q1-Left-q1 ?x - interpretation)  (visited-B ?x - interpretation)  (obsA-q0-Right-q0 ?x - interpretation)  (x-agent ?p - object  ?x - interpretation)  (not-obs--q0 ?x - interpretation)  (obsB ?x - interpretation)  (obs--q0-Right-q1 ?x - interpretation)  (obsA-q0-Left-q1 ?x - interpretation)  (obsB-q1-Left-q1 ?x - interpretation)  (q1 ?x - interpretation)  (obsA-q1-Left-q0 ?x - interpretation)  (obs--q0-Left-q1 ?x - interpretation)  (obs--q1-Left-q0 ?x - interpretation)  (obsA-q1-Right-q0 ?x - interpretation)  (not-obsA-q1 ?x - interpretation)  (not-obs--q1 ?x - interpretation)  (obs--q1-Right-q1 ?x - interpretation)  (visited-A ?x - interpretation)  (obsB-q0-Right-q1 ?x - interpretation)  (obsB-q1-Right-q0 ?x - interpretation)  (visited-C ?x - interpretation)  (obsB-q0-Left-q0 ?x - interpretation)  (visited-D ?x - interpretation)  (not-obsB-q1 ?x - interpretation)  (obs- ?x - interpretation)  (obs--q0-Right-q0 ?x - interpretation)  (obsA ?x - interpretation)  (obsA-q0-Right-q1 ?x - interpretation)) 
+(:action app---q0-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q0-Left-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obs- ?interpr)))))))
+(:action app---q0-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q0-Left-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))))
+(:action app---q0-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q0-Right-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr)))))))
+(:action app---q0-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q0-Right-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))))
+(:action app---q1-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q1-Left-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))))
+(:action app---q1-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q1-Left-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obs- ?interpr)))))))
+(:action app---q1-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q1-Right-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))))
+(:action app---q1-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obs--q1-Right-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obs- ?interpr)))))(forall (?interpr - interpretation) (when (and   (obs- ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obs- ?interpr)))))))
+(:action app-A-q0-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsA-q0-Right-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obsA ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsA ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsA ?interpr)))))))
+(:action app-A-q0-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsA-q0-Right-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obsA ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsA ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsA ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))))
+(:action app-A-q1-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsA-q1-Right-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obsA ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsA ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsA ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))))
+(:action app-A-q1-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsA-q1-Right-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p1 ?interpr))(not   (obsA ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsA ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsA ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p4 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsA ?interpr)))))))
+(:action app-B-q0-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsB-q0-Left-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsB ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsB ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obsB ?interpr)))))))
+(:action app-B-q0-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsB-q0-Left-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsB ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsB ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q0 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obsB ?interpr))(not   (q0 ?interpr))  (q1 ?interpr))))))
+(:action app-B-q1-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsB-q1-Left-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsB ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsB ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obsB ?interpr))(not   (q1 ?interpr))  (q0 ?interpr))))))
+(:action app-B-q1-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (obsB-q1-Left-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p1 ?interpr)(not   (x-agent p2 ?interpr))(not   (obsB ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p2 ?interpr)(not   (x-agent p3 ?interpr))(not   (obsB ?interpr)))))(forall (?interpr - interpretation) (when (and   (obsB ?interpr)  (q1 ?interpr)  (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (x-agent p3 ?interpr)(not   (x-agent p4 ?interpr))(not   (obsB ?interpr)))))))
+(:action map---q0-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q0-Left-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q0 ?interpr)))))
+(:action map---q0-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q0-Left-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q0 ?interpr)))))
+(:action map---q0-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q0-Right-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q0 ?interpr)))))
+(:action map---q0-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q0-Right-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q0 ?interpr)))))
+(:action map---q1-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q1-Left-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q1 ?interpr)))))
+(:action map---q1-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q1-Left-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q1 ?interpr)))))
+(:action map---q1-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q1-Right-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q1 ?interpr)))))
+(:action map---q1-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obs--q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obs--q1-Right-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obs--q1 ?interpr)))))
+(:action map-A-q0-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsA-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsA-q0-Right-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obsA-q0 ?interpr)))))
+(:action map-A-q0-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsA-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsA-q0-Right-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obsA-q0 ?interpr)))))
+(:action map-A-q1-Right-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsA-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsA-q1-Right-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obsA-q1 ?interpr)))))
+(:action map-A-q1-Right-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsA-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsA-q1-Right-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obsA-q1 ?interpr)))))
+(:action map-B-q0-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsB-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsB-q0-Left-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obsB-q0 ?interpr)))))
+(:action map-B-q0-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsB-q0 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsB-q0-Left-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obsB-q0 ?interpr)))))
+(:action map-B-q1-Left-q0
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsB-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsB-q1-Left-q0 ?interpr))(forall (?interpr - interpretation) (not   (not-obsB-q1 ?interpr)))))
+(:action map-B-q1-Left-q1
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (not-obsB-q1 ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (obsB-q1-Left-q1 ?interpr))(forall (?interpr - interpretation) (not   (not-obsB-q1 ?interpr)))))
+(:action zoom
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (obsA ?interpr))))(forall (?interpr - interpretation) (when (and   (x-agent p2 ?interpr)  (y-agent p1 ?interpr)) (and   (obs- ?interpr))))(forall (?interpr - interpretation) (when (and   (x-agent p3 ?interpr)  (y-agent p1 ?interpr)) (and   (obs- ?interpr))))(forall (?interpr - interpretation) (when (and   (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (obsB ?interpr))))(forall (?interpr - interpretation) (when (and   (x-agent p1 ?interpr)  (y-agent p1 ?interpr)) (and   (visited-A ?interpr))))(forall (?interpr - interpretation) (when (and   (x-agent p4 ?interpr)  (y-agent p1 ?interpr)) (and   (visited-B ?interpr))))))
+
+)

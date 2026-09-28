@@ -1,0 +1,79 @@
+T1-CGCFF reconstruct-problem trace
+counterexamples=1 components=12 extracted_literals=16 separated_literals=11
+component 0 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=15:0:1;
+  alt 1 status=COMMON_FALSE contains_separated_y=0 term_signature=11:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;
+  alt 3 status=COMMON_TRUE contains_separated_y=1 term_signature=9:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 1 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=11:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=13:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=18:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=5:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 2 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=11:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=16:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=4:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=7:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 3 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=14:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=4:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=17:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 4 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=0:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=18:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=3:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 5 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=9:0:1;
+  alt 1 status=COMMON_FALSE contains_separated_y=0 term_signature=12:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=7:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=3:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 6 kind=oneof alternatives_before=4
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=9:0:1;
+  alt 1 status=COMMON_FALSE contains_separated_y=0 term_signature=1:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=5:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=17:0:1;
+  summary common_true=1 common_false=3 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 7 kind=or alternatives_before=2
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=4:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=18:0:0;
+  summary common_true=2 common_false=0 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=2
+component 8 kind=or alternatives_before=2
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=7:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=5:0:0;
+  summary common_true=2 common_false=0 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=2
+component 9 kind=or alternatives_before=2
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=3:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=17:0:0;
+  summary common_true=2 common_false=0 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=2
+component 10 kind=or alternatives_before=3
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=4:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=3:0:0;
+  alt 2 status=COMMON_TRUE contains_separated_y=1 term_signature=5:0:0;
+  summary common_true=3 common_false=0 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=3
+component 11 kind=or alternatives_before=3
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=7:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=17:0:0;
+  alt 2 status=COMMON_TRUE contains_separated_y=1 term_signature=18:0:0;
+  summary common_true=3 common_false=0 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=3
+t1_cff_semantic_closure:enabled=1;planner=t1;verifier_counterexample=0;verifier_y=0;relevance_symbols=5;components=0;closure_added=0;rule=action_goal_anchor_closure;thresholds=none

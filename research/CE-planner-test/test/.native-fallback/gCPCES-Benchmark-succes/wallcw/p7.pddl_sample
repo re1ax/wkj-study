@@ -1,0 +1,84 @@
+(define (problem temp)(:domain grid)(:objects 
+   zero  - num 
+   one  - num 
+   two  - num 
+   three  - num 
+   four  - num 
+   five  - num 
+   six  - num 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+   int9  - interpretation 
+   int10  - interpretation 
+   int11  - interpretation 
+   int12  - interpretation 
+   int13  - interpretation 
+   int14  - interpretation 
+   int15  - interpretation 
+   int16  - interpretation 
+   int17  - interpretation 
+   int18  - interpretation 
+   int19  - interpretation 
+   int20  - interpretation 
+)
+(:init (true)
+  (x zero int1)
+  (y zero int1)
+  (x three int2)
+  (y three int2)
+  (canmove int2)
+  (y two int3)
+  (x six int3)
+  (canmove int3)
+  (canmove int4)
+  (y three int4)
+  (x five int4)
+  (x six int5)
+  (y six int5)
+  (canmove int6)
+  (x two int6)
+  (y six int6)
+  (canmove int7)
+  (x one int7)
+  (y six int7)
+  (x six int8)
+  (y five int8)
+  (x one int9)
+  (y five int9)
+  (x two int10)
+  (y five int10)
+  (y four int11)
+  (canmove int11)
+  (x five int11)
+  (x two int12)
+  (y three int12)
+  (canmove int13)
+  (x one int13)
+  (y three int13)
+  (x two int14)
+  (y one int14)
+  (canmove int15)
+  (x one int15)
+  (y one int15)
+  (canmove int16)
+  (x zero int16)
+  (y six int16)
+  (canmove int17)
+  (x zero int17)
+  (y five int17)
+  (canmove int18)
+  (x zero int18)
+  (y three int18)
+  (canmove int19)
+  (x zero int19)
+  (y one int19)
+  (y two int20)
+  (x three int20)
+)
+(:goal (forall (?interpr - interpretation)(and   (x three ?interpr)  (y zero ?interpr)))))

@@ -1,0 +1,4 @@
+status=PLANNER_FAILED
+worlds=2
+actions=3
+message=candidate does not satisfy the complete SAS goal in sampled world ce0001; failed goal (var=17, value=0)

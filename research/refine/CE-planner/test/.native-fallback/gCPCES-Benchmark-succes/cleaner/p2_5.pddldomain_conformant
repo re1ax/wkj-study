@@ -1,0 +1,20 @@
+(define (domain cleaner)
+(:types  object - object  r - object  interpretation - object )
+(:constants 
+   r0  - r 
+   r1  - r 
+)
+
+(:predicates (true)   (position ?x - object  ?x - interpretation)  (ROOM ?r - object  ?x - interpretation)  (cleaned ?r - object  ?o - object  ?x - interpretation)  (OBJECT ?o - object  ?x - interpretation)) 
+(:action back
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position r1 ?interpr) (and   (position r0 ?interpr)(not   (position r1 ?interpr)))))))
+(:action clean
+:parameters (?r  - object ?o  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJECT ?o ?interpr)  (ROOM ?r ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (position ?r ?interpr) (and   (cleaned ?r ?o ?interpr))))))
+(:action fwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position r0 ?interpr) (and   (position r1 ?interpr)(not   (position r0 ?interpr)))))))
+
+)

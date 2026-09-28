@@ -1,0 +1,1817 @@
+[开始时间] 2026-09-25 11:09:39
+[项目根目录] /root/workspace/research/CE-planner-test
+[候选规划器] cff
+[启动脚本] /root/workspace/research/CE-planner-test/plan-cegis-cff
+[benchmark] uts-cycle
+[case_name] p3
+[pair_suffix] 3
+[domain] /root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl
+[problem] /root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl
+[result_file] /root/workspace/research/CE-planner-test/result_output_batch_ce/uts-or-guarded-final/uts-cycle/p3/result.plan
+[display_flag] false
+[timeout_sec] 120
+[memory_limit] 16G
+[memory_limit_kb] 16777216
+[success_marker_configured] yes
+[快捷键] Ctrl+B=跳过本例；Ctrl+C=终止整批
+
+[IGC-PDDL-NORMALIZE] typed_dash_rewrites=0 domain=/tmp/igc-normalized-pddl-499/domain.normalized.pddl problem=/tmp/igc-normalized-pddl-499/problem.normalized.pddl
+[IGC-FALLBACK-CONFIG] version=v16-cff-cee-native-library profile=quick-debug planner=cff runtime=isolated
+[IGC-FALLBACK-CONFIG] state_machine=NATIVE_PREFLIGHT,CE_ONLY_OR_CE_PROBE,PROBE_BUDGET_TO_NATIVE fallback_counts_as_iteration=1
+[IGC-FALLBACK-CONFIG] native_only=1 native_direct=1 generated_full_fallback=0
+[IGC-FALLBACK-CONFIG] new_counterexample_triggers_native=0 force_native_first=0
+[IGC-FALLBACK-CONFIG] refined_time_gate=1 legacy_refined_timeout=30 candidate_timeout=3600
+[IGC-FALLBACK-CONFIG] ce_only_total_budget=3600 probe_single_override=30 probe_max_iterations_override=auto probe_total_override=auto
+[IGC-FALLBACK-CONFIG] native_benchmark_root=/root/workspace/research/CE-planner-test/test public_domain=uts-cycle public_problem=p3.pddl
+[IGC-FALLBACK-CONFIG] public_source_domain=/root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl public_source_problem=/root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl
+1. Running translator
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+18 variables of 18 necessary
+2 of 2 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+主流程反例求解后端: CNF/Kissat
+CNF预处理开关: 关闭
+CNF日志开关: basic=on, detail=on, clause=on, model=on
+Simplifying transitions... done!
+[IGC-MAPPING] all_groups_entries=18 mapped_entries=18 skipped_removed_variables=0
+[IGC-NATIVE-ARTIFACT-PREFLIGHT] planner=CFF available=0 status=UNSUPPORTED_INPUT artifact_type=NONE mode=CE_ONLY message=NATIVE_BENCHMARK_NOT_FOUND planner=CFF domain=uts-cycle problem=p3.pddl roots=2 aliases=4 first_attempt=/root/workspace/research/CE-planner-test/test/CEE-Benchmark-succes/uts-cycle
+3
+axiom:0
+[CNF-初始化] oneof 文件读取完成，type=3, orlens=20, lens=0
+[CNF-初始化] axiom 映射建立完成，条目数=0
+[CNF-初始化] L0 确定事实数量=0
+[IGC-CEGIS] version=v16-cff-cee-native-library context=fnv1a64:708eb629223cf69 vars=18 constraints=20 candidate_planner=CFF runtime_mode=ISOLATED planner_timeout=3600 run_dir=/root/workspace/research/CE-planner-test/runs/run_513 internal_iteration_limit=unlimited duplicate_counterexample_limit=disabled
+[IGC-ADAPTIVE-LAYER4] enabled=0 strategy=separate-native-benchmark-fallback original_oneof=0 original_or=20 min_iteration=2 consecutive_counterexamples=2 plateau_iterations=1 oneof_ratio=0.8 or_ratio=0.8 semantic_alternative_ratio=0.95 require_alternative_semantics=1 generated_full_fallback=disabled native_baseline=all-planners-native-direct superb=off superb_contexts=0 superb_width=0
+[IGC-CE-GUIDANCE-FALLBACK] enabled=1 strategy=native-artifact-aware-mode-control execution_mode=CE_ONLY native_available=0 limit_refined_time=1 legacy_refined_timeout=30 probe_policy_tuned=1 probe_policy_active=0 probe_single_timeout=30 probe_max_refined_iterations=3 probe_total_budget=90 ce_only_total_budget=3600 force_native_fallback=0 direct_native_fallback_active=0 new_counterexample_continues_refined=1
+[IGC-SUPERB] mode=off strict_only=1 max_improvements=0 time_budget_ms=0 counterexample_batch=1 contexts=0 width=0 lite=disabled representative_rendering=disabled
+[IGC-CEGIS] legacy internal search and subplan cache are bypassed.
+[IGC-VERIFY] full_verifier_oneof_source=oneof_initial
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 开始构造静态 time0 基座
+[CNF-变量] 新建事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var6=0, t=0)，说明=初始组#0 项#0
+[CNF-变量] 新建事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var17=0, t=0)，说明=初始组#0 项#1
+[CNF-变量] 新建事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var0=0, t=0)，说明=初始组#0 项#2
+[CNF-子句] 新增子句 #1, 类型=2, 长度=3, 说明=初始组#0 至少满足一项
+[CNF-子句] 内容: (var6=0, t=0) OR (var17=0, t=0) OR (var0=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var6=0, t=0)，说明=初始组#1 项#0
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var17=0, t=0)，说明=初始组#1 项#1
+[CNF-变量] 新建事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var3=0, t=0)，说明=初始组#1 项#2
+[CNF-子句] 新增子句 #2, 类型=2, 长度=3, 说明=初始组#1 至少满足一项
+[CNF-子句] 内容: (var6=0, t=0) OR (var17=0, t=0) OR (var3=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var6=0, t=0)，说明=初始组#2 项#0
+[CNF-变量] 新建事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var8=0, t=0)，说明=初始组#2 项#1
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var0=0, t=0)，说明=初始组#2 项#2
+[CNF-子句] 新增子句 #3, 类型=2, 长度=3, 说明=初始组#2 至少满足一项
+[CNF-子句] 内容: (var6=0, t=0) OR (var0=0, t=0) OR (var8=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var6=0, t=0)，说明=初始组#3 项#0
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var8=0, t=0)，说明=初始组#3 项#1
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var3=0, t=0)，说明=初始组#3 项#2
+[CNF-子句] 新增子句 #4, 类型=2, 长度=3, 说明=初始组#3 至少满足一项
+[CNF-子句] 内容: (var6=0, t=0) OR (var3=0, t=0) OR (var8=0, t=0)
+[CNF-变量] 新建事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var9=0, t=0)，说明=初始组#4 项#0
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var17=0, t=0)，说明=初始组#4 项#1
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var0=0, t=0)，说明=初始组#4 项#2
+[CNF-子句] 新增子句 #5, 类型=2, 长度=3, 说明=初始组#4 至少满足一项
+[CNF-子句] 内容: (var17=0, t=0) OR (var0=0, t=0) OR (var9=0, t=0)
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var9=0, t=0)，说明=初始组#5 项#0
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var17=0, t=0)，说明=初始组#5 项#1
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var3=0, t=0)，说明=初始组#5 项#2
+[CNF-子句] 新增子句 #6, 类型=2, 长度=3, 说明=初始组#5 至少满足一项
+[CNF-子句] 内容: (var17=0, t=0) OR (var3=0, t=0) OR (var9=0, t=0)
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var9=0, t=0)，说明=初始组#6 项#0
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-化简] AND门单输入折叠，直接复用 (var8=0, t=0)，说明=初始组#6 项#1
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-子句] 新增子句 #7, 类型=2, 长度=3, 说明=初始组#6 至少满足一项
+[CNF-子句] 内容: (var0=0, t=0) OR (var8=0, t=0) OR (var9=0, t=0)
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-子句] 新增子句 #8, 类型=2, 长度=3, 说明=初始组#7 至少满足一项
+[CNF-子句] 内容: (var3=0, t=0) OR (var8=0, t=0) OR (var9=0, t=0)
+[CNF-变量] 新建事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 新建事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-子句] 新增子句 #9, 类型=2, 长度=2, 说明=初始组#8 至少满足一项
+[CNF-子句] 内容: (var10=0, t=0) OR (var16=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 新建事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-子句] 新增子句 #10, 类型=2, 长度=2, 说明=初始组#9 至少满足一项
+[CNF-子句] 内容: (var10=0, t=0) OR (var2=0, t=0)
+[CNF-变量] 新建事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-子句] 新增子句 #11, 类型=2, 长度=2, 说明=初始组#10 至少满足一项
+[CNF-子句] 内容: (var16=0, t=0) OR (var1=0, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-子句] 新增子句 #12, 类型=2, 长度=2, 说明=初始组#11 至少满足一项
+[CNF-子句] 内容: (var2=0, t=0) OR (var1=0, t=0)
+[CNF-变量] 新建事实变量 id=11, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-子句] 新增子句 #13, 类型=2, 长度=2, 说明=初始组#12 至少满足一项
+[CNF-子句] 内容: (var7=0, t=0) OR (var11=0, t=0)
+[CNF-变量] 复用事实变量 id=11, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=13, 含义=(var12=0, t=0)
+[CNF-子句] 新增子句 #14, 类型=2, 长度=2, 说明=初始组#13 至少满足一项
+[CNF-子句] 内容: (var7=0, t=0) OR (var12=0, t=0)
+[CNF-变量] 新建事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-子句] 新增子句 #15, 类型=2, 长度=2, 说明=初始组#14 至少满足一项
+[CNF-子句] 内容: (var11=0, t=0) OR (var13=0, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=13, 含义=(var12=0, t=0)
+[CNF-子句] 新增子句 #16, 类型=2, 长度=2, 说明=初始组#15 至少满足一项
+[CNF-子句] 内容: (var12=0, t=0) OR (var13=0, t=0)
+[CNF-变量] 新建事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 新建事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-子句] 新增子句 #17, 类型=2, 长度=2, 说明=初始组#16 至少满足一项
+[CNF-子句] 内容: (var4=0, t=0) OR (var5=0, t=0)
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 新建事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-子句] 新增子句 #18, 类型=2, 长度=2, 说明=初始组#17 至少满足一项
+[CNF-子句] 内容: (var4=0, t=0) OR (var14=0, t=0)
+[CNF-变量] 新建事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-子句] 新增子句 #19, 类型=2, 长度=2, 说明=初始组#18 至少满足一项
+[CNF-子句] 内容: (var5=0, t=0) OR (var15=0, t=0)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-子句] 新增子句 #20, 类型=2, 长度=2, 说明=初始组#19 至少满足一项
+[CNF-子句] 内容: (var14=0, t=0) OR (var15=0, t=0)
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 新建事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-子句] 内容: (var16=0, t=0) OR (var16=1, t=0)
+[CNF-子句] 内容: ¬(var16=1, t=0) OR ¬(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 新建事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-子句] 内容: (var15=0, t=0) OR (var15=1, t=0)
+[CNF-子句] 内容: ¬(var15=1, t=0) OR ¬(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-变量] 新建事实变量 id=21, 含义=(var14=1, t=0)
+[CNF-子句] 内容: (var14=0, t=0) OR (var14=1, t=0)
+[CNF-子句] 内容: ¬(var14=1, t=0) OR ¬(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-子句] 内容: (var13=0, t=0) OR (var13=1, t=0)
+[CNF-子句] 内容: ¬(var13=1, t=0) OR ¬(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=13, 含义=(var12=0, t=0)
+[CNF-变量] 新建事实变量 id=23, 含义=(var12=1, t=0)
+[CNF-子句] 内容: (var12=0, t=0) OR (var12=1, t=0)
+[CNF-子句] 内容: ¬(var12=1, t=0) OR ¬(var12=0, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 新建事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-子句] 内容: (var11=0, t=0) OR (var11=1, t=0)
+[CNF-子句] 内容: ¬(var11=1, t=0) OR ¬(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 新建事实变量 id=25, 含义=(var10=1, t=0)
+[CNF-子句] 内容: (var10=0, t=0) OR (var10=1, t=0)
+[CNF-子句] 内容: ¬(var10=1, t=0) OR ¬(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=11, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=26, 含义=(var7=1, t=0)
+[CNF-子句] 内容: (var7=0, t=0) OR (var7=1, t=0)
+[CNF-子句] 内容: ¬(var7=1, t=0) OR ¬(var7=0, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 新建事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-子句] 内容: (var5=0, t=0) OR (var5=1, t=0)
+[CNF-子句] 内容: ¬(var5=1, t=0) OR ¬(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 新建事实变量 id=28, 含义=(var4=1, t=0)
+[CNF-子句] 内容: (var4=0, t=0) OR (var4=1, t=0)
+[CNF-子句] 内容: ¬(var4=1, t=0) OR ¬(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 新建事实变量 id=29, 含义=(var2=1, t=0)
+[CNF-子句] 内容: (var2=0, t=0) OR (var2=1, t=0)
+[CNF-子句] 内容: ¬(var2=1, t=0) OR ¬(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-子句] 内容: (var1=0, t=0) OR (var1=1, t=0)
+[CNF-子句] 内容: ¬(var1=1, t=0) OR ¬(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-子句] 内容: (var0=0, t=0) OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-子句] 内容: (var6=0, t=0) OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-子句] 内容: (var17=0, t=0) OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var17=0, t=0)
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-变量] 新建事实变量 id=34, 含义=(var9=1, t=0)
+[CNF-子句] 内容: (var9=0, t=0) OR (var9=1, t=0)
+[CNF-子句] 内容: ¬(var9=1, t=0) OR ¬(var9=0, t=0)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 新建事实变量 id=35, 含义=(var8=1, t=0)
+[CNF-子句] 内容: (var8=0, t=0) OR (var8=1, t=0)
+[CNF-子句] 内容: ¬(var8=1, t=0) OR ¬(var8=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-变量] 新建事实变量 id=36, 含义=(var3=1, t=0)
+[CNF-子句] 内容: (var3=0, t=0) OR (var3=1, t=0)
+[CNF-子句] 内容: ¬(var3=1, t=0) OR ¬(var3=0, t=0)
+[CNF-静态基座] 构造完成: vars=36, clauses=56
+[CNF-静态基座] 已恢复静态基座: vars=36, clauses=56
+[CNF-验证] 开始构造计划失败 CNF，计划长度=0
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-子句] 新增子句 #57, 类型=11, 长度=3, 说明=最终失败条件：不是所有根条件都成立
+[CNF-子句] 内容: ¬(var9=0, t=0) OR ¬(var8=0, t=0) OR ¬(var3=0, t=0)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=0
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=0
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=0
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=0
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=0
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=0
+[CNF-化简] 估计少加子句=0
+[CNF-缓存] 变量骨架缓存命中次数=0
+[CNF-缓存] 变量骨架缓存未命中次数=0
+[CNF-缓存] 变量桶内处理值请求次数=0
+[CNF-缓存] 实例化ADD支持项次数=0
+[CNF-缓存] 实例化DEL支持项次数=0
+[CNF-缓存] 支持项门缓存命中次数=0
+[CNF-缓存] 支持项门缓存未命中次数=0
+[CNF-缓存] 持久变量骨架缓存大小=0 -> 0
+[CNF-缓存] support term pool 复用命中次数=0, pool_size=0
+[CNF-化简] persistence别名命中次数=0
+[CNF-化简] persistence时间别名累计跨度=0
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=0, cache_size=0
+[CNF-跨轮] 后缀摘要 build_count=1, reuse_count=0
+[CNF-跨轮] 本轮复用公共后缀步数=0, 本轮重建前缀步数=0
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=0, 累计跳过步数=0
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=0
+[CNF-跨轮] 回归调度插入事实数=0, 实际处理事实数=0, time0落地事实数=3
+[CNF-P8-count] logical_schedule_attempts=0, inserted=0, suppressed=0, active_attempts=0, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=1, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=0, compared=0, equal=0, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=off, replay_layers=0, replay_buckets=0, replay_facts=0, suppressed=0, allowed=0, attempts=0
+[CNF-P1] plan_size=0, regression_loop_scanned_steps=0, active_layers=0, processed_buckets=0
+[CNF-P1] AND门请求次数=0, OR门请求次数=0, 空support项=0, 非空support项=0
+[CNF-P2] 回归case记录使用次数=0, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=0, 前缀扫描步数=0, 后缀重放步数=0
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=0
+[CNF-P4] branch_lit_vector_hit=0, branch_lit_vector_miss=0
+[CNF-汇总] 事实变量数=36
+[CNF-汇总] 辅助变量数=0
+[CNF-汇总] 变量总数=36
+[CNF-汇总] 子句总数=57
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=3
+[CNF-汇总] 回归层峰值事实数=0
+[Kissat] 开始装载CNF，子句总数=57
+[Kissat] 开始求解...
+[Kissat] 求解结果: SAT，发现反例。
+[Kissat-模型] 开始恢复 t=0 反例状态。
+[Kissat-模型] 恢复: var0 = 0
+[Kissat-模型] 恢复: var3 = 0
+[Kissat-模型] 恢复: var16 = 0
+[Kissat-模型] 恢复: var2 = 0
+[Kissat-模型] 恢复: var11 = 0
+[Kissat-模型] 恢复: var12 = 0
+[Kissat-模型] 恢复: var5 = 0
+[Kissat-模型] 恢复: var14 = 0
+[Kissat-模型] 恢复: var15 = 1
+[Kissat-模型] 恢复: var13 = 1
+[Kissat-模型] 恢复: var10 = 1
+[Kissat-模型] 恢复: var7 = 1
+[Kissat-模型] 恢复: var4 = 1
+[Kissat-模型] 恢复: var1 = 1
+[Kissat-模型] 恢复: var6 = 1
+[Kissat-模型] 恢复: var17 = 1
+[Kissat-模型] 恢复: var9 = 1
+[Kissat-模型] 恢复: var8 = 1
+[Kissat-模型] 恢复完成，共恢复 18 个 time0 变量。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=0
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=0
+[IGC-VERIFY] iteration=bootstrap plan_len=0 status=COUNTEREXAMPLE build_ms=0 solve_ms=0 extract_ms=0
+[IGC-ITERATION-PHASE] iteration=0 phase=REFINED fallback_counts_as_iteration=1 generated_full_fallback=disabled
+[IGC-REFINED-BUDGET] iteration=0 mode=CE_ONLY refined_iteration_count=1 ce_elapsed=0 probe_single_timeout=30 probe_max_refined_iterations=3 probe_total_budget=90 ce_only_total_budget=3600
+[IGC-WRITER] iteration=0 mode=structured_product syntax=cff_adaptive_generalized_cgcff_onf_dnf counterexamples=1 visible_worlds=1 raw_mapped_atoms=18 mapped_atoms=18 skipped_internal_atoms=0 skipped_removed_variables=0 fixed_true=0 fixed_false=0 varying=0 unknown=0 oneof=0 or=0 cgcff_components=20 cgcff_selected=0 cgcff_deleted_redundant_singleton_dnfs=0 selectors=0 selector_implications=0 icpces_complements=0 status=OK
+[IGC-ADAPTIVE-LAYER4] iteration=0 group_close=0 semantic_close=0 alt_ratio=0.000 alt=0/48 oneof=0/0 or=0/20 selected=0 plateau=0 plateau_streak=0 profile=progressive-semantic-closure
+[IGC-VALIDATE] CFF/CGCFF validation passed: direct-init forms=8, known=8, unknown=0, oneof=0, or=0, cgcff_components=20, cgcff_selected=0, deleted_redundant_singleton_dnf=0; atom accounting intentionally skipped for literature reconstruct-problem profile status=OK
+[IGC-CFF-DOMAIN] iteration=0 status=OK message=CFF-compatible domain written; removed unsupported requirement keywords
+[IGC-PDDL-PAIR] iteration=0 mode=REFINED_GENERATED status=OK message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid
+[CFF-RUNNER] runtime=/root/workspace/research/CE-planner-test/conformant-ff
+[CFF-RUNNER] attempt=primary args=-h 2
+[CFF-RUNNER] command=cd '/root/workspace/research/CE-planner-test/runs/run_513/iter_0000' && '/root/workspace/research/CE-planner-test/conformant-ff/ff' -h 2 -o '/root/workspace/research/CE-planner-test/runs/run_513/iter_0000/refined_cff_domain.pddl' -f '/root/workspace/research/CE-planner-test/runs/run_513/iter_0000/refined_cff_problem.pddl' > '/root/workspace/research/CE-planner-test/runs/run_513/iter_0000/planner.stdout' 2> '/root/workspace/research/CE-planner-test/runs/run_513/iter_0000/planner.stderr'
+[CFF-RUNNER] process_start pid=514 pgid=514 sid=514 timeout=3600
+[CFF-RUNNER] process_end pid=514 elapsed=0.101
+[IGC-PLANNER] planner=CFF iteration=0 status=OK timeout=3600 elapsed=0 ce_guidance_trial=0 ce_guidance_full_budget_retry=0 execution_mode=CE_ONLY refined_iteration_count=1
+[IGC-MAP] actions=2 status=OK
+[IGC-ADAPTIVE-SEMANTIC-CLOSURE] iteration=0 planner=CFF relevance_symbols=6 added=2 source=goal_and_failed_candidate_plan
+[IGC-SAMPLE-VERIFY] iteration=0 worlds=1 status=OK message=candidate is executable and goal-reaching in all 1 accumulated sampled worlds
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 已恢复静态基座: vars=36, clauses=56
+[CNF-验证] 开始构造计划失败 CNF，计划长度=2
+[CNF-变量] 新建事实变量 id=37, 含义=(var9=0, t=2)
+[CNF-变量] 新建事实变量 id=38, 含义=(var8=0, t=2)
+[CNF-变量] 新建事实变量 id=39, 含义=(var3=0, t=2)
+[CNF-变量] 复用事实变量 id=37, 含义=(var9=0, t=2)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 新建事实变量 id=40, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=41, 类型=1, 含义=回归ADD支持 (var9=0, t=2)
+[CNF-子句] 新增子句 #57, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 新增子句 #58, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 新增子句 #59, 类型=7, 长度=3, 说明=回归ADD支持 (var9=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var5=0, t=0) OR aux#41{回归ADD支持 (var9=0, t=2)}
+[CNF-门] 构造AND门 out=x41, 输入数量=2, 说明=回归ADD支持 (var9=0, t=2)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=42, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=43, 类型=1, 含义=回归ADD支持 (var9=0, t=2)
+[CNF-子句] 新增子句 #60, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 新增子句 #61, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 新增子句 #62, 类型=7, 长度=3, 说明=回归ADD支持 (var9=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var13=0, t=0) OR aux#43{回归ADD支持 (var9=0, t=2)}
+[CNF-门] 构造AND门 out=x43, 输入数量=2, 说明=回归ADD支持 (var9=0, t=2)
+[CNF-变量] 新建事实变量 id=44, 含义=(var9=0, t=1)
+[CNF-子句] 新增子句 #63, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var9=0, t=2) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var9=0, t=2) OR aux#41{回归ADD支持 (var9=0, t=2)} OR aux#43{回归ADD支持 (var9=0, t=2)} OR (var9=0, t=1)
+[CNF-子句] 新增子句 #64, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=2)} OR (var9=0, t=2)
+[CNF-子句] 新增子句 #65, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=2)} OR (var9=0, t=2)
+[CNF-子句] 新增子句 #66, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var9=0, t=1) OR (var9=0, t=2)
+[CNF-变量] 复用事实变量 id=38, 含义=(var8=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=40, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=45, 类型=1, 含义=回归ADD支持 (var8=0, t=2)
+[CNF-子句] 新增子句 #67, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 新增子句 #68, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 新增子句 #69, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var15=0, t=0) OR aux#45{回归ADD支持 (var8=0, t=2)}
+[CNF-门] 构造AND门 out=x45, 输入数量=2, 说明=回归ADD支持 (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 新建事实变量 id=46, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=47, 类型=1, 含义=回归ADD支持 (var8=0, t=2)
+[CNF-子句] 新增子句 #70, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 新增子句 #71, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 新增子句 #72, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var16=0, t=0) OR aux#47{回归ADD支持 (var8=0, t=2)}
+[CNF-门] 构造AND门 out=x47, 输入数量=2, 说明=回归ADD支持 (var8=0, t=2)
+[CNF-变量] 新建事实变量 id=48, 含义=(var8=0, t=1)
+[CNF-子句] 新增子句 #73, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var8=0, t=2) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var8=0, t=2) OR aux#45{回归ADD支持 (var8=0, t=2)} OR aux#47{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=1)
+[CNF-子句] 新增子句 #74, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #75, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #76, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=39, 含义=(var3=0, t=2)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=46, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=49, 类型=1, 含义=回归ADD支持 (var3=0, t=2)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var1=0, t=0) OR aux#49{回归ADD支持 (var3=0, t=2)}
+[CNF-门] 构造AND门 out=x49, 输入数量=2, 说明=回归ADD支持 (var3=0, t=2)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=42, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=50, 类型=1, 含义=回归ADD支持 (var3=0, t=2)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var11=0, t=0) OR aux#50{回归ADD支持 (var3=0, t=2)}
+[CNF-门] 构造AND门 out=x50, 输入数量=2, 说明=回归ADD支持 (var3=0, t=2)
+[CNF-变量] 新建事实变量 id=51, 含义=(var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=2) OR aux#49{回归ADD支持 (var3=0, t=2)} OR aux#50{回归ADD支持 (var3=0, t=2)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=2)} OR (var3=0, t=2)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=2)} OR (var3=0, t=2)
+[CNF-子句] 内容: ¬(var3=0, t=1) OR (var3=0, t=2)
+[CNF-变量] 复用事实变量 id=40, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=52, 类型=1, 含义=回归ADD支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var0=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var0=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#52{回归ADD支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x52, 输入数量=2, 说明=回归ADD支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=53, 类型=1, 含义=回归ADD支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬(var11=0, t=0) OR ¬(var17=0, t=0) OR aux#53{回归ADD支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x53, 输入数量=2, 说明=回归ADD支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=54, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#54{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#54{回归DEL支持 (var0=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#54{回归DEL支持 (var0=0, t=1)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#54{回归DEL支持 (var0=0, t=1)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬(var1=1, t=0) OR ¬(var11=1, t=0) OR ¬(var5=0, t=0) OR ¬(var0=0, t=0) OR aux#54{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x54, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=55, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#55{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#55{回归DEL支持 (var0=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#55{回归DEL支持 (var0=0, t=1)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#55{回归DEL支持 (var0=0, t=1)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬(var1=1, t=0) OR ¬(var11=1, t=0) OR ¬(var15=0, t=0) OR ¬(var0=0, t=0) OR aux#55{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x55, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 新建辅助变量 id=56, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#56{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#56{回归DEL支持 (var0=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#56{回归DEL支持 (var0=0, t=1)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#56{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var11=1, t=0) OR ¬(var5=0, t=0) OR ¬(var0=0, t=0) OR aux#56{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x56, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 新建辅助变量 id=57, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=1)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var11=1, t=0) OR ¬(var15=0, t=0) OR ¬(var0=0, t=0) OR aux#57{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x57, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=58, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=1)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var1=1, t=0) OR ¬(var5=0, t=0) OR ¬(var0=0, t=0) OR aux#58{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x58, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=59, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#59{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#59{回归DEL支持 (var0=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#59{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬aux#59{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var6=1, t=0) OR ¬(var5=0, t=0) OR ¬(var0=0, t=0) OR aux#59{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x59, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=60, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var6=1, t=0) OR ¬(var15=0, t=0) OR ¬(var0=0, t=0) OR aux#60{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x60, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=61, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=1)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var1=1, t=0) OR ¬(var15=0, t=0) OR ¬(var0=0, t=0) OR aux#61{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造AND门 out=x61, 输入数量=4, 说明=回归DEL支持 (var0=0, t=1)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=62, 类型=2, 含义=回归ADD_OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var0=0, t=1)} OR aux#62{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=1)} OR aux#62{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#62{回归ADD_OR (var0=0, t=1)} OR aux#52{回归ADD支持 (var0=0, t=1)} OR aux#53{回归ADD支持 (var0=0, t=1)}
+[CNF-门] 构造OR门 out=x62, 输入数量=2, 说明=回归ADD_OR (var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=63, 类型=2, 含义=回归DEL_OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#54{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#55{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#56{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#59{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=1)} OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#63{回归DEL_OR (var0=0, t=1)} OR aux#54{回归DEL支持 (var0=0, t=1)} OR aux#55{回归DEL支持 (var0=0, t=1)} OR aux#56{回归DEL支持 (var0=0, t=1)} OR aux#57{回归DEL支持 (var0=0, t=1)} OR aux#58{回归DEL支持 (var0=0, t=1)} OR aux#59{回归DEL支持 (var0=0, t=1)} OR aux#60{回归DEL支持 (var0=0, t=1)} OR aux#61{回归DEL支持 (var0=0, t=1)}
+[CNF-门] 构造OR门 out=x63, 输入数量=8, 说明=回归DEL_OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#63{回归DEL_OR (var0=0, t=1)} OR ¬(var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR (var0=0, t=0) OR aux#62{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬(var0=0, t=0) OR (var0=0, t=1) OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#62{回归ADD_OR (var0=0, t=1)} OR (var0=0, t=1) OR aux#63{回归DEL_OR (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=46, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=64, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬(var5=0, t=0) OR ¬(var0=0, t=0) OR aux#64{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x64, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=65, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#65{回归ADD支持 (var6=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#65{回归ADD支持 (var6=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬(var13=0, t=0) OR ¬(var17=0, t=0) OR aux#65{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x65, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=66, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=1)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var13=1, t=0) OR ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#66{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=67, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=1)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=1)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var13=1, t=0) OR ¬(var16=0, t=0) OR ¬(var6=0, t=0) OR aux#67{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=68, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var0=1, t=0) OR ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#68{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=69, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#69{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#69{回归DEL支持 (var6=0, t=1)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#69{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#69{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var0=1, t=0) OR ¬(var16=0, t=0) OR ¬(var6=0, t=0) OR aux#69{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=70, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#70{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#70{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#70{回归DEL支持 (var6=0, t=1)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#70{回归DEL支持 (var6=0, t=1)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬(var5=1, t=0) OR ¬(var13=1, t=0) OR ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#70{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=71, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var6=0, t=1)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var6=0, t=1)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var6=0, t=1)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬(var5=1, t=0) OR ¬(var13=1, t=0) OR ¬(var16=0, t=0) OR ¬(var6=0, t=0) OR aux#71{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=72, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=1)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=1)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var5=1, t=0) OR ¬(var16=0, t=0) OR ¬(var6=0, t=0) OR aux#72{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=73, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=1)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var5=1, t=0) OR ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#73{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=74, 类型=2, 含义=回归ADD_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=1)} OR aux#74{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#65{回归ADD支持 (var6=0, t=1)} OR aux#74{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#74{回归ADD_OR (var6=0, t=1)} OR aux#64{回归ADD支持 (var6=0, t=1)} OR aux#65{回归ADD支持 (var6=0, t=1)}
+[CNF-变量] 新建辅助变量 id=75, 类型=2, 含义=回归DEL_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#69{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#70{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=1)} OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#75{回归DEL_OR (var6=0, t=1)} OR aux#66{回归DEL支持 (var6=0, t=1)} OR aux#67{回归DEL支持 (var6=0, t=1)} OR aux#68{回归DEL支持 (var6=0, t=1)} OR aux#69{回归DEL支持 (var6=0, t=1)} OR aux#70{回归DEL支持 (var6=0, t=1)} OR aux#71{回归DEL支持 (var6=0, t=1)} OR aux#72{回归DEL支持 (var6=0, t=1)} OR aux#73{回归DEL支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#75{回归DEL_OR (var6=0, t=1)} OR ¬(var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=0) OR aux#74{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬(var6=0, t=0) OR (var6=0, t=1) OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#74{回归ADD_OR (var6=0, t=1)} OR (var6=0, t=1) OR aux#75{回归DEL_OR (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=42, 含义=(var17=0, t=1)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=76, 类型=1, 含义=回归ADD支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#76{回归ADD支持 (var17=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#76{回归ADD支持 (var17=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬(var15=0, t=0) OR ¬(var0=0, t=0) OR aux#76{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=77, 类型=1, 含义=回归ADD支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#77{回归ADD支持 (var17=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#77{回归ADD支持 (var17=0, t=1)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬(var16=0, t=0) OR ¬(var6=0, t=0) OR aux#77{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=78, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var17=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var0=1, t=0) OR ¬(var11=0, t=0) OR ¬(var17=0, t=0) OR aux#78{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=79, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var17=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var17=0, t=1)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var16=1, t=0) OR ¬(var11=0, t=0) OR ¬(var17=0, t=0) OR aux#79{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=80, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#80{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#80{回归DEL支持 (var17=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#80{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#80{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var0=1, t=0) OR ¬(var13=0, t=0) OR ¬(var17=0, t=0) OR aux#80{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=81, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var17=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var17=0, t=1)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var16=1, t=0) OR ¬(var13=0, t=0) OR ¬(var17=0, t=0) OR aux#81{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=82, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var17=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var17=0, t=1)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var17=0, t=1)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬(var15=1, t=0) OR ¬(var16=1, t=0) OR ¬(var11=0, t=0) OR ¬(var17=0, t=0) OR aux#82{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=83, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#83{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#83{回归DEL支持 (var17=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#83{回归DEL支持 (var17=0, t=1)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#83{回归DEL支持 (var17=0, t=1)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬(var15=1, t=0) OR ¬(var16=1, t=0) OR ¬(var13=0, t=0) OR ¬(var17=0, t=0) OR aux#83{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=84, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=1)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var15=1, t=0) OR ¬(var11=0, t=0) OR ¬(var17=0, t=0) OR aux#84{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=85, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=1)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var15=1, t=0) OR ¬(var13=0, t=0) OR ¬(var17=0, t=0) OR aux#85{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=86, 类型=2, 含义=回归ADD_OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#76{回归ADD支持 (var17=0, t=1)} OR aux#86{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#77{回归ADD支持 (var17=0, t=1)} OR aux#86{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#86{回归ADD_OR (var17=0, t=1)} OR aux#76{回归ADD支持 (var17=0, t=1)} OR aux#77{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=87, 类型=2, 含义=回归DEL_OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#80{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#83{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=1)} OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#87{回归DEL_OR (var17=0, t=1)} OR aux#78{回归DEL支持 (var17=0, t=1)} OR aux#79{回归DEL支持 (var17=0, t=1)} OR aux#80{回归DEL支持 (var17=0, t=1)} OR aux#81{回归DEL支持 (var17=0, t=1)} OR aux#82{回归DEL支持 (var17=0, t=1)} OR aux#83{回归DEL支持 (var17=0, t=1)} OR aux#84{回归DEL支持 (var17=0, t=1)} OR aux#85{回归DEL支持 (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#87{回归DEL_OR (var17=0, t=1)} OR ¬(var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR (var17=0, t=0) OR aux#86{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬(var17=0, t=0) OR (var17=0, t=1) OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#86{回归ADD_OR (var17=0, t=1)} OR (var17=0, t=1) OR aux#87{回归DEL_OR (var17=0, t=1)}
+[CNF-变量] 复用事实变量 id=44, 含义=(var9=0, t=1)
+[CNF-变量] 复用事实变量 id=6, 含义=(var9=0, t=0)
+[CNF-子句] 内容: ¬(var9=0, t=1) OR (var9=0, t=0) OR aux#64{回归ADD支持 (var6=0, t=1)} OR aux#65{回归ADD支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=1)} OR (var9=0, t=1)
+[CNF-子句] 内容: ¬aux#65{回归ADD支持 (var6=0, t=1)} OR (var9=0, t=1)
+[CNF-子句] 内容: ¬(var9=0, t=0) OR (var9=0, t=1)
+[CNF-变量] 复用事实变量 id=48, 含义=(var8=0, t=1)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=0) OR aux#76{回归ADD支持 (var17=0, t=1)} OR aux#77{回归ADD支持 (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#76{回归ADD支持 (var17=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#77{回归ADD支持 (var17=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=0) OR (var8=0, t=1)
+[CNF-变量] 复用事实变量 id=51, 含义=(var3=0, t=1)
+[CNF-变量] 复用事实变量 id=4, 含义=(var3=0, t=0)
+[CNF-子句] 内容: ¬(var3=0, t=1) OR (var3=0, t=0) OR aux#52{回归ADD支持 (var0=0, t=1)} OR aux#53{回归ADD支持 (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var0=0, t=1)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=1)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=0) OR (var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=2) OR ¬(var8=0, t=2) OR ¬(var9=0, t=2)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=1
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=1
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=0
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=6
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=3
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=0
+[CNF-化简] 估计少加子句=0
+[CNF-缓存] 变量骨架缓存命中次数=3
+[CNF-缓存] 变量骨架缓存未命中次数=6
+[CNF-缓存] 变量桶内处理值请求次数=9
+[CNF-缓存] 实例化ADD支持项次数=18
+[CNF-缓存] 实例化DEL支持项次数=24
+[CNF-缓存] 支持项门缓存命中次数=6
+[CNF-缓存] 支持项门缓存未命中次数=36
+[CNF-缓存] 持久变量骨架缓存大小=0 -> 6
+[CNF-缓存] support term pool 复用命中次数=6, pool_size=30
+[CNF-化简] persistence别名命中次数=6
+[CNF-化简] persistence时间别名累计跨度=6
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=1, cache_size=1
+[CNF-跨轮] 后缀摘要 build_count=2, reuse_count=0
+[CNF-跨轮] 本轮复用公共后缀步数=0, 本轮重建前缀步数=2
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=18, 累计跳过步数=6
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=12
+[CNF-跨轮] 回归调度插入事实数=9, 实际处理事实数=9, time0落地事实数=24
+[CNF-P8-count] logical_schedule_attempts=12, inserted=9, suppressed=0, active_attempts=0, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=3, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=0, compared=0, equal=0, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=off, replay_layers=0, replay_buckets=0, replay_facts=0, suppressed=0, allowed=0, attempts=0
+[CNF-P1] plan_size=2, regression_loop_scanned_steps=2, active_layers=2, processed_buckets=9
+[CNF-P1] AND门请求次数=36, OR门请求次数=6, 空support项=0, 非空support项=36
+[CNF-P2] 回归case记录使用次数=9, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=0, 前缀扫描步数=2, 后缀重放步数=0
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=2
+[CNF-P4] branch_lit_vector_hit=0, branch_lit_vector_miss=42
+[CNF-汇总] 事实变量数=45
+[CNF-汇总] 辅助变量数=42
+[CNF-汇总] 变量总数=87
+[CNF-汇总] 子句总数=285
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=21
+[CNF-汇总] 回归层峰值事实数=6
+[Kissat] 开始装载CNF，子句总数=285
+[Kissat] 开始求解...
+[Kissat] 求解结果: SAT，发现反例。
+[Kissat-模型] 开始恢复 t=0 反例状态。
+[Kissat-模型] 恢复: var0 = 0
+[Kissat-模型] 恢复: var3 = 0
+[Kissat-模型] 恢复: var16 = 0
+[Kissat-模型] 恢复: var2 = 0
+[Kissat-模型] 恢复: var11 = 0
+[Kissat-模型] 恢复: var12 = 0
+[Kissat-模型] 恢复: var4 = 0
+[Kissat-模型] 恢复: var15 = 0
+[Kissat-模型] 恢复: var14 = 1
+[Kissat-模型] 恢复: var13 = 1
+[Kissat-模型] 恢复: var10 = 1
+[Kissat-模型] 恢复: var7 = 1
+[Kissat-模型] 恢复: var5 = 1
+[Kissat-模型] 恢复: var1 = 1
+[Kissat-模型] 恢复: var6 = 1
+[Kissat-模型] 恢复: var17 = 1
+[Kissat-模型] 恢复: var9 = 1
+[Kissat-模型] 恢复: var8 = 1
+[Kissat-模型] 恢复完成，共恢复 18 个 time0 变量。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=0
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=0
+[IGC-VERIFY] iteration=0 plan_len=2 status=COUNTEREXAMPLE build_ms=1 solve_ms=0 extract_ms=0
+[IGC-CE-PROGRESS] iteration=0 phase=REFINED status=NEW_COUNTEREXAMPLE primary_or_batch_inserted=1 aligned_completion_added=0 next_phase=REFINED fallback_triggered=0
+[IGC-PHASE-TRANSITION] iteration=0 from=REFINED to=REFINED status=COUNTEREXAMPLE reason=new_counterexample_continue_refined
+[IGC-STORE] size=2 inserted_new=yes duplicate_streak=0
+[IGC-ITERATION-PHASE] iteration=1 phase=REFINED fallback_counts_as_iteration=1 generated_full_fallback=disabled
+[IGC-REFINED-BUDGET] iteration=1 mode=CE_ONLY refined_iteration_count=2 ce_elapsed=0 probe_single_timeout=30 probe_max_refined_iterations=3 probe_total_budget=90 ce_only_total_budget=3600
+[IGC-WRITER] iteration=1 mode=structured_product syntax=cff_adaptive_generalized_cgcff_onf_dnf counterexamples=2 visible_worlds=2 raw_mapped_atoms=18 mapped_atoms=18 skipped_internal_atoms=0 skipped_removed_variables=0 fixed_true=0 fixed_false=0 varying=0 unknown=4 oneof=0 or=4 cgcff_components=20 cgcff_selected=40 cgcff_deleted_redundant_singleton_dnfs=0 selectors=0 selector_implications=0 icpces_complements=0 status=OK
+[IGC-ADAPTIVE-LAYER4] iteration=1 group_close=0 semantic_close=0 alt_ratio=0.833 alt=40/48 oneof=0/0 or=4/20 selected=40 plateau=0 plateau_streak=0 profile=progressive-semantic-closure
+[IGC-VALIDATE] CFF/CGCFF validation passed: direct-init forms=14, known=6, unknown=4, oneof=0, or=4, cgcff_components=20, cgcff_selected=40, deleted_redundant_singleton_dnf=0; atom accounting intentionally skipped for literature reconstruct-problem profile status=OK
+[IGC-CFF-DOMAIN] iteration=1 status=OK message=CFF-compatible domain written; removed unsupported requirement keywords
+[IGC-PDDL-PAIR] iteration=1 mode=REFINED_GENERATED status=OK message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid
+[CFF-RUNNER] runtime=/root/workspace/research/CE-planner-test/conformant-ff
+[CFF-RUNNER] attempt=primary args=-h 2
+[CFF-RUNNER] command=cd '/root/workspace/research/CE-planner-test/runs/run_513/iter_0001' && '/root/workspace/research/CE-planner-test/conformant-ff/ff' -h 2 -o '/root/workspace/research/CE-planner-test/runs/run_513/iter_0001/refined_cff_domain.pddl' -f '/root/workspace/research/CE-planner-test/runs/run_513/iter_0001/refined_cff_problem.pddl' > '/root/workspace/research/CE-planner-test/runs/run_513/iter_0001/planner.stdout' 2> '/root/workspace/research/CE-planner-test/runs/run_513/iter_0001/planner.stderr'
+[CFF-RUNNER] process_start pid=517 pgid=517 sid=517 timeout=3600
+[CFF-RUNNER] process_end pid=517 elapsed=0.101
+[IGC-PLANNER] planner=CFF iteration=1 status=OK timeout=3600 elapsed=0 ce_guidance_trial=0 ce_guidance_full_budget_retry=0 execution_mode=CE_ONLY refined_iteration_count=2
+[IGC-MAP] actions=3 status=OK
+[IGC-ADAPTIVE-SEMANTIC-CLOSURE] iteration=1 planner=CFF relevance_symbols=7 added=1 source=goal_and_failed_candidate_plan
+[IGC-SAMPLE-VERIFY] iteration=1 worlds=2 status=OK message=candidate is executable and goal-reaching in all 2 accumulated sampled worlds
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 已恢复静态基座: vars=36, clauses=56
+[CNF-验证] 开始构造计划失败 CNF，计划长度=3
+[CNF-变量] 新建事实变量 id=37, 含义=(var9=0, t=3)
+[CNF-变量] 新建事实变量 id=38, 含义=(var8=0, t=3)
+[CNF-变量] 新建事实变量 id=39, 含义=(var3=0, t=3)
+[CNF-变量] 复用事实变量 id=37, 含义=(var9=0, t=3)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 新建事实变量 id=40, 含义=(var0=0, t=2)
+[CNF-变量] 新建辅助变量 id=41, 类型=1, 含义=回归ADD支持 (var9=0, t=3)
+[CNF-子句] 新增子句 #57, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=3)} OR (var5=0, t=0)
+[CNF-子句] 新增子句 #58, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=3)} OR (var0=0, t=2)
+[CNF-子句] 新增子句 #59, 类型=7, 长度=3, 说明=回归ADD支持 (var9=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var0=0, t=2) OR ¬(var5=0, t=0) OR aux#41{回归ADD支持 (var9=0, t=3)}
+[CNF-门] 构造AND门 out=x41, 输入数量=2, 说明=回归ADD支持 (var9=0, t=3)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=42, 含义=(var17=0, t=2)
+[CNF-变量] 新建辅助变量 id=43, 类型=1, 含义=回归ADD支持 (var9=0, t=3)
+[CNF-子句] 新增子句 #60, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=3)} OR (var13=0, t=0)
+[CNF-子句] 新增子句 #61, 类型=7, 长度=2, 说明=回归ADD支持 (var9=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=3)} OR (var17=0, t=2)
+[CNF-子句] 新增子句 #62, 类型=7, 长度=3, 说明=回归ADD支持 (var9=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var17=0, t=2) OR ¬(var13=0, t=0) OR aux#43{回归ADD支持 (var9=0, t=3)}
+[CNF-门] 构造AND门 out=x43, 输入数量=2, 说明=回归ADD支持 (var9=0, t=3)
+[CNF-变量] 新建事实变量 id=44, 含义=(var9=0, t=2)
+[CNF-子句] 新增子句 #63, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var9=0, t=3) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var9=0, t=3) OR aux#41{回归ADD支持 (var9=0, t=3)} OR aux#43{回归ADD支持 (var9=0, t=3)} OR (var9=0, t=2)
+[CNF-子句] 新增子句 #64, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#41{回归ADD支持 (var9=0, t=3)} OR (var9=0, t=3)
+[CNF-子句] 新增子句 #65, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#43{回归ADD支持 (var9=0, t=3)} OR (var9=0, t=3)
+[CNF-子句] 新增子句 #66, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var9=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var9=0, t=2) OR (var9=0, t=3)
+[CNF-变量] 复用事实变量 id=38, 含义=(var8=0, t=3)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=40, 含义=(var0=0, t=2)
+[CNF-变量] 新建辅助变量 id=45, 类型=1, 含义=回归ADD支持 (var8=0, t=3)
+[CNF-子句] 新增子句 #67, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=3)} OR (var15=0, t=0)
+[CNF-子句] 新增子句 #68, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=3)} OR (var0=0, t=2)
+[CNF-子句] 新增子句 #69, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var0=0, t=2) OR ¬(var15=0, t=0) OR aux#45{回归ADD支持 (var8=0, t=3)}
+[CNF-门] 构造AND门 out=x45, 输入数量=2, 说明=回归ADD支持 (var8=0, t=3)
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 新建事实变量 id=46, 含义=(var6=0, t=2)
+[CNF-变量] 新建辅助变量 id=47, 类型=1, 含义=回归ADD支持 (var8=0, t=3)
+[CNF-子句] 新增子句 #70, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=3)} OR (var16=0, t=0)
+[CNF-子句] 新增子句 #71, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=3)} OR (var6=0, t=2)
+[CNF-子句] 新增子句 #72, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=2) OR ¬(var16=0, t=0) OR aux#47{回归ADD支持 (var8=0, t=3)}
+[CNF-门] 构造AND门 out=x47, 输入数量=2, 说明=回归ADD支持 (var8=0, t=3)
+[CNF-变量] 新建事实变量 id=48, 含义=(var8=0, t=2)
+[CNF-子句] 新增子句 #73, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var8=0, t=3) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var8=0, t=3) OR aux#45{回归ADD支持 (var8=0, t=3)} OR aux#47{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #74, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#45{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=3)
+[CNF-子句] 新增子句 #75, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#47{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=3)
+[CNF-子句] 新增子句 #76, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var8=0, t=2) OR (var8=0, t=3)
+[CNF-变量] 复用事实变量 id=39, 含义=(var3=0, t=3)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=46, 含义=(var6=0, t=2)
+[CNF-变量] 新建辅助变量 id=49, 类型=1, 含义=回归ADD支持 (var3=0, t=3)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=3)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=3)} OR (var6=0, t=2)
+[CNF-子句] 内容: ¬(var6=0, t=2) OR ¬(var1=0, t=0) OR aux#49{回归ADD支持 (var3=0, t=3)}
+[CNF-门] 构造AND门 out=x49, 输入数量=2, 说明=回归ADD支持 (var3=0, t=3)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=42, 含义=(var17=0, t=2)
+[CNF-变量] 新建辅助变量 id=50, 类型=1, 含义=回归ADD支持 (var3=0, t=3)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=3)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=3)} OR (var17=0, t=2)
+[CNF-子句] 内容: ¬(var17=0, t=2) OR ¬(var11=0, t=0) OR aux#50{回归ADD支持 (var3=0, t=3)}
+[CNF-门] 构造AND门 out=x50, 输入数量=2, 说明=回归ADD支持 (var3=0, t=3)
+[CNF-变量] 新建事实变量 id=51, 含义=(var3=0, t=2)
+[CNF-子句] 内容: ¬(var3=0, t=3) OR aux#49{回归ADD支持 (var3=0, t=3)} OR aux#50{回归ADD支持 (var3=0, t=3)} OR (var3=0, t=2)
+[CNF-子句] 内容: ¬aux#49{回归ADD支持 (var3=0, t=3)} OR (var3=0, t=3)
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var3=0, t=3)} OR (var3=0, t=3)
+[CNF-子句] 内容: ¬(var3=0, t=2) OR (var3=0, t=3)
+[CNF-变量] 复用事实变量 id=40, 含义=(var0=0, t=2)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=53, 类型=1, 含义=回归ADD支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var1=0, t=0) OR aux#53{回归ADD支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x53, 输入数量=2, 说明=回归ADD支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 新建事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=55, 类型=1, 含义=回归ADD支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#55{回归ADD支持 (var0=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#55{回归ADD支持 (var0=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var11=0, t=0) OR aux#55{回归ADD支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x55, 输入数量=2, 说明=回归ADD支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 新建事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=57, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=2)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=2)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var1=1, t=0) OR ¬(var11=1, t=0) OR ¬(var5=0, t=0) OR aux#57{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x57, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=58, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=2)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=2)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var1=1, t=0) OR ¬(var11=1, t=0) OR ¬(var15=0, t=0) OR aux#58{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x58, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 新建辅助变量 id=60, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=2)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬(var6=1, t=1) OR ¬(var0=0, t=1) OR ¬(var11=1, t=0) OR ¬(var5=0, t=0) OR aux#60{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x60, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=24, 含义=(var11=1, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 新建辅助变量 id=61, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=2)} OR (var11=1, t=0)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬(var6=1, t=1) OR ¬(var0=0, t=1) OR ¬(var11=1, t=0) OR ¬(var15=0, t=0) OR aux#61{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x61, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=63, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var0=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var0=0, t=2)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var0=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var0=0, t=1) OR ¬(var1=1, t=0) OR ¬(var5=0, t=0) OR aux#63{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x63, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=64, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var0=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var0=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var0=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var6=1, t=1) OR ¬(var0=0, t=1) OR ¬(var5=0, t=0) OR aux#64{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x64, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=65, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#65{回归DEL支持 (var0=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#65{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#65{回归DEL支持 (var0=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬aux#65{回归DEL支持 (var0=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var6=1, t=1) OR ¬(var0=0, t=1) OR ¬(var15=0, t=0) OR aux#65{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x65, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=30, 含义=(var1=1, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=66, 类型=1, 含义=回归DEL支持 (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var0=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var0=0, t=2)} OR (var1=1, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var0=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var0=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var0=0, t=1) OR ¬(var1=1, t=0) OR ¬(var15=0, t=0) OR aux#66{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造AND门 out=x66, 输入数量=4, 说明=回归DEL支持 (var0=0, t=2)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=67, 类型=2, 含义=回归ADD_OR (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=2)} OR aux#67{回归ADD_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#55{回归ADD支持 (var0=0, t=2)} OR aux#67{回归ADD_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#67{回归ADD_OR (var0=0, t=2)} OR aux#53{回归ADD支持 (var0=0, t=2)} OR aux#55{回归ADD支持 (var0=0, t=2)}
+[CNF-门] 构造OR门 out=x67, 输入数量=2, 说明=回归ADD_OR (var0=0, t=2)
+[CNF-变量] 新建辅助变量 id=68, 类型=2, 含义=回归DEL_OR (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#57{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#58{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#60{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#61{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#65{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var0=0, t=2)} OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#68{回归DEL_OR (var0=0, t=2)} OR aux#57{回归DEL支持 (var0=0, t=2)} OR aux#58{回归DEL支持 (var0=0, t=2)} OR aux#60{回归DEL支持 (var0=0, t=2)} OR aux#61{回归DEL支持 (var0=0, t=2)} OR aux#63{回归DEL支持 (var0=0, t=2)} OR aux#64{回归DEL支持 (var0=0, t=2)} OR aux#65{回归DEL支持 (var0=0, t=2)} OR aux#66{回归DEL支持 (var0=0, t=2)}
+[CNF-门] 构造OR门 out=x68, 输入数量=8, 说明=回归DEL_OR (var0=0, t=2)
+[CNF-子句] 内容: ¬aux#68{回归DEL_OR (var0=0, t=2)} OR ¬(var0=0, t=2)
+[CNF-子句] 内容: ¬(var0=0, t=2) OR (var0=0, t=1) OR aux#67{回归ADD_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬(var0=0, t=1) OR (var0=0, t=2) OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-子句] 内容: ¬aux#67{回归ADD_OR (var0=0, t=2)} OR (var0=0, t=2) OR aux#68{回归DEL_OR (var0=0, t=2)}
+[CNF-变量] 复用事实变量 id=46, 含义=(var6=0, t=2)
+[CNF-变量] 复用事实变量 id=16, 含义=(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=69, 类型=1, 含义=回归ADD支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#69{回归ADD支持 (var6=0, t=2)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#69{回归ADD支持 (var6=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var5=0, t=0) OR aux#69{回归ADD支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x69, 输入数量=2, 说明=回归ADD支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=70, 类型=1, 含义=回归ADD支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var6=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var6=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var13=0, t=0) OR aux#70{回归ADD支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x70, 输入数量=2, 说明=回归ADD支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=72, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=2)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var6=0, t=1) OR ¬(var13=1, t=0) OR ¬(var1=0, t=0) OR aux#72{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=73, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=2)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var6=0, t=1) OR ¬(var13=1, t=0) OR ¬(var16=0, t=0) OR aux#73{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=74, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#74{回归DEL支持 (var6=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#74{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#74{回归DEL支持 (var6=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬aux#74{回归DEL支持 (var6=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var17=1, t=1) OR ¬(var6=0, t=1) OR ¬(var1=0, t=0) OR aux#74{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=75, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#75{回归DEL支持 (var6=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#75{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#75{回归DEL支持 (var6=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬aux#75{回归DEL支持 (var6=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var17=1, t=1) OR ¬(var6=0, t=1) OR ¬(var16=0, t=0) OR aux#75{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=76, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#76{回归DEL支持 (var6=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#76{回归DEL支持 (var6=0, t=2)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#76{回归DEL支持 (var6=0, t=2)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#76{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var5=1, t=0) OR ¬(var13=1, t=0) OR ¬(var1=0, t=0) OR aux#76{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=22, 含义=(var13=1, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=77, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#77{回归DEL支持 (var6=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#77{回归DEL支持 (var6=0, t=2)} OR (var13=1, t=0)
+[CNF-子句] 内容: ¬aux#77{回归DEL支持 (var6=0, t=2)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#77{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var5=1, t=0) OR ¬(var13=1, t=0) OR ¬(var16=0, t=0) OR aux#77{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=78, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var6=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var6=0, t=2)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var6=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var6=0, t=1) OR ¬(var5=1, t=0) OR ¬(var16=0, t=0) OR aux#78{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=27, 含义=(var5=1, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=62, 含义=(var17=1, t=1)
+[CNF-变量] 新建辅助变量 id=79, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var6=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var6=0, t=2)} OR (var5=1, t=0)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var6=0, t=2)} OR (var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR ¬(var6=0, t=1) OR ¬(var5=1, t=0) OR ¬(var1=0, t=0) OR aux#79{回归DEL支持 (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=80, 类型=2, 含义=回归ADD_OR (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#69{回归ADD支持 (var6=0, t=2)} OR aux#80{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var6=0, t=2)} OR aux#80{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#80{回归ADD_OR (var6=0, t=2)} OR aux#69{回归ADD支持 (var6=0, t=2)} OR aux#70{回归ADD支持 (var6=0, t=2)}
+[CNF-变量] 新建辅助变量 id=81, 类型=2, 含义=回归DEL_OR (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#72{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#73{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#74{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#75{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#76{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#77{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#78{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#79{回归DEL支持 (var6=0, t=2)} OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#81{回归DEL_OR (var6=0, t=2)} OR aux#72{回归DEL支持 (var6=0, t=2)} OR aux#73{回归DEL支持 (var6=0, t=2)} OR aux#74{回归DEL支持 (var6=0, t=2)} OR aux#75{回归DEL支持 (var6=0, t=2)} OR aux#76{回归DEL支持 (var6=0, t=2)} OR aux#77{回归DEL支持 (var6=0, t=2)} OR aux#78{回归DEL支持 (var6=0, t=2)} OR aux#79{回归DEL支持 (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#81{回归DEL_OR (var6=0, t=2)} OR ¬(var6=0, t=2)
+[CNF-子句] 内容: ¬(var6=0, t=2) OR (var6=0, t=1) OR aux#80{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=2) OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#80{回归ADD_OR (var6=0, t=2)} OR (var6=0, t=2) OR aux#81{回归DEL_OR (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=42, 含义=(var17=0, t=2)
+[CNF-变量] 复用事实变量 id=18, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 新建辅助变量 id=82, 类型=1, 含义=回归ADD支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#82{回归ADD支持 (var17=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#82{回归ADD支持 (var17=0, t=2)} OR (var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR ¬(var15=0, t=0) OR aux#82{回归ADD支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=8, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=83, 类型=1, 含义=回归ADD支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#83{回归ADD支持 (var17=0, t=2)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#83{回归ADD支持 (var17=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var16=0, t=0) OR aux#83{回归ADD支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=84, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var6=1, t=1) OR ¬(var17=0, t=1) OR ¬(var11=0, t=0) OR aux#84{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=85, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=2)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var17=0, t=1) OR ¬(var16=1, t=0) OR ¬(var11=0, t=0) OR aux#85{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=86, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var17=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var17=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var17=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var6=1, t=1) OR ¬(var17=0, t=1) OR ¬(var13=0, t=0) OR aux#86{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=87, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#87{回归DEL支持 (var17=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#87{回归DEL支持 (var17=0, t=2)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#87{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#87{回归DEL支持 (var17=0, t=2)} OR (var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR ¬(var17=0, t=1) OR ¬(var16=1, t=0) OR ¬(var13=0, t=0) OR aux#87{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=88, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#88{回归DEL支持 (var17=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#88{回归DEL支持 (var17=0, t=2)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#88{回归DEL支持 (var17=0, t=2)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#88{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var15=1, t=0) OR ¬(var16=1, t=0) OR ¬(var11=0, t=0) OR aux#88{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=19, 含义=(var16=1, t=0)
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=89, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#89{回归DEL支持 (var17=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#89{回归DEL支持 (var17=0, t=2)} OR (var16=1, t=0)
+[CNF-子句] 内容: ¬aux#89{回归DEL支持 (var17=0, t=2)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#89{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR ¬(var15=1, t=0) OR ¬(var16=1, t=0) OR ¬(var13=0, t=0) OR aux#89{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=12, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=90, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#90{回归DEL支持 (var17=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#90{回归DEL支持 (var17=0, t=2)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#90{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#90{回归DEL支持 (var17=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬(var6=1, t=1) OR ¬(var17=0, t=1) OR ¬(var15=1, t=0) OR ¬(var11=0, t=0) OR aux#90{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=20, 含义=(var15=1, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=59, 含义=(var6=1, t=1)
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=91, 类型=1, 含义=回归DEL支持 (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#91{回归DEL支持 (var17=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#91{回归DEL支持 (var17=0, t=2)} OR (var15=1, t=0)
+[CNF-子句] 内容: ¬aux#91{回归DEL支持 (var17=0, t=2)} OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#91{回归DEL支持 (var17=0, t=2)} OR (var6=1, t=1)
+[CNF-子句] 内容: ¬(var6=1, t=1) OR ¬(var17=0, t=1) OR ¬(var15=1, t=0) OR ¬(var13=0, t=0) OR aux#91{回归DEL支持 (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=54, 含义=(var17=0, t=1)
+[CNF-变量] 新建辅助变量 id=92, 类型=2, 含义=回归ADD_OR (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#82{回归ADD支持 (var17=0, t=2)} OR aux#92{回归ADD_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#83{回归ADD支持 (var17=0, t=2)} OR aux#92{回归ADD_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#92{回归ADD_OR (var17=0, t=2)} OR aux#82{回归ADD支持 (var17=0, t=2)} OR aux#83{回归ADD支持 (var17=0, t=2)}
+[CNF-变量] 新建辅助变量 id=93, 类型=2, 含义=回归DEL_OR (var17=0, t=2)
+[CNF-子句] 内容: ¬aux#84{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#85{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#87{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#88{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#89{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#90{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#91{回归DEL支持 (var17=0, t=2)} OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#93{回归DEL_OR (var17=0, t=2)} OR aux#84{回归DEL支持 (var17=0, t=2)} OR aux#85{回归DEL支持 (var17=0, t=2)} OR aux#86{回归DEL支持 (var17=0, t=2)} OR aux#87{回归DEL支持 (var17=0, t=2)} OR aux#88{回归DEL支持 (var17=0, t=2)} OR aux#89{回归DEL支持 (var17=0, t=2)} OR aux#90{回归DEL支持 (var17=0, t=2)} OR aux#91{回归DEL支持 (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#93{回归DEL_OR (var17=0, t=2)} OR ¬(var17=0, t=2)
+[CNF-子句] 内容: ¬(var17=0, t=2) OR (var17=0, t=1) OR aux#92{回归ADD_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬(var17=0, t=1) OR (var17=0, t=2) OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-子句] 内容: ¬aux#92{回归ADD_OR (var17=0, t=2)} OR (var17=0, t=2) OR aux#93{回归DEL_OR (var17=0, t=2)}
+[CNF-变量] 复用事实变量 id=44, 含义=(var9=0, t=2)
+[CNF-变量] 新建事实变量 id=94, 含义=(var9=0, t=1)
+[CNF-子句] 内容: ¬(var9=0, t=2) OR aux#69{回归ADD支持 (var6=0, t=2)} OR aux#70{回归ADD支持 (var6=0, t=2)} OR (var9=0, t=1)
+[CNF-子句] 内容: ¬aux#69{回归ADD支持 (var6=0, t=2)} OR (var9=0, t=2)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var6=0, t=2)} OR (var9=0, t=2)
+[CNF-子句] 内容: ¬(var9=0, t=1) OR (var9=0, t=2)
+[CNF-变量] 复用事实变量 id=48, 含义=(var8=0, t=2)
+[CNF-变量] 新建事实变量 id=95, 含义=(var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=2) OR aux#82{回归ADD支持 (var17=0, t=2)} OR aux#83{回归ADD支持 (var17=0, t=2)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#82{回归ADD支持 (var17=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 内容: ¬aux#83{回归ADD支持 (var17=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=51, 含义=(var3=0, t=2)
+[CNF-变量] 新建事实变量 id=96, 含义=(var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=2) OR aux#53{回归ADD支持 (var0=0, t=2)} OR aux#55{回归ADD支持 (var0=0, t=2)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬aux#53{回归ADD支持 (var0=0, t=2)} OR (var3=0, t=2)
+[CNF-子句] 内容: ¬aux#55{回归ADD支持 (var0=0, t=2)} OR (var3=0, t=2)
+[CNF-子句] 内容: ¬(var3=0, t=1) OR (var3=0, t=2)
+[CNF-变量] 复用事实变量 id=56, 含义=(var0=0, t=1)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=97, 类型=1, 含义=回归ADD支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#97{回归ADD支持 (var0=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#97{回归ADD支持 (var0=0, t=1)} OR (var2=0, t=0)
+[CNF-子句] 内容: ¬(var2=0, t=0) OR ¬(var6=0, t=0) OR aux#97{回归ADD支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=11, 含义=(var7=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=98, 类型=1, 含义=回归ADD支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#98{回归ADD支持 (var0=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#98{回归ADD支持 (var0=0, t=1)} OR (var7=0, t=0)
+[CNF-子句] 内容: ¬(var7=0, t=0) OR ¬(var17=0, t=0) OR aux#98{回归ADD支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=26, 含义=(var7=1, t=0)
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=29, 含义=(var2=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=99, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#99{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#99{回归DEL支持 (var0=0, t=1)} OR (var4=0, t=0)
+[CNF-子句] 内容: ¬aux#99{回归DEL支持 (var0=0, t=1)} OR (var7=1, t=0)
+[CNF-子句] 内容: ¬aux#99{回归DEL支持 (var0=0, t=1)} OR (var2=1, t=0)
+[CNF-子句] 内容: ¬(var2=1, t=0) OR ¬(var7=1, t=0) OR ¬(var4=0, t=0) OR ¬(var0=0, t=0) OR aux#99{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=26, 含义=(var7=1, t=0)
+[CNF-变量] 复用事实变量 id=29, 含义=(var2=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=100, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#100{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#100{回归DEL支持 (var0=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#100{回归DEL支持 (var0=0, t=1)} OR (var7=1, t=0)
+[CNF-子句] 内容: ¬aux#100{回归DEL支持 (var0=0, t=1)} OR (var2=1, t=0)
+[CNF-子句] 内容: ¬(var2=1, t=0) OR ¬(var7=1, t=0) OR ¬(var14=0, t=0) OR ¬(var0=0, t=0) OR aux#100{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=26, 含义=(var7=1, t=0)
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 新建辅助变量 id=101, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#101{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#101{回归DEL支持 (var0=0, t=1)} OR (var4=0, t=0)
+[CNF-子句] 内容: ¬aux#101{回归DEL支持 (var0=0, t=1)} OR (var7=1, t=0)
+[CNF-子句] 内容: ¬aux#101{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var7=1, t=0) OR ¬(var4=0, t=0) OR ¬(var0=0, t=0) OR aux#101{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=26, 含义=(var7=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 新建辅助变量 id=102, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#102{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#102{回归DEL支持 (var0=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#102{回归DEL支持 (var0=0, t=1)} OR (var7=1, t=0)
+[CNF-子句] 内容: ¬aux#102{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var7=1, t=0) OR ¬(var14=0, t=0) OR ¬(var0=0, t=0) OR aux#102{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=29, 含义=(var2=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=103, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#103{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#103{回归DEL支持 (var0=0, t=1)} OR (var4=0, t=0)
+[CNF-子句] 内容: ¬aux#103{回归DEL支持 (var0=0, t=1)} OR (var2=1, t=0)
+[CNF-子句] 内容: ¬aux#103{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var2=1, t=0) OR ¬(var4=0, t=0) OR ¬(var0=0, t=0) OR aux#103{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=29, 含义=(var2=1, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=104, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#104{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#104{回归DEL支持 (var0=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#104{回归DEL支持 (var0=0, t=1)} OR (var2=1, t=0)
+[CNF-子句] 内容: ¬aux#104{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var2=1, t=0) OR ¬(var14=0, t=0) OR ¬(var0=0, t=0) OR aux#104{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=105, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#105{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#105{回归DEL支持 (var0=0, t=1)} OR (var4=0, t=0)
+[CNF-子句] 内容: ¬aux#105{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬aux#105{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var6=1, t=0) OR ¬(var4=0, t=0) OR ¬(var0=0, t=0) OR aux#105{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=17, 含义=(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=32, 含义=(var6=1, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=106, 类型=1, 含义=回归DEL支持 (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#106{回归DEL支持 (var0=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#106{回归DEL支持 (var0=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#106{回归DEL支持 (var0=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬aux#106{回归DEL支持 (var0=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var6=1, t=0) OR ¬(var14=0, t=0) OR ¬(var0=0, t=0) OR aux#106{回归DEL支持 (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=107, 类型=2, 含义=回归ADD_OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#97{回归ADD支持 (var0=0, t=1)} OR aux#107{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#98{回归ADD支持 (var0=0, t=1)} OR aux#107{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#107{回归ADD_OR (var0=0, t=1)} OR aux#97{回归ADD支持 (var0=0, t=1)} OR aux#98{回归ADD支持 (var0=0, t=1)}
+[CNF-变量] 新建辅助变量 id=108, 类型=2, 含义=回归DEL_OR (var0=0, t=1)
+[CNF-子句] 内容: ¬aux#99{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#100{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#101{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#102{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#103{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#104{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#105{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#106{回归DEL支持 (var0=0, t=1)} OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#108{回归DEL_OR (var0=0, t=1)} OR aux#99{回归DEL支持 (var0=0, t=1)} OR aux#100{回归DEL支持 (var0=0, t=1)} OR aux#101{回归DEL支持 (var0=0, t=1)} OR aux#102{回归DEL支持 (var0=0, t=1)} OR aux#103{回归DEL支持 (var0=0, t=1)} OR aux#104{回归DEL支持 (var0=0, t=1)} OR aux#105{回归DEL支持 (var0=0, t=1)} OR aux#106{回归DEL支持 (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#108{回归DEL_OR (var0=0, t=1)} OR ¬(var0=0, t=1)
+[CNF-子句] 内容: ¬(var0=0, t=1) OR (var0=0, t=0) OR aux#107{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬(var0=0, t=0) OR (var0=0, t=1) OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#107{回归ADD_OR (var0=0, t=1)} OR (var0=0, t=1) OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=71, 含义=(var0=1, t=1)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-子句] 内容: ¬aux#107{回归ADD_OR (var0=0, t=1)} OR ¬(var0=1, t=1)
+[CNF-子句] 内容: ¬(var0=1, t=1) OR (var0=1, t=0) OR aux#108{回归DEL_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬(var0=1, t=0) OR (var0=1, t=1) OR aux#107{回归ADD_OR (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#108{回归DEL_OR (var0=0, t=1)} OR (var0=1, t=1) OR aux#107{回归ADD_OR (var0=0, t=1)}
+[CNF-变量] 复用事实变量 id=52, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=15, 含义=(var4=0, t=0)
+[CNF-变量] 复用事实变量 id=3, 含义=(var0=0, t=0)
+[CNF-变量] 新建辅助变量 id=109, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#109{回归ADD支持 (var6=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#109{回归ADD支持 (var6=0, t=1)} OR (var4=0, t=0)
+[CNF-子句] 内容: ¬(var4=0, t=0) OR ¬(var0=0, t=0) OR aux#109{回归ADD支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=13, 含义=(var12=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var17=0, t=0)
+[CNF-变量] 新建辅助变量 id=110, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#110{回归ADD支持 (var6=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#110{回归ADD支持 (var6=0, t=1)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬(var12=0, t=0) OR ¬(var17=0, t=0) OR aux#110{回归ADD支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=23, 含义=(var12=1, t=0)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=111, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#111{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#111{回归DEL支持 (var6=0, t=1)} OR (var2=0, t=0)
+[CNF-子句] 内容: ¬aux#111{回归DEL支持 (var6=0, t=1)} OR (var12=1, t=0)
+[CNF-子句] 内容: ¬aux#111{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var12=1, t=0) OR ¬(var2=0, t=0) OR ¬(var6=0, t=0) OR aux#111{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=23, 含义=(var12=1, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=112, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#112{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#112{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=0)
+[CNF-子句] 内容: ¬aux#112{回归DEL支持 (var6=0, t=1)} OR (var12=1, t=0)
+[CNF-子句] 内容: ¬aux#112{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var12=1, t=0) OR ¬(var10=0, t=0) OR ¬(var6=0, t=0) OR aux#112{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=113, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#113{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#113{回归DEL支持 (var6=0, t=1)} OR (var2=0, t=0)
+[CNF-子句] 内容: ¬aux#113{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#113{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var0=1, t=0) OR ¬(var2=0, t=0) OR ¬(var6=0, t=0) OR aux#113{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=31, 含义=(var0=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=114, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#114{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#114{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=0)
+[CNF-子句] 内容: ¬aux#114{回归DEL支持 (var6=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#114{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var0=1, t=0) OR ¬(var10=0, t=0) OR ¬(var6=0, t=0) OR aux#114{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=23, 含义=(var12=1, t=0)
+[CNF-变量] 复用事实变量 id=28, 含义=(var4=1, t=0)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=115, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#115{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#115{回归DEL支持 (var6=0, t=1)} OR (var2=0, t=0)
+[CNF-子句] 内容: ¬aux#115{回归DEL支持 (var6=0, t=1)} OR (var12=1, t=0)
+[CNF-子句] 内容: ¬aux#115{回归DEL支持 (var6=0, t=1)} OR (var4=1, t=0)
+[CNF-子句] 内容: ¬(var4=1, t=0) OR ¬(var12=1, t=0) OR ¬(var2=0, t=0) OR ¬(var6=0, t=0) OR aux#115{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=23, 含义=(var12=1, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=28, 含义=(var4=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=116, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#116{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#116{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=0)
+[CNF-子句] 内容: ¬aux#116{回归DEL支持 (var6=0, t=1)} OR (var12=1, t=0)
+[CNF-子句] 内容: ¬aux#116{回归DEL支持 (var6=0, t=1)} OR (var4=1, t=0)
+[CNF-子句] 内容: ¬(var4=1, t=0) OR ¬(var12=1, t=0) OR ¬(var10=0, t=0) OR ¬(var6=0, t=0) OR aux#116{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=28, 含义=(var4=1, t=0)
+[CNF-变量] 复用事实变量 id=9, 含义=(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=117, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#117{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#117{回归DEL支持 (var6=0, t=1)} OR (var2=0, t=0)
+[CNF-子句] 内容: ¬aux#117{回归DEL支持 (var6=0, t=1)} OR (var4=1, t=0)
+[CNF-子句] 内容: ¬aux#117{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var4=1, t=0) OR ¬(var2=0, t=0) OR ¬(var6=0, t=0) OR aux#117{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=7, 含义=(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=28, 含义=(var4=1, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=33, 含义=(var17=1, t=0)
+[CNF-变量] 新建辅助变量 id=118, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#118{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#118{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=0)
+[CNF-子句] 内容: ¬aux#118{回归DEL支持 (var6=0, t=1)} OR (var4=1, t=0)
+[CNF-子句] 内容: ¬aux#118{回归DEL支持 (var6=0, t=1)} OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var4=1, t=0) OR ¬(var10=0, t=0) OR ¬(var6=0, t=0) OR aux#118{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 新建辅助变量 id=119, 类型=2, 含义=回归ADD_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#109{回归ADD支持 (var6=0, t=1)} OR aux#119{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#110{回归ADD支持 (var6=0, t=1)} OR aux#119{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#119{回归ADD_OR (var6=0, t=1)} OR aux#109{回归ADD支持 (var6=0, t=1)} OR aux#110{回归ADD支持 (var6=0, t=1)}
+[CNF-变量] 新建辅助变量 id=120, 类型=2, 含义=回归DEL_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#111{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#112{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#113{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#114{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#115{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#116{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#117{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#118{回归DEL支持 (var6=0, t=1)} OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#120{回归DEL_OR (var6=0, t=1)} OR aux#111{回归DEL支持 (var6=0, t=1)} OR aux#112{回归DEL支持 (var6=0, t=1)} OR aux#113{回归DEL支持 (var6=0, t=1)} OR aux#114{回归DEL支持 (var6=0, t=1)} OR aux#115{回归DEL支持 (var6=0, t=1)} OR aux#116{回归DEL支持 (var6=0, t=1)} OR aux#117{回归DEL支持 (var6=0, t=1)} OR aux#118{回归DEL支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#120{回归DEL_OR (var6=0, t=1)} OR ¬(var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=0) OR aux#119{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬(var6=0, t=0) OR (var6=0, t=1) OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#119{回归ADD_OR (var6=0, t=1)} OR (var6=0, t=1) OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#119{回归ADD_OR (var6=0, t=1)} OR ¬(var6=1, t=1)
+[CNF-子句] 内容: ¬(var6=1, t=1) OR (var6=1, t=0) OR aux#120{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬(var6=1, t=0) OR (var6=1, t=1) OR aux#119{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#120{回归DEL_OR (var6=0, t=1)} OR (var6=1, t=1) OR aux#119{回归ADD_OR (var6=0, t=1)}
+[CNF-变量] 新建辅助变量 id=121, 类型=1, 含义=回归ADD支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#121{回归ADD支持 (var17=0, t=1)} OR (var0=0, t=0)
+[CNF-子句] 内容: ¬aux#121{回归ADD支持 (var17=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬(var14=0, t=0) OR ¬(var0=0, t=0) OR aux#121{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=122, 类型=1, 含义=回归ADD支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#122{回归ADD支持 (var17=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#122{回归ADD支持 (var17=0, t=1)} OR (var10=0, t=0)
+[CNF-子句] 内容: ¬(var10=0, t=0) OR ¬(var6=0, t=0) OR aux#122{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=123, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#123{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#123{回归DEL支持 (var17=0, t=1)} OR (var7=0, t=0)
+[CNF-子句] 内容: ¬aux#123{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#123{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var0=1, t=0) OR ¬(var7=0, t=0) OR ¬(var17=0, t=0) OR aux#123{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=124, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#124{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#124{回归DEL支持 (var17=0, t=1)} OR (var7=0, t=0)
+[CNF-子句] 内容: ¬aux#124{回归DEL支持 (var17=0, t=1)} OR (var10=1, t=0)
+[CNF-子句] 内容: ¬aux#124{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var10=1, t=0) OR ¬(var7=0, t=0) OR ¬(var17=0, t=0) OR aux#124{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=125, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#125{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#125{回归DEL支持 (var17=0, t=1)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬aux#125{回归DEL支持 (var17=0, t=1)} OR (var10=1, t=0)
+[CNF-子句] 内容: ¬aux#125{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var10=1, t=0) OR ¬(var12=0, t=0) OR ¬(var17=0, t=0) OR aux#125{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=126, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#126{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#126{回归DEL支持 (var17=0, t=1)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬aux#126{回归DEL支持 (var17=0, t=1)} OR (var0=1, t=0)
+[CNF-子句] 内容: ¬aux#126{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var0=1, t=0) OR ¬(var12=0, t=0) OR ¬(var17=0, t=0) OR aux#126{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=127, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#127{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#127{回归DEL支持 (var17=0, t=1)} OR (var7=0, t=0)
+[CNF-子句] 内容: ¬aux#127{回归DEL支持 (var17=0, t=1)} OR (var14=1, t=0)
+[CNF-子句] 内容: ¬aux#127{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var14=1, t=0) OR ¬(var7=0, t=0) OR ¬(var17=0, t=0) OR aux#127{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=128, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#128{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#128{回归DEL支持 (var17=0, t=1)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬aux#128{回归DEL支持 (var17=0, t=1)} OR (var14=1, t=0)
+[CNF-子句] 内容: ¬aux#128{回归DEL支持 (var17=0, t=1)} OR (var10=1, t=0)
+[CNF-子句] 内容: ¬(var10=1, t=0) OR ¬(var14=1, t=0) OR ¬(var12=0, t=0) OR ¬(var17=0, t=0) OR aux#128{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=129, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#129{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#129{回归DEL支持 (var17=0, t=1)} OR (var7=0, t=0)
+[CNF-子句] 内容: ¬aux#129{回归DEL支持 (var17=0, t=1)} OR (var14=1, t=0)
+[CNF-子句] 内容: ¬aux#129{回归DEL支持 (var17=0, t=1)} OR (var10=1, t=0)
+[CNF-子句] 内容: ¬(var10=1, t=0) OR ¬(var14=1, t=0) OR ¬(var7=0, t=0) OR ¬(var17=0, t=0) OR aux#129{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=130, 类型=1, 含义=回归DEL支持 (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#130{回归DEL支持 (var17=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#130{回归DEL支持 (var17=0, t=1)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬aux#130{回归DEL支持 (var17=0, t=1)} OR (var14=1, t=0)
+[CNF-子句] 内容: ¬aux#130{回归DEL支持 (var17=0, t=1)} OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var14=1, t=0) OR ¬(var12=0, t=0) OR ¬(var17=0, t=0) OR aux#130{回归DEL支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=131, 类型=2, 含义=回归ADD_OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#121{回归ADD支持 (var17=0, t=1)} OR aux#131{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#122{回归ADD支持 (var17=0, t=1)} OR aux#131{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#131{回归ADD_OR (var17=0, t=1)} OR aux#121{回归ADD支持 (var17=0, t=1)} OR aux#122{回归ADD支持 (var17=0, t=1)}
+[CNF-变量] 新建辅助变量 id=132, 类型=2, 含义=回归DEL_OR (var17=0, t=1)
+[CNF-子句] 内容: ¬aux#123{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#124{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#125{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#126{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#127{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#128{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#129{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#130{回归DEL支持 (var17=0, t=1)} OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#132{回归DEL_OR (var17=0, t=1)} OR aux#123{回归DEL支持 (var17=0, t=1)} OR aux#124{回归DEL支持 (var17=0, t=1)} OR aux#125{回归DEL支持 (var17=0, t=1)} OR aux#126{回归DEL支持 (var17=0, t=1)} OR aux#127{回归DEL支持 (var17=0, t=1)} OR aux#128{回归DEL支持 (var17=0, t=1)} OR aux#129{回归DEL支持 (var17=0, t=1)} OR aux#130{回归DEL支持 (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#132{回归DEL_OR (var17=0, t=1)} OR ¬(var17=0, t=1)
+[CNF-子句] 内容: ¬(var17=0, t=1) OR (var17=0, t=0) OR aux#131{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬(var17=0, t=0) OR (var17=0, t=1) OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#131{回归ADD_OR (var17=0, t=1)} OR (var17=0, t=1) OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#131{回归ADD_OR (var17=0, t=1)} OR ¬(var17=1, t=1)
+[CNF-子句] 内容: ¬(var17=1, t=1) OR (var17=1, t=0) OR aux#132{回归DEL_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬(var17=1, t=0) OR (var17=1, t=1) OR aux#131{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#132{回归DEL_OR (var17=0, t=1)} OR (var17=1, t=1) OR aux#131{回归ADD_OR (var17=0, t=1)}
+[CNF-子句] 内容: ¬(var9=0, t=1) OR (var9=0, t=0) OR aux#109{回归ADD支持 (var6=0, t=1)} OR aux#110{回归ADD支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#109{回归ADD支持 (var6=0, t=1)} OR (var9=0, t=1)
+[CNF-子句] 内容: ¬aux#110{回归ADD支持 (var6=0, t=1)} OR (var9=0, t=1)
+[CNF-子句] 内容: ¬(var9=0, t=0) OR (var9=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=0) OR aux#121{回归ADD支持 (var17=0, t=1)} OR aux#122{回归ADD支持 (var17=0, t=1)}
+[CNF-子句] 内容: ¬aux#121{回归ADD支持 (var17=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#122{回归ADD支持 (var17=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=0) OR (var8=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=1) OR (var3=0, t=0) OR aux#97{回归ADD支持 (var0=0, t=1)} OR aux#98{回归ADD支持 (var0=0, t=1)}
+[CNF-子句] 内容: ¬aux#97{回归ADD支持 (var0=0, t=1)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬aux#98{回归ADD支持 (var0=0, t=1)} OR (var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=0) OR (var3=0, t=1)
+[CNF-子句] 内容: ¬(var3=0, t=3) OR ¬(var8=0, t=3) OR ¬(var9=0, t=3)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=2
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=2
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=6
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=9
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=9
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=6
+[CNF-化简] 估计少加子句=36
+[CNF-缓存] 变量骨架缓存命中次数=9
+[CNF-缓存] 变量骨架缓存未命中次数=6
+[CNF-缓存] 变量桶内处理值请求次数=18
+[CNF-缓存] 实例化ADD支持项次数=54
+[CNF-缓存] 实例化DEL支持项次数=54
+[CNF-缓存] 支持项门缓存命中次数=12
+[CNF-缓存] 支持项门缓存未命中次数=66
+[CNF-缓存] 持久变量骨架缓存大小=6 -> 12
+[CNF-缓存] support term pool 复用命中次数=6, pool_size=60
+[CNF-化简] persistence别名命中次数=60
+[CNF-化简] persistence时间别名累计跨度=66
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=2, cache_size=2
+[CNF-跨轮] 后缀摘要 build_count=3, reuse_count=1
+[CNF-跨轮] 本轮复用公共后缀步数=2, 本轮重建前缀步数=1
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=162, 累计跳过步数=78
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=30
+[CNF-跨轮] 回归调度插入事实数=21, 实际处理事实数=27, time0落地事实数=57
+[CNF-P8-count] logical_schedule_attempts=78, inserted=12, suppressed=9, active_attempts=9, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=4, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=2, compared=2, equal=2, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=on, replay_layers=2, replay_buckets=9, replay_facts=9, suppressed=9, allowed=0, attempts=9
+[CNF-P1] plan_size=3, regression_loop_scanned_steps=3, active_layers=3, processed_buckets=15
+[CNF-P1] AND门请求次数=66, OR门请求次数=18, 空support项=0, 非空support项=66
+[CNF-P2] 回归case记录使用次数=18, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=12, 前缀扫描步数=1, 后缀重放步数=2
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=3
+[CNF-P4] branch_lit_vector_hit=30, branch_lit_vector_miss=78
+[CNF-汇总] 事实变量数=54
+[CNF-汇总] 辅助变量数=78
+[CNF-汇总] 变量总数=132
+[CNF-汇总] 子句总数=495
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=33
+[CNF-汇总] 回归层峰值事实数=9
+[Kissat] 开始装载CNF，子句总数=495
+[Kissat] 开始求解...
+[Kissat] 求解结果: UNSAT，没有反例。候选计划通过验证。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=8
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=8
+[IGC-VERIFY] iteration=1 plan_len=3 status=VALID build_ms=2 solve_ms=8 extract_ms=0
+[IGC-CEGIS] no counterexample found; final conformant plan accepted.
+[IGC-CEGIS] final_status=VALID
+	Command being timed: "/usr/bin/timeout --signal=TERM --kill-after=10s 120 bash /root/workspace/research/CE-planner-test/plan-cegis-cff /root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl /root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl /root/workspace/research/CE-planner-test/result_output_batch_ce/uts-or-guarded-final/uts-cycle/p3/result.plan false"
+	User time (seconds): 0.09
+	System time (seconds): 0.06
+	Percent of CPU this job got: 38%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28160
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 16184
+	Voluntary context switches: 63
+	Involuntary context switches: 46
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 752
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+
+[结束时间] 2026-09-25 11:09:39
+[耗时秒] 1
+[退出码] 0
+[final_status] VALID
+[最终状态] OK

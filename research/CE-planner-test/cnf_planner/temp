@@ -1,0 +1,35 @@
+Building domain...CNF Cost: 54, DNF Cost: 50331648
+
+Initial cstate before simplification: 
+Number of unit clauses: 3
+Number of other clauses: 28
+Number of literals in clauses: 57
+Average clause size: 2.03571
+m_init_cstate.m_clauses.size() = 28
+Initial cstate after simplification: 
+Number of unit clauses: 3
+Number of other clauses: 28
+Number of literals in clauses: 57
+Average clause size: 2.03571
+done.
+
+Number of literals: 28
+Number of goals: 2
+Goals satisfied: 0 1 
+Found a plan of length 6:
+"cpa_stack(cpa_a,cpa_b)" "cpa_put_down(cpa_b)" "cpa_unstack(cpa_a,cpa_b)" "cpa_put_down(cpa_a)" "cpa_pick_up(cpa_b)" "cpa_stack(cpa_b,cpa_a)" 
+STATISTICS
+---------------------
+Total time: 0.015 (sec) 
+  Reading: 0.000 (sec) [2.49 %]
+  Preprocessing: 0.006 (sec) [39.64 %]
+  Search: 0.009 (sec) [57.87 %]
+  CNF simplification: 0.002 (sec) [14.10 %]
+  Merging: 0.003 (sec) [19.72 %]
+  SAT Solver for Executability: 0.000 (sec) [0.00 %]
+  SAT Solver for Effects: 0.001 (sec) [5.23 %]
+  SAT Solver for GOAL: 0.000 (sec) [0.42 %]
+Total states allocated: 14
+Total clauses allocated: 161
+Total CNF-states generated: 15
+Total CNF-states explored: 6

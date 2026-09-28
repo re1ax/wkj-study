@@ -1,0 +1,61 @@
+
+ff: parsing domain file
+domain 'FOREST' defined
+ ... done.
+ff: parsing problem file
+problem 'P2' defined
+ ... done.
+
+
+
+Cueing down from goal distance:   11 into depth [1][2]
+                                  10            [1]
+                                   9            [1]
+                                   8            [1][2]
+                                   7            [1][2]
+                                   6            [1]
+                                   5            [1][2][3][4][5][6]
+                                   4            [1]
+                                   3            [1]
+                                   2            [1]
+                                   0            
+
+ff: found legal plan as follows
+
+step    0: S_DOWN_Y SX2 SY2 SY1 X2
+        1: S_DOWN_X SX2 SY1 SX1 X2
+        2: SOLVE_GRID SX1 SY1 X2
+        3: DOWN_X
+        4: S_DOWN_Y SX2 SY2 SY1 Y1
+        5: S_DOWN_X SX2 SY1 SX1 Y1
+        6: SOLVE_GRID SX1 SY1 Y1
+        7: UNSTACK C A Y2
+        8: UP_Y
+        9: PUTDOWN C Y2
+       10: UNSTACK C A Y2
+       11: PUTDOWN C Y2
+       12: PICKUP B Y2
+       13: STACK B C Y2
+       14: PICKUP A Y2
+       15: STACK A B Y2
+       16: SOLVE_BLOCKSWORLD Y2
+       17: DOWN-Y
+     
+
+statistics:    0.00 seconds instantiating 1199 easy, 0 hard action templates
+               0.00 seconds reachability analysis, yielding 220 facts and 1199 actions
+               0.00 seconds creating final representation with 220 relevant facts (99 max U, 51 CNF max U)
+               0.01 seconds building connectivity graph
+               0.02 seconds (   0.01 pure) evaluating 47 states, to a max depth of 6
+               0.01 seconds in DP for 3728 RPG ini state implication checks
+               0.00 seconds in DP for 0 RPlan extract ini state implication checks (0 lits removed)
+               0.00 seconds generating,    0.00 seconds encoding 287 state transition base CNFs
+               0.00 seconds in DP solving 400 state transition CNFs
+               0.00 seconds checking for self-contradictions, including 0 DP calls
+               0.00 seconds checking for stagnating states (167 hits), including 3172 DP calls
+               0.01 seconds altogether checking for dominated states making 28 comparisons (28 conformant, 18 hits),
+                    spending    0.00 seconds doing 574 DP calls
+               7874 total DP calls, 12987 total UP calls,    0.00 sec membership
+               0.00 seconds for remaining searching duties
+               0.04 seconds total time (+    0.13 secs for CNF memory allocation)
+

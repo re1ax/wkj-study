@@ -1,0 +1,189 @@
+(define (problem temp)(:domain grid)(:objects 
+   zero  - num 
+   one  - num 
+   two  - num 
+   three  - num 
+   four  - num 
+   five  - num 
+   six  - num 
+   seven  - num 
+   eight  - num 
+   nine  - num 
+   ten  - num 
+   eleven  - num 
+   twelve  - num 
+   thirteen  - num 
+   fourteen  - num 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+   int9  - interpretation 
+   int10  - interpretation 
+   int11  - interpretation 
+   int12  - interpretation 
+   int13  - interpretation 
+   int14  - interpretation 
+   int15  - interpretation 
+   int16  - interpretation 
+   int17  - interpretation 
+   int18  - interpretation 
+   int19  - interpretation 
+   int20  - interpretation 
+   int21  - interpretation 
+   int22  - interpretation 
+   int23  - interpretation 
+   int24  - interpretation 
+   int25  - interpretation 
+   int26  - interpretation 
+   int27  - interpretation 
+   int28  - interpretation 
+   int29  - interpretation 
+   int30  - interpretation 
+   int31  - interpretation 
+   int32  - interpretation 
+   int33  - interpretation 
+   int34  - interpretation 
+   int35  - interpretation 
+   int36  - interpretation 
+   int37  - interpretation 
+   int38  - interpretation 
+   int39  - interpretation 
+   int40  - interpretation 
+   int41  - interpretation 
+   int42  - interpretation 
+   int43  - interpretation 
+   int44  - interpretation 
+   int45  - interpretation 
+   int46  - interpretation 
+   int47  - interpretation 
+   int48  - interpretation 
+   int49  - interpretation 
+)
+(:init (true)
+  (x zero int1)
+  (y zero int1)
+  (canmove int2)
+  (y nine int2)
+  (x twelve int2)
+  (y six int3)
+  (x fourteen int3)
+  (canmove int4)
+  (y thirteen int4)
+  (x seven int4)
+  (x nine int5)
+  (y fourteen int5)
+  (x thirteen int6)
+  (canmove int6)
+  (y five int6)
+  (y six int7)
+  (x twelve int7)
+  (x six int8)
+  (y eight int8)
+  (y twelve int9)
+  (x twelve int9)
+  (y eleven int10)
+  (canmove int10)
+  (x seven int10)
+  (y eleven int11)
+  (x twelve int11)
+  (x six int12)
+  (y fourteen int12)
+  (y six int13)
+  (x six int13)
+  (x six int14)
+  (y twelve int14)
+  (canmove int15)
+  (y seven int15)
+  (x seven int15)
+  (x five int16)
+  (canmove int16)
+  (y fourteen int16)
+  (x six int17)
+  (y nine int17)
+  (y fourteen int18)
+  (x four int18)
+  (y six int19)
+  (x seven int19)
+  (x six int20)
+  (y four int20)
+  (canmove int20)
+  (y six int21)
+  (x five int21)
+  (y ten int22)
+  (x twelve int22)
+  (x five int23)
+  (canmove int23)
+  (y nine int23)
+  (y four int24)
+  (x seven int24)
+  (x five int25)
+  (y four int25)
+  (canmove int25)
+  (x three int26)
+  (canmove int26)
+  (y fourteen int26)
+  (y six int27)
+  (canmove int27)
+  (x four int27)
+  (x two int28)
+  (canmove int28)
+  (y thirteen int28)
+  (x one int29)
+  (y fourteen int29)
+  (canmove int30)
+  (x zero int30)
+  (y fourteen int30)
+  (y six int31)
+  (x three int31)
+  (x three int32)
+  (y eight int32)
+  (y ten int33)
+  (x three int33)
+  (canmove int33)
+  (y twelve int34)
+  (x two int34)
+  (y six int35)
+  (x two int35)
+  (y ten int36)
+  (x two int36)
+  (x two int37)
+  (canmove int37)
+  (y eight int37)
+  (x one int38)
+  (y eleven int38)
+  (canmove int38)
+  (y eleven int39)
+  (canmove int39)
+  (x zero int39)
+  (y six int40)
+  (x one int40)
+  (x six int41)
+  (canmove int41)
+  (y three int41)
+  (y six int42)
+  (x zero int42)
+  (y four int43)
+  (canmove int43)
+  (x four int43)
+  (y four int44)
+  (x three int44)
+  (canmove int45)
+  (x zero int45)
+  (y seven int45)
+  (canmove int46)
+  (x zero int46)
+  (y nine int46)
+  (y four int47)
+  (x two int47)
+  (y four int48)
+  (x one int48)
+  (y four int49)
+  (canmove int49)
+  (x zero int49)
+)
+(:goal (forall (?interpr - interpretation)(and   (x six ?interpr)  (y zero ?interpr)))))

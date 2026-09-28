@@ -1,0 +1,20 @@
+CPA+ version 1.2 - Built date: Wed Mar 11 13:45:54 MDT 2009
+Building domain...
+CNF Cost: -5840595085123502841, DNF Cost: 81
+Initial Computation Time: 0.300 Init size=81 x 654 x 327
+Initial CState Size = 81
+done.
+
+maxh = 0, cs size = 81 maxh = 1, cs size = 4 maxh = 2, cs size = 2 Found a plan 
+
+Length: 2225
+
+STATISTICS
+---------------------
+Total time: 76.175 (sec) 
+  Reading: 0.105 (sec) [0.14 %]
+  Preprocessing: 0.334 (sec) [0.44 %]
+  Search: 75.736 (sec) [99.42 %]
+Total states allocated: 113730
+Total cstate(s): 87188
+Total cstate(s) remaining in the queue: 62446

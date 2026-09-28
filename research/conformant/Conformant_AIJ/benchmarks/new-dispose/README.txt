@@ -1,0 +1,1 @@
+GCLAMA: pr3_*.pddl

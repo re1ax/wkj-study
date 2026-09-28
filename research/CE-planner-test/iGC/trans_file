@@ -1,0 +1,42 @@
+Parsing... ./test/adder-IPC5/domain.pddl
+./test/adder-IPC5/p01.pddl
+parse task...
+  Atom low(x1)
+  Atom low(x1)
+  Atom low(y1)
+  Atom low(y1)
+parse
+Atom high(t)
+Atom low(f)
+Atom low(r1)
+Atom low(r2)
+Atom low(z1)
+Atom low(z2)
+Atom constant(x1)
+Atom constant(y1)
+Atom low(x1)
+Atom low(y1)
+after parse
+Atom high(t)
+Atom low(f)
+Atom low(r1)
+Atom low(r2)
+Atom low(z1)
+Atom low(z2)
+Atom constant(x1)
+Atom constant(y1)
+Atom low(x1)
+Atom low(y1)
+Atom =(t, t)
+Atom =(f, f)
+Atom =(tmp1, tmp1)
+Atom =(tmp2, tmp2)
+Atom =(x1, x1)
+Atom =(y1, y1)
+Atom =(r1, r1)
+Atom =(z1, z1)
+Atom =(r2, r2)
+Atom =(z2, z2)
+[0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Normalizing task...

@@ -1,0 +1,86 @@
+(define (problem temp)(:domain bt)(:objects 
+   b0  - bomb 
+   p0  - package 
+   p1  - package 
+   p2  - package 
+   p3  - package 
+   p4  - package 
+   p5  - package 
+   p6  - package 
+   p7  - package 
+   p8  - package 
+   p9  - package 
+   p10  - package 
+   p11  - package 
+   p12  - package 
+   p13  - package 
+   p14  - package 
+   p15  - package 
+   p16  - package 
+   p17  - package 
+   p18  - package 
+   p19  - package 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+   int9  - interpretation 
+   int10  - interpretation 
+   int11  - interpretation 
+   int12  - interpretation 
+   int13  - interpretation 
+   int14  - interpretation 
+   int15  - interpretation 
+   int16  - interpretation 
+   int17  - interpretation 
+   int18  - interpretation 
+   int19  - interpretation 
+   int20  - interpretation 
+)
+(:init (true)
+  (notdefused b0 int1)
+  (in p0 b0 int1)
+  (in p1 b0 int2)
+  (notdefused b0 int2)
+  (in p2 b0 int3)
+  (notdefused b0 int3)
+  (in p3 b0 int4)
+  (notdefused b0 int4)
+  (notdefused b0 int5)
+  (in p4 b0 int5)
+  (in p5 b0 int6)
+  (notdefused b0 int6)
+  (in p6 b0 int7)
+  (notdefused b0 int7)
+  (in p7 b0 int8)
+  (notdefused b0 int8)
+  (in p8 b0 int9)
+  (notdefused b0 int9)
+  (notdefused b0 int10)
+  (in p9 b0 int10)
+  (in p10 b0 int11)
+  (notdefused b0 int11)
+  (notdefused b0 int12)
+  (in p11 b0 int12)
+  (notdefused b0 int13)
+  (in p12 b0 int13)
+  (notdefused b0 int14)
+  (in p13 b0 int14)
+  (notdefused b0 int15)
+  (in p14 b0 int15)
+  (notdefused b0 int16)
+  (in p15 b0 int16)
+  (in p16 b0 int17)
+  (notdefused b0 int17)
+  (notdefused b0 int18)
+  (in p17 b0 int18)
+  (in p18 b0 int19)
+  (notdefused b0 int19)
+  (in p19 b0 int20)
+  (notdefused b0 int20)
+)
+(:goal (forall (?interpr - interpretation)(and   (defused b0 ?interpr)))))

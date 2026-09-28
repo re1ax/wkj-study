@@ -1,0 +1,9 @@
+(define (problem coins_2_4_2_29864)
+  (:domain coins)
+  (:objects e0 e1 - elevator f0 f1 - floor p0 p1 p2 p3 - pos c0 c1 c2 c3 - coin)
+  (:init
+(and
+  (dec_f f1 f0) (dec_p p1 p0) (dec_p p2 p1) (dec_p p3 p2) (shaft e0 p1) (oneof (in e0 f0) (in e0 f1)) (shaft e1 p3) (oneof (in e1 f0) (in e1 f1)) (oneof (coin-located c0 f0 p0) (coin-located c0 f0 p1) (coin-located c0 f0 p2) (coin-located c0 f0 p3)) (oneof (coin-located c1 f0 p0) (coin-located c1 f0 p1) (coin-located c1 f0 p2) (coin-located c1 f0 p3)) (oneof (coin-located c2 f0 p0) (coin-located c2 f0 p1) (coin-located c2 f0 p2) (coin-located c2 f0 p3)) (oneof (coin-located c3 f1 p0) (coin-located c3 f1 p1) (coin-located c3 f1 p2) (coin-located c3 f1 p3)) (located f0 p0))
+)
+  (:goal (and (have c0) (have c1) (have c2) (have c3)))
+)

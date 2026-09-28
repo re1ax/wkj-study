@@ -1,0 +1,28 @@
+(define (problem temp)(:domain grid)(:objects 
+   zero  - num 
+   one  - num 
+   two  - num 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+)
+(:init (true)
+  (y zero int1)
+  (x zero int1)
+  (x zero int2)
+  (y one int2)
+  (canmove int2)
+  (x zero int3)
+  (y two int3)
+  (x one int4)
+  (y two int4)
+  (canmove int5)
+  (x two int5)
+  (y zero int5)
+  (y two int6)
+  (x two int6)
+)
+(:goal (forall (?interpr - interpretation)(and   (x one ?interpr)  (y zero ?interpr)))))

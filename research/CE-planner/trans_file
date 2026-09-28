@@ -1,0 +1,230 @@
+Parsing... /tmp/igc-normalized-pddl-1217191/domain.normalized.pddl
+/tmp/igc-normalized-pddl-1217191/problem.normalized.pddl
+parse task...
+  Atom at_node(n0)
+  Atom visited(n0)
+  Atom visited(n0)
+  Atom at_node(n0)
+  Atom edge_label(n0, n1, l1)
+  Atom edge_label(n0, n2, l2)
+  Atom edge_label(n0, n1, l1)
+  Atom edge_label(n0, n2, l2)
+  Atom edge_label(n1, n2, l1)
+  Atom edge_label(n1, n0, l2)
+  Atom edge_label(n1, n0, l2)
+  Atom edge_label(n1, n2, l1)
+  Atom edge_label(n2, n0, l1)
+  Atom edge_label(n2, n1, l2)
+  Atom edge_label(n2, n1, l2)
+  Atom edge_label(n2, n0, l1)
+parse
+Atom visited(n0)
+Atom at_node(n0)
+Atom edge_label(n0, n1, l1)
+Atom edge_label(n0, n2, l2)
+Atom edge_label(n1, n0, l2)
+Atom edge_label(n1, n2, l1)
+Atom edge_label(n2, n1, l2)
+Atom edge_label(n2, n0, l1)
+after parse
+Atom visited(n0)
+Atom at_node(n0)
+Atom edge_label(n0, n1, l1)
+Atom edge_label(n0, n2, l2)
+Atom edge_label(n1, n0, l2)
+Atom edge_label(n1, n2, l1)
+Atom edge_label(n2, n1, l2)
+Atom edge_label(n2, n0, l1)
+Atom =(n0, n0)
+Atom =(n1, n1)
+Atom =(n2, n2)
+Atom =(l1, l1)
+Atom =(l2, l2)
+[0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Deduplicated 8 duplicate Datalog facts before normalization.
+Normalizing Datalog program: [0.010s CPU, 0.004s wall-clock]
+Preparing model... [0.000s CPU, 0.001s wall-clock]
+Generated 38 rules.
+Computing model... [0.000s CPU, 0.001s wall-clock]
+36 relevant atoms
+36 auxiliary atoms
+72 final queue length
+120 total queue pushes
+Completing instantiation... [0.000s CPU, 0.001s wall-clock]
+Instantiating: [0.010s CPU, 0.007s wall-clock]
+(follow_label l1)
+ADD: Atom at_node(n0), Atom edge_label(n0, n1, l1) -> Atom at_node(n1)
+ADD: Atom at_node(n0), Atom edge_label(n0, n1, l1) -> Atom visited(n1)
+ADD: Atom at_node(n0), Atom edge_label(n0, n2, l1) -> Atom at_node(n2)
+ADD: Atom at_node(n0), Atom edge_label(n0, n2, l1) -> Atom visited(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n2, l1) -> Atom at_node(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n2, l1) -> Atom visited(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n0, l1) -> Atom at_node(n0)
+ADD: Atom at_node(n1), Atom edge_label(n1, n0, l1) -> Atom visited(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n0, l1) -> Atom at_node(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n0, l1) -> Atom visited(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n1, l1) -> Atom at_node(n1)
+ADD: Atom at_node(n2), Atom edge_label(n2, n1, l1) -> Atom visited(n1)
+DEL: Atom at_node(n0), Atom edge_label(n0, n1, l1) -> Atom at_node(n0)
+DEL: Atom at_node(n0), Atom edge_label(n0, n2, l1) -> Atom at_node(n0)
+DEL: Atom at_node(n1), Atom edge_label(n1, n2, l1) -> Atom at_node(n1)
+DEL: Atom at_node(n1), Atom edge_label(n1, n0, l1) -> Atom at_node(n1)
+DEL: Atom at_node(n2), Atom edge_label(n2, n0, l1) -> Atom at_node(n2)
+DEL: Atom at_node(n2), Atom edge_label(n2, n1, l1) -> Atom at_node(n2)
+cost: 0
+(follow_label l2)
+ADD: Atom at_node(n0), Atom edge_label(n0, n1, l2) -> Atom at_node(n1)
+ADD: Atom at_node(n0), Atom edge_label(n0, n1, l2) -> Atom visited(n1)
+ADD: Atom at_node(n0), Atom edge_label(n0, n2, l2) -> Atom at_node(n2)
+ADD: Atom at_node(n0), Atom edge_label(n0, n2, l2) -> Atom visited(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n2, l2) -> Atom at_node(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n2, l2) -> Atom visited(n2)
+ADD: Atom at_node(n1), Atom edge_label(n1, n0, l2) -> Atom at_node(n0)
+ADD: Atom at_node(n1), Atom edge_label(n1, n0, l2) -> Atom visited(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n0, l2) -> Atom at_node(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n0, l2) -> Atom visited(n0)
+ADD: Atom at_node(n2), Atom edge_label(n2, n1, l2) -> Atom at_node(n1)
+ADD: Atom at_node(n2), Atom edge_label(n2, n1, l2) -> Atom visited(n1)
+DEL: Atom at_node(n0), Atom edge_label(n0, n1, l2) -> Atom at_node(n0)
+DEL: Atom at_node(n0), Atom edge_label(n0, n2, l2) -> Atom at_node(n0)
+DEL: Atom at_node(n1), Atom edge_label(n1, n2, l2) -> Atom at_node(n1)
+DEL: Atom at_node(n1), Atom edge_label(n1, n0, l2) -> Atom at_node(n1)
+DEL: Atom at_node(n2), Atom edge_label(n2, n0, l2) -> Atom at_node(n2)
+DEL: Atom at_node(n2), Atom edge_label(n2, n1, l2) -> Atom at_node(n2)
+cost: 0
+Computing fact groups...
+Finding invariants... 4 initial candidates
+[0.000s CPU, 0.001s wall-clock]
+{at_node 0}
+Checking invariant weight... Atom visited(n0)
+Atom at_node(n0)
+Atom edge_label(n0, n1, l1)
+Atom edge_label(n0, n2, l2)
+Atom edge_label(n1, n0, l2)
+Atom edge_label(n1, n2, l1)
+Atom edge_label(n2, n1, l2)
+Atom edge_label(n2, n0, l1)
+Atom =(n0, n0)
+Atom =(n1, n1)
+Atom =(n2, n2)
+Atom =(l1, l1)
+Atom =(l2, l2)
+[0.000s CPU, 0.000s wall-clock]
+()
+Atom at_node(n0)
+2
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+18 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+1212
+Atom edge_label(n2, n1, l2)
+1212
+Atom at_node(n0)
+1212
+Atom visited(n1)
+1212
+Atom edge_label(n1, n0, l2)
+1212
+Atom edge_label(n1, n2, l2)
+1212
+Atom edge_label(n2, n1, l1)
+1212
+Atom visited(n2)
+1212
+Atom edge_label(n0, n1, l1)
+1212
+Atom edge_label(n1, n0, l1)
+1212
+Atom at_node(n1)
+1212
+Atom edge_label(n2, n0, l1)
+1212
+Atom at_node(n2)
+1212
+Atom edge_label(n0, n1, l2)
+1212
+Atom edge_label(n1, n2, l1)
+1212
+Atom edge_label(n0, n2, l1)
+1212
+Atom edge_label(n2, n0, l2)
+1212
+Atom visited(n0)
+1212
+Atom edge_label(n0, n2, l2)
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.001s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building implied facts dictionary...... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.001s wall-clock]
+0 implied effects removed
+0 effect conditions simplified
+0 implied preconditions added
+Building mutex information... [0.000s CPU, 0.000s wall-clock]
+Writing translation key... 
+ors and oneof in initial :
+start
+  Conjunction
+    Conjunction
+      Atom at_node(n0)
+      Atom visited(n0)
+    Conjunction
+      Atom at_node(n1)
+      Atom visited(n1)
+    Conjunction
+      Atom at_node(n2)
+      Atom visited(n2)
+  Conjunction
+    Conjunction
+      Atom edge_label(n0, n1, l1)
+      Atom edge_label(n0, n2, l2)
+    Conjunction
+      Atom edge_label(n0, n1, l2)
+      Atom edge_label(n0, n2, l1)
+  Conjunction
+    Conjunction
+      Atom edge_label(n1, n2, l1)
+      Atom edge_label(n1, n0, l2)
+    Conjunction
+      Atom edge_label(n1, n2, l2)
+      Atom edge_label(n1, n0, l1)
+  Conjunction
+    Conjunction
+      Atom edge_label(n2, n0, l1)
+      Atom edge_label(n2, n1, l2)
+    Conjunction
+      Atom edge_label(n2, n0, l2)
+      Atom edge_label(n2, n1, l1)
+end
+Detect oneof combinable... False
+[0.000s CPU, 0.000s wall-clock]
+maxlen: 3
+ONEOFS:
+oneof(
+(' Atom at_node(n0) Atom visited(n0)',),
+(' Atom at_node(n1) Atom visited(n1)',),
+(' Atom at_node(n2) Atom visited(n2)',)
+oneof(
+(' Atom edge_label(n0, n1, l1) Atom edge_label(n0, n2, l2)',),
+(' Atom edge_label(n0, n1, l2) Atom edge_label(n0, n2, l1)',)
+oneof(
+(' Atom edge_label(n1, n2, l1) Atom edge_label(n1, n0, l2)',),
+(' Atom edge_label(n1, n2, l2) Atom edge_label(n1, n0, l1)',)
+oneof(
+(' Atom edge_label(n2, n0, l1) Atom edge_label(n2, n1, l2)',),
+(' Atom edge_label(n2, n0, l2) Atom edge_label(n2, n1, l1)',)
+[0.000s CPU, 0.002s wall-clock]
+Writing mutex key... [0.000s CPU, 0.000s wall-clock]
+Writing output... [0.000s CPU, 0.000s wall-clock]
+Done! [0.010s CPU, 0.013s wall-clock]

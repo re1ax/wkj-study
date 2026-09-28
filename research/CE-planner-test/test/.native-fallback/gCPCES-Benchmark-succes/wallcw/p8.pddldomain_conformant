@@ -1,0 +1,32 @@
+(define (domain grid)
+;(:requirements  :strips :typing)
+(:types  object - object  num - object  interpretation - object )
+(:constants 
+   zero  - num 
+   one  - num 
+   two  - num 
+   three  - num 
+   four  - num 
+   five  - num 
+   six  - num 
+   seven  - num 
+)
+
+(:predicates (true)   (canmove ?x - interpretation)  (x ?i - num  ?x - interpretation)  (y ?i - num  ?x - interpretation)) 
+(:action can_move
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (x six ?interpr)  (y three ?interpr)) (and (not   (canmove ?interpr)))))(forall (?interpr - interpretation) (when (or (not   (x six ?interpr))(not   (y three ?interpr))) (and   (canmove ?interpr))))))
+(:action east
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (x zero ?interpr)  (canmove ?interpr)) (and   (x one ?interpr)(not   (x zero ?interpr)))))(forall (?interpr - interpretation) (when (and   (x one ?interpr)  (canmove ?interpr)) (and   (x two ?interpr)(not   (x one ?interpr)))))(forall (?interpr - interpretation) (when (and   (x two ?interpr)  (canmove ?interpr)) (and   (x three ?interpr)(not   (x two ?interpr)))))(forall (?interpr - interpretation) (when (and   (x three ?interpr)  (canmove ?interpr)) (and   (x four ?interpr)(not   (x three ?interpr)))))(forall (?interpr - interpretation) (when (and   (x four ?interpr)  (canmove ?interpr)) (and   (x five ?interpr)(not   (x four ?interpr)))))(forall (?interpr - interpretation) (when (and (not   (y three ?interpr))  (x five ?interpr)  (canmove ?interpr)) (and   (x six ?interpr)(not   (x five ?interpr)))))(forall (?interpr - interpretation) (when (and   (x six ?interpr)  (canmove ?interpr)) (and   (x seven ?interpr)(not   (x six ?interpr)))))))
+(:action north
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (y one ?interpr)  (canmove ?interpr)) (and   (y zero ?interpr)(not   (y one ?interpr)))))(forall (?interpr - interpretation) (when (and   (y two ?interpr)  (canmove ?interpr)) (and   (y one ?interpr)(not   (y two ?interpr)))))(forall (?interpr - interpretation) (when (and   (y three ?interpr)  (canmove ?interpr)) (and   (y two ?interpr)(not   (y three ?interpr)))))(forall (?interpr - interpretation) (when (and   (y four ?interpr)  (canmove ?interpr)) (and   (y three ?interpr)(not   (y four ?interpr)))))(forall (?interpr - interpretation) (when (and   (y five ?interpr)  (canmove ?interpr)) (and   (y four ?interpr)(not   (y five ?interpr)))))(forall (?interpr - interpretation) (when (and   (y six ?interpr)  (canmove ?interpr)) (and   (y five ?interpr)(not   (y six ?interpr)))))(forall (?interpr - interpretation) (when (and   (y seven ?interpr)  (canmove ?interpr)) (and   (y six ?interpr)(not   (y seven ?interpr)))))))
+(:action south
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (y zero ?interpr)  (canmove ?interpr)) (and   (y one ?interpr)(not   (y zero ?interpr)))))(forall (?interpr - interpretation) (when (and   (y one ?interpr)  (canmove ?interpr)) (and   (y two ?interpr)(not   (y one ?interpr)))))(forall (?interpr - interpretation) (when (and   (y two ?interpr)  (canmove ?interpr)) (and   (y three ?interpr)(not   (y two ?interpr)))))(forall (?interpr - interpretation) (when (and   (y three ?interpr)  (canmove ?interpr)) (and   (y four ?interpr)(not   (y three ?interpr)))))(forall (?interpr - interpretation) (when (and   (y four ?interpr)  (canmove ?interpr)) (and   (y five ?interpr)(not   (y four ?interpr)))))(forall (?interpr - interpretation) (when (and   (y five ?interpr)  (canmove ?interpr)) (and   (y six ?interpr)(not   (y five ?interpr)))))(forall (?interpr - interpretation) (when (and   (y six ?interpr)  (canmove ?interpr)) (and   (y seven ?interpr)(not   (y six ?interpr)))))))
+(:action west
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (x one ?interpr)  (canmove ?interpr)) (and   (x zero ?interpr)(not   (x one ?interpr)))))(forall (?interpr - interpretation) (when (and   (x two ?interpr)  (canmove ?interpr)) (and   (x one ?interpr)(not   (x two ?interpr)))))(forall (?interpr - interpretation) (when (and   (x three ?interpr)  (canmove ?interpr)) (and   (x two ?interpr)(not   (x three ?interpr)))))(forall (?interpr - interpretation) (when (and   (x four ?interpr)  (canmove ?interpr)) (and   (x three ?interpr)(not   (x four ?interpr)))))(forall (?interpr - interpretation) (when (and   (x five ?interpr)  (canmove ?interpr)) (and   (x four ?interpr)(not   (x five ?interpr)))))(forall (?interpr - interpretation) (when (and   (x six ?interpr)  (canmove ?interpr)) (and   (x five ?interpr)(not   (x six ?interpr)))))(forall (?interpr - interpretation) (when (and   (x seven ?interpr)  (canmove ?interpr)) (and   (x six ?interpr)(not   (x seven ?interpr)))))))
+
+)

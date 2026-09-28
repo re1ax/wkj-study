@@ -1,0 +1,29 @@
+(define (problem temp)(:domain emptyroom)(:objects 
+   p1  - pos 
+   p2  - pos 
+   p3  - pos 
+   p4  - pos 
+   p5  - pos 
+   p6  - pos 
+   p7  - pos 
+   p8  - pos 
+   p9  - pos 
+   p10  - pos 
+   p11  - pos 
+   p12  - pos 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+)
+(:init (true)
+  (y p7 int1)
+  (x p1 int1)
+  (y p7 int2)
+  (x p5 int2)
+  (y p11 int3)
+  (x p1 int3)
+  (y p2 int4)
+  (x p9 int4)
+)
+(:goal (forall (?interpr - interpretation)(and   (x p7 ?interpr)  (y p7 ?interpr)))))

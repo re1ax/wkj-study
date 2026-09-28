@@ -1,0 +1,14 @@
+(define (domain reward)
+;(:requirements  :strips)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (adj ?pi - object  ?pj - object  ?x - interpretation)  (goal ?o - object  ?x - interpretation)  (located ?pi - object  ?x - interpretation)  (obj-located ?o - object  ?pi - object  ?x - interpretation)) 
+(:action move
+:parameters (?pi  - object ?pj  - object )
+:precondition (forall (?interpr - interpretation)(and   (adj ?pi ?pj ?interpr)  (located ?pi ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?pj ?interpr))(forall (?interpr - interpretation) (not   (located ?pi ?interpr)))))
+(:action shout
+:parameters (?o  - object ?pi  - object )
+:precondition (forall (?interpr - interpretation)(and   (located ?pi ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (obj-located ?o ?pi ?interpr) (and   (goal ?o ?interpr))))))
+
+)

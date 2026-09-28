@@ -1,0 +1,19 @@
+#!/bin/bash
+
+a="${TRANSLATOR_HOME:-.}"
+ln -sfn -- "$a" ./t0-runtime || exit 2
+a="./t0-runtime"
+export TRANSLATOR_HOME="$a"
+
+args=("$@")
+for ((i = 0; i < ${#args[@]}; i++)); do
+    if [[ "${args[$i]}" == "-f" && $((i + 2)) -lt ${#args[@]} ]]; then
+        cp -- "${args[$((i + 1))]}" ./t0-input-domain.pddl || exit 2
+        cp -- "${args[$((i + 2))]}" ./t0-input-problem.pddl || exit 2
+        args[$((i + 1))]="t0-input-domain.pddl"
+        args[$((i + 2))]="t0-input-problem.pddl"
+        break
+    fi
+done
+
+exec "$a/translator" -l result_translator-t0 -s 't0:inf' "${args[@]}"

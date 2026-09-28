@@ -1,0 +1,14 @@
+(define (problem temp)(:domain d-ring-new-7)(:objects 
+   w1  - window 
+   w2  - window 
+   w3  - window 
+   w4  - window 
+   w5  - window 
+   w6  - window 
+   w7  - window 
+   int1  - interpretation 
+)
+(:init (true)
+  (pos w1 int1)
+)
+(:goal (forall (?interpr - interpretation)(and (or   (locked w1 ?interpr)  (locker_damaged w1 ?interpr))(or   (locked w2 ?interpr)  (locker_damaged w2 ?interpr))(or   (locked w3 ?interpr)  (locker_damaged w3 ?interpr))(or   (locked w4 ?interpr)  (locker_damaged w4 ?interpr))(or   (locked w5 ?interpr)  (locker_damaged w5 ?interpr))(or   (locked w6 ?interpr)  (locker_damaged w6 ?interpr))(or   (locked w7 ?interpr)  (locker_damaged w7 ?interpr))  (closed w1 ?interpr)  (closed w2 ?interpr)  (closed w3 ?interpr)  (closed w4 ?interpr)  (closed w5 ?interpr)  (closed w6 ?interpr)  (closed w7 ?interpr)))))

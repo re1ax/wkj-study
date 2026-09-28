@@ -1,0 +1,5 @@
+status=OK
+mode=NATIVE_READ_ONLY
+domain=/root/workspace/research/refine/CE-planner/runs/run_17594/iter_0001/native_fallback_cff_domain.pddl
+problem=/root/workspace/research/refine/CE-planner/runs/run_17594/iter_0001/native_fallback_cff_problem.pddl
+message=SKIPPED_NATIVE_DIRECT: native success-library pair is handed unchanged to its original planner frontend

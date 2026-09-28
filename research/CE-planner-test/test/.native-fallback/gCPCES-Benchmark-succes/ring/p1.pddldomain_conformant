@@ -1,0 +1,22 @@
+(define (domain d-ring-1)
+;(:requirements  :typing :equality)
+(:types  object - object  window - object  interpretation - object )
+(:constants 
+   w1  - window 
+)
+
+(:predicates (true)   (pos ?w - window  ?x - interpretation)  (closed ?w - window  ?x - interpretation)  (open ?w - window  ?x - interpretation)  (locked ?w - window  ?x - interpretation)) 
+(:action bwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (pos w1 ?interpr)(not   (pos w1 ?interpr)))))))
+(:action close
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (closed w1 ?interpr))))))
+(:action fwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (pos w1 ?interpr)(not   (pos w1 ?interpr)))))))
+(:action lock
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (pos w1 ?interpr)  (closed w1 ?interpr)) (and   (locked w1 ?interpr))))))
+
+)

@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/app.dir/main.cpp.o -o /root/workspace/cppThings/Modern-cpp/cmake_lab_v3/app   -L/root/workspace/cppThings/Modern-cpp/cmake_lab_v3/lib2  -Wl,-rpath,/root/workspace/cppThings/Modern-cpp/cmake_lab_v3/lib2 -lcalc 

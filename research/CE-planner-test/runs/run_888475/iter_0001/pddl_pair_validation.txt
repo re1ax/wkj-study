@@ -1,0 +1,5 @@
+status=OK
+mode=REFINED_GENERATED
+domain=/tmp/igc-normalized-pddl-888461/domain.normalized.pddl
+problem=/root/workspace/research/CE-planner/runs/run_888475/iter_0001/refined_t1_problem.pddl
+message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid

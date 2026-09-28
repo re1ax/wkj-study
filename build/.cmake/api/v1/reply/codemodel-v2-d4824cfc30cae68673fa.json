@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "MyCache",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-49168d9fe435f0b6be95.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_all_cache_policy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_all_cache_policy-Debug-89df6af326da51ff4e3d.json",
+					"name" : "test_all_cache_policy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_hash_lfu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_hash_lfu-Debug-f202b2353b29d474c909.json",
+					"name" : "test_hash_lfu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_hash_lru::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_hash_lru-Debug-8c66989ab2b15f4496b7.json",
+					"name" : "test_hash_lru",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_lfu::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_lfu-Debug-869bdac25d408fbfcb36.json",
+					"name" : "test_lfu",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_lfu_aging::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_lfu_aging-Debug-2ac99922e2a9de95a440.json",
+					"name" : "test_lfu_aging",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_lru::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_lru-Debug-848567111e7b6bfd55be.json",
+					"name" : "test_lru",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_thread_safety::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_thread_safety-Debug-1a2b7c3d542ac36c53fa.json",
+					"name" : "test_thread_safety",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/root/workspace/build",
+		"source" : "/root/workspace/MyProject/MyCache"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

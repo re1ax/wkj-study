@@ -1,0 +1,8 @@
+(define (domain bt)
+(:types  object - object  package - object  bomb - object  interpretation - object )
+(:predicates (true)   (defused ?b - bomb  ?x - interpretation)  (in ?p - package  ?b - bomb  ?x - interpretation)  (notdefused ?b - bomb  ?x - interpretation)) 
+(:action dunk
+:parameters (?p  - package ?b  - bomb )
+:effect (and (forall (?interpr - interpretation) (when (and   (notdefused ?b ?interpr)  (in ?p ?b ?interpr)) (and   (defused ?b ?interpr))))))
+
+)

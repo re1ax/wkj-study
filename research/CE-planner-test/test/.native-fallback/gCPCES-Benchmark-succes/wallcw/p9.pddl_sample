@@ -1,0 +1,101 @@
+(define (problem temp)(:domain grid)(:objects 
+   zero  - num 
+   one  - num 
+   two  - num 
+   three  - num 
+   four  - num 
+   five  - num 
+   six  - num 
+   seven  - num 
+   eight  - num 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+   int9  - interpretation 
+   int10  - interpretation 
+   int11  - interpretation 
+   int12  - interpretation 
+   int13  - interpretation 
+   int14  - interpretation 
+   int15  - interpretation 
+   int16  - interpretation 
+   int17  - interpretation 
+   int18  - interpretation 
+   int19  - interpretation 
+   int20  - interpretation 
+   int21  - interpretation 
+   int22  - interpretation 
+   int23  - interpretation 
+   int24  - interpretation 
+   int25  - interpretation 
+   int26  - interpretation 
+)
+(:init (true)
+  (x zero int1)
+  (y zero int1)
+  (y three int2)
+  (canmove int2)
+  (x four int2)
+  (x six int3)
+  (y six int3)
+  (x eight int4)
+  (y three int4)
+  (y seven int5)
+  (x three int5)
+  (x eight int6)
+  (y eight int6)
+  (y five int7)
+  (x three int7)
+  (y four int8)
+  (canmove int8)
+  (x four int8)
+  (y five int9)
+  (x two int9)
+  (canmove int10)
+  (x one int10)
+  (y seven int10)
+  (y six int11)
+  (x three int11)
+  (y four int12)
+  (canmove int12)
+  (x seven int12)
+  (canmove int13)
+  (x zero int13)
+  (y eight int13)
+  (x zero int14)
+  (y seven int14)
+  (x zero int15)
+  (y six int15)
+  (canmove int16)
+  (y four int16)
+  (x three int16)
+  (canmove int17)
+  (y six int17)
+  (x one int17)
+  (x zero int18)
+  (y five int18)
+  (y four int19)
+  (x two int19)
+  (y five int20)
+  (x one int20)
+  (y two int21)
+  (x three int21)
+  (y two int22)
+  (x two int22)
+  (y four int23)
+  (x one int23)
+  (x zero int24)
+  (y four int24)
+  (y two int25)
+  (canmove int25)
+  (x one int25)
+  (y two int26)
+  (canmove int26)
+  (x zero int26)
+)
+(:goal (forall (?interpr - interpretation)(and   (x four ?interpr)  (y zero ?interpr)))))

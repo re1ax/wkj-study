@@ -1,0 +1,13 @@
+
+warning: empty con/disjunction in domain definition. simplifying.
+
+Iteraction: 0
+Iteraction: 1
+Iteraction: 2
+Iteraction: 3
+Fluents=35
+Operators=20
+Compiler time limit set to: 60
+Time spent compiling CNF into DNNF: 0.014
+Problem has WIDTH > 1
+Plan found!

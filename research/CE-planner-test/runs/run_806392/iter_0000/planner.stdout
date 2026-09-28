@@ -1,0 +1,10 @@
+Iteraction: 0
+Iteraction: 1
+Iteraction: 2
+Iteraction: 3
+Fluents=40
+Operators=28
+Compiler time limit set to: 60
+Time spent compiling CNF into DNNF: 0.016
+Problem has WIDTH <= 1
+Plan found!

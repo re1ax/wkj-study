@@ -1,0 +1,145 @@
+Building causal graph...
+The causal graph is not acyclic.
+18 variables of 18 necessary
+2 of 2 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+Simplifying transitions... done!
+Search iteration 1
+Using the following heuristic(s):
+FF heuristic with preferred operators
+STATE:
+  var15: 1
+  var14: 0
+  var13: 1
+  var10: 1
+  var9: 1
+  var8: 1
+  var7: 0
+  var6: 1
+  var5: 0
+  var2: 0
+  var1: 0
+  var0: 0
+  var3: 1
+  var11: 0
+  var12: 1
+  var17: 1
+  var16: 1
+  var4: 0
+2
+axiom:0
+第0个oneof:(0,0) (0,0) (0,0) 
+选择的下标:0,
+最终选择0
+第1个oneof:(0,0) (0,0) 
+选择的下标:0,
+最终选择0
+第2个oneof:(0,0) (0,0) 
+选择的下标:0,
+最终选择0
+第3个oneof:(0,0) (0,0) 
+选择的下标:0,
+最终选择0
+STATE:
+  var15: 1
+  var14: 0
+  var13: 1
+  var10: 1
+  var9: 1
+  var8: 1
+  var7: 0
+  var6: 1
+  var5: 0
+  var2: 0
+  var1: 0
+  var0: 0
+  var3: 1
+  var11: 0
+  var12: 1
+  var17: 1
+  var16: 1
+  var4: 0
+Best heuristic value: 2 [expanded 1 state(s)]
+Best heuristic value: 1 [expanded 2 state(s)]
+Solution found!
+2
+g_use_metric:0
+follow_label l2
+follow_label l2
+Plan length: 2 step(s).
+plansize:2
+第1次迭代
+规划长度：2
+follow_label l2 follow_label l2 
+2
+规划解能解反例集！
+
+0 0 0 重复的次数：0
+规划解长度2
+找到反例！
+SMT变量数:51
+1
+状态1出现在反例集中的次数：1
+状态2出现在反例集中的次数：1
+Initial State:
+  var15: 0
+  var10: 0
+  var8: 0
+  var7: 0
+  var6: 0
+  var1: 0
+  var11: 0
+  var4: 0
+Previou State:
+  var14: 0
+  var7: 0
+  var5: 0
+  var2: 0
+  var1: 0
+  var0: 0
+  var11: 0
+  var4: 0
+Completely explored state space -- no solution!
+0 没有找到！
+Completely explored state space -- no solution!
+1 没有找到！
+Best heuristic value: 1 [expanded 1 state(s)]
+Solution found!
+4.plan
+规划长度：1
+follow_label l1 
+第2次迭代
+规划长度：3
+follow_label l2 follow_label l2 follow_label l1 
+3
+规划解能解反例集！
+
+0 0 0 0 重复的次数：0
+规划解长度3
+没有反例，找到最终解！
+0
+0
+
+规划解能解反例集！
+是否找到landmark:0
+切换0
+影响1:2
+影响2:0
+删除不满足前置条件的动作数:0
+最终反例集大小:2
+反例集中出现次数大于1的反例数:0
+检测到可精简plan次数:0
+belief_size:4
+operate size:4
+final plan: plan_size 3
+iteration:2
+fail_time:0
+landmark time:0
+counter time:0.02 seconds
+Total time: 0.02 seconds

@@ -1,0 +1,124 @@
+(define (problem temp)(:domain forest)(:objects 
+   x1  - location 
+   y1  - location 
+   x2  - location 
+   y2  - location 
+   grid  - prob 
+   logistics  - prob 
+   blocksworld  - prob 
+   a  - block 
+   b  - block 
+   c  - block 
+   t1  - truck 
+   t2  - truck 
+   a1  - plane 
+   p1  - package 
+   l11  - log_location 
+   l12  - log_location 
+   l21  - log_location 
+   l22  - log_location 
+   c1  - city 
+   c2  - city 
+   sx1  - sub_location 
+   sx2  - sub_location 
+   sy1  - sub_location 
+   sy2  - sub_location 
+   int1  - interpretation 
+   int2  - interpretation 
+)
+(:init (true)
+  (s_goal_y sy1 x1 int1)
+  (s_succ_loc sx1 sx2 int1)
+  (s_succ_loc sy1 sy2 int1)
+  (s_goal_x sx1 y1 int1)
+  (neq l22 l11 int1)
+  (s_at_y sy2 x2 int1)
+  (s_city_loc l21 c2 int1)
+  (s_at_y sy2 y1 int1)
+  (s_clear c y2 int1)
+  (s_goal_x sx1 x1 int1)
+  (prob_at x2 grid int1)
+  (succ_loc y1 y2 int1)
+  (prob_at y1 grid int1)
+  (s_goal_x sx1 x2 int1)
+  (s_at_y sy2 x1 int1)
+  (s_at_x sx2 x2 int1)
+  (s_clear b y2 int1)
+  (s_empty y2 int1)
+  (s_city_loc l11 c1 int1)
+  (s_city_loc l22 c2 int1)
+  (s_airport_loc l21 int1)
+  (s_goal_y sy1 y1 int1)
+  (neq l11 l12 int1)
+  (neq l11 l22 int1)
+  (succ_loc x1 x2 int1)
+  (s_on_table b y2 int1)
+  (s_at_x sx2 x1 int1)
+  (neq l12 l11 int1)
+  (s_on c a y2 int1)
+  (neq l22 l21 int1)
+  (prob_at y2 blocksworld int1)
+  (neq l21 l22 int1)
+  (s_airport_loc l11 int1)
+  (neq l21 l12 int1)
+  (s_city_loc l12 c1 int1)
+  (located x2 int1)
+  (s_goal_y sy1 x2 int1)
+  (neq l12 l21 int1)
+  (neq l12 l22 int1)
+  (prob_at x1 grid int1)
+  (neq l11 l21 int1)
+  (located y1 int1)
+  (neq l21 l11 int1)
+  (neq l22 l12 int1)
+  (s_on_table a y2 int1)
+  (s_at_x sx2 y1 int1)
+  (located x1 int2)
+  (neq l22 l11 int2)
+  (s_city_loc l21 c2 int2)
+  (s_clear c y2 int2)
+  (s_airport_loc l21 int2)
+  (prob_at x2 grid int2)
+  (prob_at y1 grid int2)
+  (s_at_y sy2 x1 int2)
+  (neq l22 l21 int2)
+  (neq l11 l22 int2)
+  (succ_loc x1 x2 int2)
+  (s_on_table b y2 int2)
+  (s_at_y sy1 x2 int2)
+  (s_city_loc l12 c1 int2)
+  (neq l12 l21 int2)
+  (neq l12 l22 int2)
+  (s_goal_y sy1 x1 int2)
+  (s_on_table a y2 int2)
+  (s_succ_loc sx1 sx2 int2)
+  (s_goal_x sx1 y1 int2)
+  (s_at_y sy2 x2 int2)
+  (s_succ_loc sy1 sy2 int2)
+  (s_at_y sy2 y1 int2)
+  (s_goal_x sx1 x1 int2)
+  (s_clear b y2 int2)
+  (succ_loc y1 y2 int2)
+  (s_empty y2 int2)
+  (s_goal_x sx1 x2 int2)
+  (located y2 int2)
+  (s_city_loc l11 c1 int2)
+  (s_at_x sx2 x2 int2)
+  (s_city_loc l22 c2 int2)
+  (s_goal_y sy1 y1 int2)
+  (neq l11 l12 int2)
+  (s_at_x sx2 x1 int2)
+  (neq l12 l11 int2)
+  (s_on c a y2 int2)
+  (prob_at y2 blocksworld int2)
+  (neq l21 l22 int2)
+  (s_airport_loc l11 int2)
+  (neq l21 l12 int2)
+  (s_goal_y sy1 x2 int2)
+  (prob_at x1 grid int2)
+  (neq l11 l21 int2)
+  (neq l21 l11 int2)
+  (neq l22 l12 int2)
+  (s_at_x sx2 y1 int2)
+)
+(:goal (forall (?interpr - interpretation)(and   (located x1 ?interpr)  (located y1 ?interpr)))))

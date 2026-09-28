@@ -1,0 +1,1098 @@
+[开始时间] 2026-09-24 23:44:22
+[项目根目录] /root/workspace/research/CE-planner
+[候选规划器] igc
+[启动脚本] /root/workspace/research/CE-planner/plan-cegis-igc
+[benchmark] uts-cycle
+[case_name] p3
+[pair_suffix] 3
+[domain] /root/workspace/research/CE-planner/test/uts-cycle/d3.pddl
+[problem] /root/workspace/research/CE-planner/test/uts-cycle/p3.pddl
+[result_file] /root/workspace/research/CE-planner/result_output_batch_ce/example-igc/uts-cycle/p3/result.plan
+[display_flag] false
+[timeout_sec] 120
+[memory_limit] 16G
+[memory_limit_kb] 16777216
+[success_marker_configured] yes
+[快捷键] Ctrl+B=跳过本例；Ctrl+C=终止整批
+
+[IGC-PDDL-NORMALIZE] typed_dash_rewrites=0 domain=/tmp/igc-normalized-pddl-495/domain.normalized.pddl problem=/tmp/igc-normalized-pddl-495/problem.normalized.pddl
+[IGC-FALLBACK-CONFIG] version=v16-cff-cee-native-library profile=quick-debug planner=igc runtime=isolated
+[IGC-FALLBACK-CONFIG] state_machine=NATIVE_PREFLIGHT,CE_ONLY_OR_CE_PROBE,PROBE_BUDGET_TO_NATIVE fallback_counts_as_iteration=1
+[IGC-FALLBACK-CONFIG] native_only=1 native_direct=1 generated_full_fallback=0
+[IGC-FALLBACK-CONFIG] new_counterexample_triggers_native=0 force_native_first=0
+[IGC-FALLBACK-CONFIG] refined_time_gate=1 legacy_refined_timeout=30 candidate_timeout=3600
+[IGC-FALLBACK-CONFIG] ce_only_total_budget=3600 probe_single_override=30 probe_max_iterations_override=auto probe_total_override=auto
+[IGC-FALLBACK-CONFIG] native_benchmark_root=/root/workspace/research/CE-planner/test public_domain=uts-cycle public_problem=p3.pddl
+[IGC-FALLBACK-CONFIG] public_source_domain=/root/workspace/research/CE-planner/test/uts-cycle/d3.pddl public_source_problem=/root/workspace/research/CE-planner/test/uts-cycle/p3.pddl
+1. Running translator
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+18 variables of 18 necessary
+2 of 2 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+主流程反例求解后端: CNF/Kissat
+CNF预处理开关: 关闭
+CNF日志开关: basic=on, detail=on, clause=on, model=on
+Simplifying transitions... done!
+[IGC-MAPPING] all_groups_entries=18 mapped_entries=18 skipped_removed_variables=0
+[IGC-NATIVE-ARTIFACT-PREFLIGHT] planner=iGC available=1 status=OK artifact_type=PDDL_PAIR mode=CE_PROBE message=planner=iGC artifact_type=PDDL_PAIR library_alias=iGC-Benchmark-succes domain=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/d3.pddl problem=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/p3.pddl domain_rule=public-domain-basename:d3.pddl
+3
+axiom:0
+[CNF-初始化] oneof 文件读取完成，type=3, orlens=4, lens=0
+[CNF-初始化] axiom 映射建立完成，条目数=0
+[CNF-初始化] L0 确定事实数量=0
+[IGC-CEGIS] version=v16-cff-cee-native-library context=fnv1a64:d2a4ea0c64079d89 vars=18 constraints=4 candidate_planner=iGC runtime_mode=ISOLATED planner_timeout=3600 run_dir=/root/workspace/research/CE-planner/runs/run_509 internal_iteration_limit=unlimited duplicate_counterexample_limit=disabled
+[IGC-ADAPTIVE-LAYER4] enabled=0 strategy=separate-native-benchmark-fallback original_oneof=0 original_or=4 min_iteration=2 consecutive_counterexamples=2 plateau_iterations=1 oneof_ratio=0.8 or_ratio=0.8 semantic_alternative_ratio=0.95 require_alternative_semantics=1 generated_full_fallback=disabled native_baseline=all-planners-native-direct superb=off superb_contexts=0 superb_width=0
+[IGC-CE-GUIDANCE-FALLBACK] enabled=1 strategy=native-artifact-aware-mode-control execution_mode=CE_PROBE native_available=1 limit_refined_time=1 legacy_refined_timeout=30 probe_policy_tuned=1 probe_policy_active=1 probe_single_timeout=30 probe_max_refined_iterations=6 probe_total_budget=180 ce_only_total_budget=3600 force_native_fallback=0 direct_native_fallback_active=0 new_counterexample_continues_refined=1
+[IGC-SUPERB] mode=off strict_only=1 max_improvements=0 time_budget_ms=0 counterexample_batch=1 contexts=0 width=0 lite=disabled representative_rendering=disabled
+[IGC-CEGIS] legacy internal search and subplan cache are bypassed.
+[IGC-VERIFY] full_verifier_oneof_source=oneof_initial
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 开始构造静态 time0 基座
+[CNF-变量] 新建事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建事实变量 id=2, 含义=(var4=0, t=0)
+[CNF-变量] 新建辅助变量 id=3, 类型=1, 含义=初始组#0 项#0
+[CNF-子句] 新增子句 #1, 类型=1, 长度=2, 说明=初始组#0 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#3{初始组#0 项#0} OR (var6=0, t=0)
+[CNF-子句] 新增子句 #2, 类型=1, 长度=2, 说明=初始组#0 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#3{初始组#0 项#0} OR (var4=0, t=0)
+[CNF-子句] 新增子句 #3, 类型=1, 长度=3, 说明=初始组#0 项#0 : all in -> out
+[CNF-子句] 内容: ¬(var4=0, t=0) OR ¬(var6=0, t=0) OR aux#3{初始组#0 项#0}
+[CNF-门] 构造AND门 out=x3, 输入数量=2, 说明=初始组#0 项#0
+[CNF-变量] 新建事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 新建辅助变量 id=6, 类型=1, 含义=初始组#0 项#1
+[CNF-子句] 新增子句 #4, 类型=1, 长度=2, 说明=初始组#0 项#1 : out -> in
+[CNF-子句] 内容: ¬aux#6{初始组#0 项#1} OR (var14=0, t=0)
+[CNF-子句] 新增子句 #5, 类型=1, 长度=2, 说明=初始组#0 项#1 : out -> in
+[CNF-子句] 内容: ¬aux#6{初始组#0 项#1} OR (var8=0, t=0)
+[CNF-子句] 新增子句 #6, 类型=1, 长度=3, 说明=初始组#0 项#1 : all in -> out
+[CNF-子句] 内容: ¬(var8=0, t=0) OR ¬(var14=0, t=0) OR aux#6{初始组#0 项#1}
+[CNF-门] 构造AND门 out=x6, 输入数量=2, 说明=初始组#0 项#1
+[CNF-变量] 新建事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建事实变量 id=8, 含义=(var10=0, t=0)
+[CNF-变量] 新建辅助变量 id=9, 类型=1, 含义=初始组#0 项#2
+[CNF-子句] 新增子句 #7, 类型=1, 长度=2, 说明=初始组#0 项#2 : out -> in
+[CNF-子句] 内容: ¬aux#9{初始组#0 项#2} OR (var5=0, t=0)
+[CNF-子句] 新增子句 #8, 类型=1, 长度=2, 说明=初始组#0 项#2 : out -> in
+[CNF-子句] 内容: ¬aux#9{初始组#0 项#2} OR (var10=0, t=0)
+[CNF-子句] 新增子句 #9, 类型=1, 长度=3, 说明=初始组#0 项#2 : all in -> out
+[CNF-子句] 内容: ¬(var10=0, t=0) OR ¬(var5=0, t=0) OR aux#9{初始组#0 项#2}
+[CNF-门] 构造AND门 out=x9, 输入数量=2, 说明=初始组#0 项#2
+[CNF-子句] 新增子句 #10, 类型=2, 长度=3, 说明=初始组#0 至少满足一项
+[CNF-子句] 内容: aux#3{初始组#0 项#0} OR aux#6{初始组#0 项#1} OR aux#9{初始组#0 项#2}
+[CNF-变量] 新建事实变量 id=10, 含义=(var0=0, t=0)
+[CNF-变量] 新建事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 新建辅助变量 id=12, 类型=1, 含义=初始组#1 项#0
+[CNF-子句] 新增子句 #11, 类型=1, 长度=2, 说明=初始组#1 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#12{初始组#1 项#0} OR (var0=0, t=0)
+[CNF-子句] 新增子句 #12, 类型=1, 长度=2, 说明=初始组#1 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#12{初始组#1 项#0} OR (var3=0, t=0)
+[CNF-子句] 新增子句 #13, 类型=1, 长度=3, 说明=初始组#1 项#0 : all in -> out
+[CNF-子句] 内容: ¬(var3=0, t=0) OR ¬(var0=0, t=0) OR aux#12{初始组#1 项#0}
+[CNF-门] 构造AND门 out=x12, 输入数量=2, 说明=初始组#1 项#0
+[CNF-变量] 新建事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=14, 含义=(var2=0, t=0)
+[CNF-变量] 新建辅助变量 id=15, 类型=1, 含义=初始组#1 项#1
+[CNF-子句] 新增子句 #14, 类型=1, 长度=2, 说明=初始组#1 项#1 : out -> in
+[CNF-子句] 内容: ¬aux#15{初始组#1 项#1} OR (var1=0, t=0)
+[CNF-子句] 新增子句 #15, 类型=1, 长度=2, 说明=初始组#1 项#1 : out -> in
+[CNF-子句] 内容: ¬aux#15{初始组#1 项#1} OR (var2=0, t=0)
+[CNF-子句] 新增子句 #16, 类型=1, 长度=3, 说明=初始组#1 项#1 : all in -> out
+[CNF-子句] 内容: ¬(var2=0, t=0) OR ¬(var1=0, t=0) OR aux#15{初始组#1 项#1}
+[CNF-门] 构造AND门 out=x15, 输入数量=2, 说明=初始组#1 项#1
+[CNF-子句] 新增子句 #17, 类型=2, 长度=2, 说明=初始组#1 至少满足一项
+[CNF-子句] 内容: aux#12{初始组#1 项#0} OR aux#15{初始组#1 项#1}
+[CNF-变量] 新建事实变量 id=16, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 新建辅助变量 id=18, 类型=1, 含义=初始组#2 项#0
+[CNF-子句] 新增子句 #18, 类型=1, 长度=2, 说明=初始组#2 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#18{初始组#2 项#0} OR (var7=0, t=0)
+[CNF-子句] 新增子句 #19, 类型=1, 长度=2, 说明=初始组#2 项#0 : out -> in
+[CNF-子句] 内容: ¬aux#18{初始组#2 项#0} OR (var11=0, t=0)
+[CNF-子句] 新增子句 #20, 类型=1, 长度=3, 说明=初始组#2 项#0 : all in -> out
+[CNF-子句] 内容: ¬(var11=0, t=0) OR ¬(var7=0, t=0) OR aux#18{初始组#2 项#0}
+[CNF-门] 构造AND门 out=x18, 输入数量=2, 说明=初始组#2 项#0
+[CNF-变量] 新建事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=20, 含义=(var12=0, t=0)
+[CNF-变量] 新建辅助变量 id=21, 类型=1, 含义=初始组#2 项#1
+[CNF-子句] 内容: ¬aux#21{初始组#2 项#1} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#21{初始组#2 项#1} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬(var12=0, t=0) OR ¬(var13=0, t=0) OR aux#21{初始组#2 项#1}
+[CNF-门] 构造AND门 out=x21, 输入数量=2, 说明=初始组#2 项#1
+[CNF-子句] 内容: aux#18{初始组#2 项#0} OR aux#21{初始组#2 项#1}
+[CNF-变量] 新建事实变量 id=22, 含义=(var16=0, t=0)
+[CNF-变量] 新建事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 新建辅助变量 id=24, 类型=1, 含义=初始组#3 项#0
+[CNF-子句] 内容: ¬aux#24{初始组#3 项#0} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#24{初始组#3 项#0} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬(var15=0, t=0) OR ¬(var16=0, t=0) OR aux#24{初始组#3 项#0}
+[CNF-门] 构造AND门 out=x24, 输入数量=2, 说明=初始组#3 项#0
+[CNF-变量] 新建事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 新建事实变量 id=26, 含义=(var9=0, t=0)
+[CNF-变量] 新建辅助变量 id=27, 类型=1, 含义=初始组#3 项#1
+[CNF-子句] 内容: ¬aux#27{初始组#3 项#1} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#27{初始组#3 项#1} OR (var9=0, t=0)
+[CNF-子句] 内容: ¬(var9=0, t=0) OR ¬(var17=0, t=0) OR aux#27{初始组#3 项#1}
+[CNF-门] 构造AND门 out=x27, 输入数量=2, 说明=初始组#3 项#1
+[CNF-子句] 内容: aux#24{初始组#3 项#0} OR aux#27{初始组#3 项#1}
+[CNF-变量] 复用事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 新建事实变量 id=28, 含义=(var17=1, t=0)
+[CNF-子句] 内容: (var17=0, t=0) OR (var17=1, t=0)
+[CNF-子句] 内容: ¬(var17=1, t=0) OR ¬(var17=0, t=0)
+[CNF-变量] 复用事实变量 id=22, 含义=(var16=0, t=0)
+[CNF-变量] 新建事实变量 id=29, 含义=(var16=1, t=0)
+[CNF-子句] 内容: (var16=0, t=0) OR (var16=1, t=0)
+[CNF-子句] 内容: ¬(var16=1, t=0) OR ¬(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 新建事实变量 id=30, 含义=(var15=1, t=0)
+[CNF-子句] 内容: (var15=0, t=0) OR (var15=1, t=0)
+[CNF-子句] 内容: ¬(var15=1, t=0) OR ¬(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=31, 含义=(var13=1, t=0)
+[CNF-子句] 内容: (var13=0, t=0) OR (var13=1, t=0)
+[CNF-子句] 内容: ¬(var13=1, t=0) OR ¬(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=20, 含义=(var12=0, t=0)
+[CNF-变量] 新建事实变量 id=32, 含义=(var12=1, t=0)
+[CNF-子句] 内容: (var12=0, t=0) OR (var12=1, t=0)
+[CNF-子句] 内容: ¬(var12=1, t=0) OR ¬(var12=0, t=0)
+[CNF-变量] 复用事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 新建事实变量 id=33, 含义=(var11=1, t=0)
+[CNF-子句] 内容: (var11=0, t=0) OR (var11=1, t=0)
+[CNF-子句] 内容: ¬(var11=1, t=0) OR ¬(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=26, 含义=(var9=0, t=0)
+[CNF-变量] 新建事实变量 id=34, 含义=(var9=1, t=0)
+[CNF-子句] 内容: (var9=0, t=0) OR (var9=1, t=0)
+[CNF-子句] 内容: ¬(var9=1, t=0) OR ¬(var9=0, t=0)
+[CNF-变量] 复用事实变量 id=16, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=35, 含义=(var7=1, t=0)
+[CNF-子句] 内容: (var7=0, t=0) OR (var7=1, t=0)
+[CNF-子句] 内容: ¬(var7=1, t=0) OR ¬(var7=0, t=0)
+[CNF-变量] 复用事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 新建事实变量 id=36, 含义=(var3=1, t=0)
+[CNF-子句] 内容: (var3=0, t=0) OR (var3=1, t=0)
+[CNF-子句] 内容: ¬(var3=1, t=0) OR ¬(var3=0, t=0)
+[CNF-变量] 复用事实变量 id=14, 含义=(var2=0, t=0)
+[CNF-变量] 新建事实变量 id=37, 含义=(var2=1, t=0)
+[CNF-子句] 内容: (var2=0, t=0) OR (var2=1, t=0)
+[CNF-子句] 内容: ¬(var2=1, t=0) OR ¬(var2=0, t=0)
+[CNF-变量] 复用事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=38, 含义=(var1=1, t=0)
+[CNF-子句] 内容: (var1=0, t=0) OR (var1=1, t=0)
+[CNF-子句] 内容: ¬(var1=1, t=0) OR ¬(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=10, 含义=(var0=0, t=0)
+[CNF-变量] 新建事实变量 id=39, 含义=(var0=1, t=0)
+[CNF-子句] 内容: (var0=0, t=0) OR (var0=1, t=0)
+[CNF-子句] 内容: ¬(var0=1, t=0) OR ¬(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建事实变量 id=40, 含义=(var6=1, t=0)
+[CNF-子句] 内容: (var6=0, t=0) OR (var6=1, t=0)
+[CNF-子句] 内容: ¬(var6=1, t=0) OR ¬(var6=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建事实变量 id=41, 含义=(var5=1, t=0)
+[CNF-子句] 内容: (var5=0, t=0) OR (var5=1, t=0)
+[CNF-子句] 内容: ¬(var5=1, t=0) OR ¬(var5=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建事实变量 id=42, 含义=(var14=1, t=0)
+[CNF-子句] 内容: (var14=0, t=0) OR (var14=1, t=0)
+[CNF-子句] 内容: ¬(var14=1, t=0) OR ¬(var14=0, t=0)
+[CNF-变量] 复用事实变量 id=8, 含义=(var10=0, t=0)
+[CNF-变量] 新建事实变量 id=43, 含义=(var10=1, t=0)
+[CNF-子句] 内容: (var10=0, t=0) OR (var10=1, t=0)
+[CNF-子句] 内容: ¬(var10=1, t=0) OR ¬(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 新建事实变量 id=44, 含义=(var8=1, t=0)
+[CNF-子句] 内容: (var8=0, t=0) OR (var8=1, t=0)
+[CNF-子句] 内容: ¬(var8=1, t=0) OR ¬(var8=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var4=0, t=0)
+[CNF-变量] 新建事实变量 id=45, 含义=(var4=1, t=0)
+[CNF-子句] 内容: (var4=0, t=0) OR (var4=1, t=0)
+[CNF-子句] 内容: ¬(var4=1, t=0) OR ¬(var4=0, t=0)
+[CNF-静态基座] 构造完成: vars=45, clauses=67
+[CNF-静态基座] 已恢复静态基座: vars=45, clauses=67
+[CNF-验证] 开始构造计划失败 CNF，计划长度=0
+[CNF-变量] 复用事实变量 id=8, 含义=(var10=0, t=0)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-变量] 复用事实变量 id=2, 含义=(var4=0, t=0)
+[CNF-子句] 新增子句 #68, 类型=11, 长度=3, 说明=最终失败条件：不是所有根条件都成立
+[CNF-子句] 内容: ¬(var10=0, t=0) OR ¬(var8=0, t=0) OR ¬(var4=0, t=0)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=0
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=0
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=0
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=0
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=0
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=0
+[CNF-化简] 估计少加子句=0
+[CNF-缓存] 变量骨架缓存命中次数=0
+[CNF-缓存] 变量骨架缓存未命中次数=0
+[CNF-缓存] 变量桶内处理值请求次数=0
+[CNF-缓存] 实例化ADD支持项次数=0
+[CNF-缓存] 实例化DEL支持项次数=0
+[CNF-缓存] 支持项门缓存命中次数=0
+[CNF-缓存] 支持项门缓存未命中次数=0
+[CNF-缓存] 持久变量骨架缓存大小=0 -> 0
+[CNF-缓存] support term pool 复用命中次数=0, pool_size=0
+[CNF-化简] persistence别名命中次数=0
+[CNF-化简] persistence时间别名累计跨度=0
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=0, cache_size=0
+[CNF-跨轮] 后缀摘要 build_count=1, reuse_count=0
+[CNF-跨轮] 本轮复用公共后缀步数=0, 本轮重建前缀步数=0
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=0, 累计跳过步数=0
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=0
+[CNF-跨轮] 回归调度插入事实数=0, 实际处理事实数=0, time0落地事实数=3
+[CNF-P8-count] logical_schedule_attempts=0, inserted=0, suppressed=0, active_attempts=0, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=1, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=0, compared=0, equal=0, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=off, replay_layers=0, replay_buckets=0, replay_facts=0, suppressed=0, allowed=0, attempts=0
+[CNF-P1] plan_size=0, regression_loop_scanned_steps=0, active_layers=0, processed_buckets=0
+[CNF-P1] AND门请求次数=0, OR门请求次数=0, 空support项=0, 非空support项=0
+[CNF-P2] 回归case记录使用次数=0, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=0, 前缀扫描步数=0, 后缀重放步数=0
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=0
+[CNF-P4] branch_lit_vector_hit=0, branch_lit_vector_miss=0
+[CNF-汇总] 事实变量数=36
+[CNF-汇总] 辅助变量数=9
+[CNF-汇总] 变量总数=45
+[CNF-汇总] 子句总数=68
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=3
+[CNF-汇总] 回归层峰值事实数=0
+[Kissat] 开始装载CNF，子句总数=68
+[Kissat] 开始求解...
+[Kissat] 求解结果: SAT，发现反例。
+[Kissat-模型] 开始恢复 t=0 反例状态。
+[Kissat-模型] 恢复: var5 = 0
+[Kissat-模型] 恢复: var10 = 0
+[Kissat-模型] 恢复: var1 = 0
+[Kissat-模型] 恢复: var2 = 0
+[Kissat-模型] 恢复: var13 = 0
+[Kissat-模型] 恢复: var12 = 0
+[Kissat-模型] 恢复: var17 = 0
+[Kissat-模型] 恢复: var9 = 0
+[Kissat-模型] 恢复: var16 = 1
+[Kissat-模型] 恢复: var15 = 1
+[Kissat-模型] 恢复: var11 = 1
+[Kissat-模型] 恢复: var7 = 1
+[Kissat-模型] 恢复: var3 = 1
+[Kissat-模型] 恢复: var0 = 1
+[Kissat-模型] 恢复: var6 = 1
+[Kissat-模型] 恢复: var14 = 1
+[Kissat-模型] 恢复: var8 = 1
+[Kissat-模型] 恢复: var4 = 1
+[Kissat-模型] 恢复完成，共恢复 18 个 time0 变量。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=0
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=0
+[IGC-VERIFY] iteration=bootstrap plan_len=0 status=COUNTEREXAMPLE build_ms=0 solve_ms=0 extract_ms=0
+[IGC-ITERATION-PHASE] iteration=0 phase=REFINED fallback_counts_as_iteration=1 generated_full_fallback=disabled
+[IGC-REFINED-BUDGET] iteration=0 mode=CE_PROBE refined_iteration_count=1 ce_elapsed=0 probe_single_timeout=30 probe_max_refined_iterations=6 probe_total_budget=180 ce_only_total_budget=3600
+[IGC-WRITER] iteration=0 mode=structured_product syntax=gc_igc_adaptive_generalized_cgcff_direct_oneof_or_no_unknown counterexamples=1 visible_worlds=1 raw_mapped_atoms=18 mapped_atoms=18 skipped_internal_atoms=0 skipped_removed_variables=0 fixed_true=8 fixed_false=10 varying=0 unknown=0 oneof=0 or=0 cgcff_components=0 cgcff_selected=0 cgcff_deleted_redundant_singleton_dnfs=0 selectors=0 selector_implications=0 icpces_complements=0 explicit_world_literals=0 reordered_worlds=0 support_alternatives=0 promoted_anchor_atoms=0 status=OK
+[IGC-ADAPTIVE-LAYER4] iteration=0 group_close=0 semantic_close=0 alt_ratio=1.000 alt=0/0 oneof=0/0 or=0/4 selected=0 plateau=0 plateau_streak=0 profile=progressive-semantic-closure
+[IGC-VALIDATE] basic checks passed: visible_worlds=1 mapped_atoms=18 fixed_true=8 fixed_false=10 varying=0 unknown=0 oneof=0 or=0 status=OK
+[IGC-PDDL-PAIR] iteration=0 mode=REFINED_GENERATED status=OK message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid
+[iGC-RUNNER] runtime=/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner_work -> runtime /root/workspace/research/CE-planner/iGC
+[iGC-RUNNER] pddl_policy=dnf_aligned_shared_gc_igc_input problem=/root/workspace/research/CE-planner/runs/run_509/iter_0000/refined_igc_problem.pddl
+[iGC-RUNNER] frontend_command=( cd '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner_work' && rm -f trans_file output.sas output belief oneof oneof_initial oneofcombine all.groups test.groups finalplan C_Plan result result.* runtime-normalization.json && 'python2' '/root/workspace/research/CE-planner/iGC/lama/translate/translate.py' '/tmp/igc-normalized-pddl-495/domain.normalized.pddl' '/root/workspace/research/CE-planner/runs/run_509/iter_0000/refined_igc_problem.pddl' > trans_file && test -s output.sas && ./preprocess < output.sas && test -s output ) > '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner.stdout' 2> '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner.stderr'
+[iGC-RUNNER][frontend] process_start pid=510 pgid=510 sid=510 timeout=30
+[iGC-RUNNER][frontend] process_end pid=510 elapsed=0.101
+[iGC-RUNNER] normalization=inserted a semantically redundant singleton ONEOF guard: var0=1
+[iGC-RUNNER] search_command=( cd '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner_work' && ./search 'fF' '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner_work/result' false < output ) >> '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner.stdout' 2>> '/root/workspace/research/CE-planner/runs/run_509/iter_0000/planner.stderr'
+[iGC-RUNNER][search] process_start pid=516 pgid=516 sid=516 timeout=30
+[iGC-RUNNER][search] process_end pid=516 elapsed=0.101
+[IGC-PLANNER] planner=iGC iteration=0 status=OK timeout=30 elapsed=1 ce_guidance_trial=1 ce_guidance_full_budget_retry=0 execution_mode=CE_PROBE refined_iteration_count=1
+[IGC-MAP] actions=2 status=OK
+[IGC-ADAPTIVE-SEMANTIC-CLOSURE] iteration=0 planner=iGC relevance_symbols=6 added=2 source=goal_and_failed_candidate_plan
+[IGC-SAMPLE-VERIFY] iteration=0 worlds=1 status=OK message=candidate is executable and goal-reaching in all 1 accumulated sampled worlds
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 已恢复静态基座: vars=45, clauses=67
+[CNF-验证] 开始构造计划失败 CNF，计划长度=2
+[CNF-变量] 新建事实变量 id=46, 含义=(var10=0, t=2)
+[CNF-变量] 新建事实变量 id=47, 含义=(var8=0, t=2)
+[CNF-变量] 新建事实变量 id=48, 含义=(var4=0, t=2)
+[CNF-变量] 复用事实变量 id=46, 含义=(var10=0, t=2)
+[CNF-变量] 复用事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 新建事实变量 id=49, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=50, 类型=1, 含义=回归ADD支持 (var10=0, t=2)
+[CNF-子句] 新增子句 #68, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=2)} OR (var3=0, t=0)
+[CNF-子句] 新增子句 #69, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 新增子句 #70, 类型=7, 长度=3, 说明=回归ADD支持 (var10=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var3=0, t=0) OR aux#50{回归ADD支持 (var10=0, t=2)}
+[CNF-门] 构造AND门 out=x50, 输入数量=2, 说明=回归ADD支持 (var10=0, t=2)
+[CNF-变量] 复用事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 新建事实变量 id=51, 含义=(var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=52, 类型=1, 含义=回归ADD支持 (var10=0, t=2)
+[CNF-子句] 新增子句 #71, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 新增子句 #72, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=2)} OR (var14=0, t=1)
+[CNF-子句] 新增子句 #73, 类型=7, 长度=3, 说明=回归ADD支持 (var10=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var14=0, t=1) OR ¬(var13=0, t=0) OR aux#52{回归ADD支持 (var10=0, t=2)}
+[CNF-门] 构造AND门 out=x52, 输入数量=2, 说明=回归ADD支持 (var10=0, t=2)
+[CNF-变量] 新建事实变量 id=53, 含义=(var10=0, t=1)
+[CNF-子句] 新增子句 #74, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var10=0, t=2) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var10=0, t=2) OR aux#50{回归ADD支持 (var10=0, t=2)} OR aux#52{回归ADD支持 (var10=0, t=2)} OR (var10=0, t=1)
+[CNF-子句] 新增子句 #75, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=2)} OR (var10=0, t=2)
+[CNF-子句] 新增子句 #76, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=2)} OR (var10=0, t=2)
+[CNF-子句] 新增子句 #77, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var10=0, t=1) OR (var10=0, t=2)
+[CNF-变量] 复用事实变量 id=47, 含义=(var8=0, t=2)
+[CNF-变量] 复用事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=49, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=54, 类型=1, 含义=回归ADD支持 (var8=0, t=2)
+[CNF-子句] 新增子句 #78, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 新增子句 #79, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 新增子句 #80, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var1=0, t=0) OR aux#54{回归ADD支持 (var8=0, t=2)}
+[CNF-门] 构造AND门 out=x54, 输入数量=2, 说明=回归ADD支持 (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 新建事实变量 id=55, 含义=(var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=56, 类型=1, 含义=回归ADD支持 (var8=0, t=2)
+[CNF-子句] 新增子句 #81, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 新增子句 #82, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=2) : out -> in
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=2)} OR (var5=0, t=1)
+[CNF-子句] 新增子句 #83, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=2) : all in -> out
+[CNF-子句] 内容: ¬(var5=0, t=1) OR ¬(var15=0, t=0) OR aux#56{回归ADD支持 (var8=0, t=2)}
+[CNF-门] 构造AND门 out=x56, 输入数量=2, 说明=回归ADD支持 (var8=0, t=2)
+[CNF-变量] 新建事实变量 id=57, 含义=(var8=0, t=1)
+[CNF-子句] 新增子句 #84, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var8=0, t=2) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var8=0, t=2) OR aux#54{回归ADD支持 (var8=0, t=2)} OR aux#56{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=1)
+[CNF-子句] 新增子句 #85, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #86, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #87, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=2) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=48, 含义=(var4=0, t=2)
+[CNF-变量] 复用事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=51, 含义=(var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=58, 类型=1, 含义=回归ADD支持 (var4=0, t=2)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=2)} OR (var14=0, t=1)
+[CNF-子句] 内容: ¬(var14=0, t=1) OR ¬(var11=0, t=0) OR aux#58{回归ADD支持 (var4=0, t=2)}
+[CNF-门] 构造AND门 out=x58, 输入数量=2, 说明=回归ADD支持 (var4=0, t=2)
+[CNF-变量] 复用事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 复用事实变量 id=55, 含义=(var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=59, 类型=1, 含义=回归ADD支持 (var4=0, t=2)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=2)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=2)} OR (var5=0, t=1)
+[CNF-子句] 内容: ¬(var5=0, t=1) OR ¬(var17=0, t=0) OR aux#59{回归ADD支持 (var4=0, t=2)}
+[CNF-门] 构造AND门 out=x59, 输入数量=2, 说明=回归ADD支持 (var4=0, t=2)
+[CNF-变量] 新建事实变量 id=60, 含义=(var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=2) OR aux#58{回归ADD支持 (var4=0, t=2)} OR aux#59{回归ADD支持 (var4=0, t=2)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=2)} OR (var4=0, t=2)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=2)} OR (var4=0, t=2)
+[CNF-子句] 内容: ¬(var4=0, t=1) OR (var4=0, t=2)
+[CNF-变量] 复用事实变量 id=49, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=61, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#61{回归ADD支持 (var6=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#61{回归ADD支持 (var6=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬(var11=0, t=0) OR ¬(var14=0, t=0) OR aux#61{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x61, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=62, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬(var17=0, t=0) OR ¬(var5=0, t=0) OR aux#62{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x62, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=63, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#63{回归DEL支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x63, 输入数量=2, 说明=回归DEL支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=64, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var6=0, t=1)} OR (var3=0, t=0)
+[CNF-子句] 内容: ¬(var3=0, t=0) OR ¬(var6=0, t=0) OR aux#64{回归DEL支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x64, 输入数量=2, 说明=回归DEL支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=65, 类型=2, 含义=回归ADD_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#61{回归ADD支持 (var6=0, t=1)} OR aux#65{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=1)} OR aux#65{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#65{回归ADD_OR (var6=0, t=1)} OR aux#61{回归ADD支持 (var6=0, t=1)} OR aux#62{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造OR门 out=x65, 输入数量=2, 说明=回归ADD_OR (var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=66, 类型=2, 含义=回归DEL_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var6=0, t=1)} OR aux#66{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var6=0, t=1)} OR aux#66{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#66{回归DEL_OR (var6=0, t=1)} OR aux#63{回归DEL支持 (var6=0, t=1)} OR aux#64{回归DEL支持 (var6=0, t=1)}
+[CNF-门] 构造OR门 out=x66, 输入数量=2, 说明=回归DEL_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#66{回归DEL_OR (var6=0, t=1)} OR ¬(var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=0) OR aux#65{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬(var6=0, t=0) OR (var6=0, t=1) OR aux#66{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#65{回归ADD_OR (var6=0, t=1)} OR (var6=0, t=1) OR aux#66{回归DEL_OR (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=55, 含义=(var5=0, t=1)
+[CNF-变量] 复用事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=67, 类型=1, 含义=回归ADD支持 (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#67{回归ADD支持 (var5=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#67{回归ADD支持 (var5=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬(var13=0, t=0) OR ¬(var14=0, t=0) OR aux#67{回归ADD支持 (var5=0, t=1)}
+[CNF-门] 构造AND门 out=x67, 输入数量=2, 说明=回归ADD支持 (var5=0, t=1)
+[CNF-变量] 复用事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=68, 类型=1, 含义=回归DEL支持 (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var5=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var5=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬(var15=0, t=0) OR ¬(var5=0, t=0) OR aux#68{回归DEL支持 (var5=0, t=1)}
+[CNF-门] 构造AND门 out=x68, 输入数量=2, 说明=回归DEL支持 (var5=0, t=1)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=69, 类型=2, 含义=回归ADD_OR (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var6=0, t=1)} OR aux#69{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#67{回归ADD支持 (var5=0, t=1)} OR aux#69{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#69{回归ADD_OR (var5=0, t=1)} OR aux#64{回归DEL支持 (var6=0, t=1)} OR aux#67{回归ADD支持 (var5=0, t=1)}
+[CNF-门] 构造OR门 out=x69, 输入数量=2, 说明=回归ADD_OR (var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=70, 类型=2, 含义=回归DEL_OR (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=1)} OR aux#70{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var5=0, t=1)} OR aux#70{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#70{回归DEL_OR (var5=0, t=1)} OR aux#62{回归ADD支持 (var6=0, t=1)} OR aux#68{回归DEL支持 (var5=0, t=1)}
+[CNF-门] 构造OR门 out=x70, 输入数量=2, 说明=回归DEL_OR (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#70{回归DEL_OR (var5=0, t=1)} OR ¬(var5=0, t=1)
+[CNF-子句] 内容: ¬(var5=0, t=1) OR (var5=0, t=0) OR aux#69{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬(var5=0, t=0) OR (var5=0, t=1) OR aux#70{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#69{回归ADD_OR (var5=0, t=1)} OR (var5=0, t=1) OR aux#70{回归DEL_OR (var5=0, t=1)}
+[CNF-变量] 复用事实变量 id=51, 含义=(var14=0, t=1)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=71, 类型=2, 含义=回归ADD_OR (var14=0, t=1)
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var6=0, t=1)} OR aux#71{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var5=0, t=1)} OR aux#71{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#71{回归ADD_OR (var14=0, t=1)} OR aux#63{回归DEL支持 (var6=0, t=1)} OR aux#68{回归DEL支持 (var5=0, t=1)}
+[CNF-门] 构造OR门 out=x71, 输入数量=2, 说明=回归ADD_OR (var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=72, 类型=2, 含义=回归DEL_OR (var14=0, t=1)
+[CNF-子句] 内容: ¬aux#61{回归ADD支持 (var6=0, t=1)} OR aux#72{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#67{回归ADD支持 (var5=0, t=1)} OR aux#72{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#72{回归DEL_OR (var14=0, t=1)} OR aux#61{回归ADD支持 (var6=0, t=1)} OR aux#67{回归ADD支持 (var5=0, t=1)}
+[CNF-门] 构造OR门 out=x72, 输入数量=2, 说明=回归DEL_OR (var14=0, t=1)
+[CNF-子句] 内容: ¬aux#72{回归DEL_OR (var14=0, t=1)} OR ¬(var14=0, t=1)
+[CNF-子句] 内容: ¬(var14=0, t=1) OR (var14=0, t=0) OR aux#71{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬(var14=0, t=0) OR (var14=0, t=1) OR aux#72{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#71{回归ADD_OR (var14=0, t=1)} OR (var14=0, t=1) OR aux#72{回归DEL_OR (var14=0, t=1)}
+[CNF-变量] 复用事实变量 id=53, 含义=(var10=0, t=1)
+[CNF-变量] 复用事实变量 id=8, 含义=(var10=0, t=0)
+[CNF-子句] 内容: ¬(var10=0, t=1) OR (var10=0, t=0) OR aux#64{回归DEL支持 (var6=0, t=1)} OR aux#67{回归ADD支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#64{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=1)
+[CNF-子句] 内容: ¬aux#67{回归ADD支持 (var5=0, t=1)} OR (var10=0, t=1)
+[CNF-子句] 内容: ¬(var10=0, t=0) OR (var10=0, t=1)
+[CNF-变量] 复用事实变量 id=57, 含义=(var8=0, t=1)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=0) OR aux#63{回归DEL支持 (var6=0, t=1)} OR aux#68{回归DEL支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#63{回归DEL支持 (var6=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#68{回归DEL支持 (var5=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=0) OR (var8=0, t=1)
+[CNF-变量] 复用事实变量 id=60, 含义=(var4=0, t=1)
+[CNF-变量] 复用事实变量 id=2, 含义=(var4=0, t=0)
+[CNF-子句] 内容: ¬(var4=0, t=1) OR (var4=0, t=0) OR aux#61{回归ADD支持 (var6=0, t=1)} OR aux#62{回归ADD支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#61{回归ADD支持 (var6=0, t=1)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=1)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=0) OR (var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=2) OR ¬(var8=0, t=2) OR ¬(var10=0, t=2)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=0
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=0
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=0
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=6
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=3
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=0
+[CNF-化简] 估计少加子句=0
+[CNF-缓存] 变量骨架缓存命中次数=3
+[CNF-缓存] 变量骨架缓存未命中次数=6
+[CNF-缓存] 变量桶内处理值请求次数=9
+[CNF-缓存] 实例化ADD支持项次数=18
+[CNF-缓存] 实例化DEL支持项次数=6
+[CNF-缓存] 支持项门缓存命中次数=12
+[CNF-缓存] 支持项门缓存未命中次数=12
+[CNF-缓存] 持久变量骨架缓存大小=0 -> 6
+[CNF-缓存] support term pool 复用命中次数=12, pool_size=6
+[CNF-化简] persistence别名命中次数=6
+[CNF-化简] persistence时间别名累计跨度=6
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=1, cache_size=1
+[CNF-跨轮] 后缀摘要 build_count=2, reuse_count=0
+[CNF-跨轮] 本轮复用公共后缀步数=0, 本轮重建前缀步数=2
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=18, 累计跳过步数=6
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=12
+[CNF-跨轮] 回归调度插入事实数=9, 实际处理事实数=9, time0落地事实数=15
+[CNF-P8-count] logical_schedule_attempts=12, inserted=9, suppressed=0, active_attempts=0, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=3, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=0, compared=0, equal=0, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=off, replay_layers=0, replay_buckets=0, replay_facts=0, suppressed=0, allowed=0, attempts=0
+[CNF-P1] plan_size=2, regression_loop_scanned_steps=2, active_layers=2, processed_buckets=9
+[CNF-P1] AND门请求次数=12, OR门请求次数=6, 空support项=0, 非空support项=12
+[CNF-P2] 回归case记录使用次数=9, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=0, 前缀扫描步数=2, 后缀重放步数=0
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=2
+[CNF-P4] branch_lit_vector_hit=0, branch_lit_vector_miss=24
+[CNF-汇总] 事实变量数=45
+[CNF-汇总] 辅助变量数=27
+[CNF-汇总] 变量总数=72
+[CNF-汇总] 子句总数=158
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=12
+[CNF-汇总] 回归层峰值事实数=6
+[Kissat] 开始装载CNF，子句总数=158
+[Kissat] 开始求解...
+[Kissat] 求解结果: SAT，发现反例。
+[Kissat-模型] 开始恢复 t=0 反例状态。
+[Kissat-模型] 恢复: var5 = 0
+[Kissat-模型] 恢复: var10 = 0
+[Kissat-模型] 恢复: var1 = 0
+[Kissat-模型] 恢复: var2 = 0
+[Kissat-模型] 恢复: var13 = 0
+[Kissat-模型] 恢复: var12 = 0
+[Kissat-模型] 恢复: var16 = 0
+[Kissat-模型] 恢复: var15 = 0
+[Kissat-模型] 恢复: var17 = 1
+[Kissat-模型] 恢复: var11 = 1
+[Kissat-模型] 恢复: var9 = 1
+[Kissat-模型] 恢复: var7 = 1
+[Kissat-模型] 恢复: var3 = 1
+[Kissat-模型] 恢复: var0 = 1
+[Kissat-模型] 恢复: var6 = 1
+[Kissat-模型] 恢复: var14 = 1
+[Kissat-模型] 恢复: var8 = 1
+[Kissat-模型] 恢复: var4 = 1
+[Kissat-模型] 恢复完成，共恢复 18 个 time0 变量。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=0
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=0
+[IGC-VERIFY] iteration=0 plan_len=2 status=COUNTEREXAMPLE build_ms=0 solve_ms=0 extract_ms=0
+[IGC-CE-PROGRESS] iteration=0 phase=REFINED status=NEW_COUNTEREXAMPLE primary_or_batch_inserted=1 aligned_completion_added=0 next_phase=REFINED fallback_triggered=0
+[IGC-PHASE-TRANSITION] iteration=0 from=REFINED to=REFINED status=COUNTEREXAMPLE reason=new_counterexample_continue_refined
+[IGC-STORE] size=2 inserted_new=yes duplicate_streak=0
+[IGC-ITERATION-PHASE] iteration=1 phase=REFINED fallback_counts_as_iteration=1 generated_full_fallback=disabled
+[IGC-REFINED-BUDGET] iteration=1 mode=CE_PROBE refined_iteration_count=2 ce_elapsed=1 probe_single_timeout=30 probe_max_refined_iterations=6 probe_total_budget=180 ce_only_total_budget=3600
+[IGC-WRITER] iteration=1 mode=structured_product syntax=gc_igc_adaptive_generalized_cgcff_direct_oneof_or_no_unknown counterexamples=2 visible_worlds=2 raw_mapped_atoms=18 mapped_atoms=18 skipped_internal_atoms=0 skipped_removed_variables=0 fixed_true=6 fixed_false=8 varying=4 unknown=0 oneof=0 or=1 cgcff_components=0 cgcff_selected=0 cgcff_deleted_redundant_singleton_dnfs=0 selectors=0 selector_implications=0 icpces_complements=0 explicit_world_literals=0 reordered_worlds=0 support_alternatives=0 promoted_anchor_atoms=0 status=OK
+[IGC-ADAPTIVE-LAYER4] iteration=1 group_close=0 semantic_close=0 alt_ratio=1.000 alt=0/0 oneof=0/0 or=1/4 selected=0 plateau=0 plateau_streak=0 profile=progressive-semantic-closure
+[IGC-VALIDATE] basic checks passed: visible_worlds=2 mapped_atoms=18 fixed_true=6 fixed_false=8 varying=4 unknown=0 oneof=0 or=1 status=OK
+[IGC-GC-FAMILY-WORLDS] planner=iGC iteration=1 applied=0 strategy=native_closed_world_oneof worlds=2 status=OK message=direct GC/iGC benchmark-compatible world encoding
+[IGC-PDDL-PAIR] iteration=1 mode=REFINED_GENERATED status=OK message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid
+[iGC-RUNNER] runtime=/root/workspace/research/CE-planner/runs/run_509/iter_0001/planner_work -> runtime /root/workspace/research/CE-planner/iGC
+[iGC-RUNNER] pddl_policy=dnf_aligned_shared_gc_igc_input problem=/root/workspace/research/CE-planner/runs/run_509/iter_0001/refined_igc_problem.pddl
+[iGC-RUNNER] frontend_command=( cd '/root/workspace/research/CE-planner/runs/run_509/iter_0001/planner_work' && rm -f trans_file output.sas output belief oneof oneof_initial oneofcombine all.groups test.groups finalplan C_Plan result result.* runtime-normalization.json && 'python2' '/root/workspace/research/CE-planner/iGC/lama/translate/translate.py' '/tmp/igc-normalized-pddl-495/domain.normalized.pddl' '/root/workspace/research/CE-planner/runs/run_509/iter_0001/refined_igc_problem.pddl' > trans_file && test -s output.sas && ./preprocess < output.sas && test -s output ) > '/root/workspace/research/CE-planner/runs/run_509/iter_0001/planner.stdout' 2> '/root/workspace/research/CE-planner/runs/run_509/iter_0001/planner.stderr'
+[iGC-RUNNER][frontend] process_start pid=519 pgid=519 sid=519 timeout=30
+[iGC-RUNNER][frontend] process_end pid=519 elapsed=0.101
+[iGC-RUNNER] frontend exit_code=1
+[iGC-RUNNER] planner.stderr: Traceback (most recent call last): File "/root/workspace/research/CE-planner/iGC/lama/translate/translate.py", line 904, in <module> sas_task = pddl_to_sas(task) File "/root/workspace/research/CE-planner/iGC/lama/translate/translate.py", line 346, in pddl_to_sas relaxed_reachable, atoms, actions, axioms = instantiate.explore(task) File "/root/workspace/research/CE-planner/iGC/lama/translate/instantiate.py", line 76, in explore prog = pddl_to_prolog.translate(task) File "/root/workspace/research/CE-planner/iGC/lama/translate/pddl_to_prolog.py", line 170, in translate translate_facts(prog, task) File "/root/workspace/research/CE-planner/iGC/lama/translate/pddl_to_prolog.py", line 151, in trans...
+[iGC-RUNNER] diagnostic: Parsing... /tmp/igc-normalized-pddl-495/domain.normalized.pddl /root/workspace/research/CE-planner/runs/run_509/iter_0001/refined_igc_problem.pddl parse task... Atom edge_label(n2, n0, l1) Atom edge_label(n2, n1, l2) Conjunction Atom edge_label(n2, n0, l1) Atom edge_label(n2, n1, l2) Conjunction Atom edge_label(n2, n0, l2) Atom edge_label(n2, n1, l1) parse Atom at_node(n2) Atom visited(n2) Atom edge_label(n0, n1, l2) Atom edge_label(n0, n2, l1) Atom edge_label(n1, n2, l2) Atom edge_label(n1, n0, l1) <pddl.conditions.Conjunction object at 0x7c2d87dfbc50> <pddl.conditions.Conjunction object at 0x7c2d87dfbd50> after parse Atom at_node(n2) Atom visited(n2) Atom edge_label(n0, n1, l2) Atom edge_l...
+[IGC-PLANNER] planner=iGC iteration=1 status=PLANNER_FAILED timeout=30 elapsed=0 ce_guidance_trial=1 ce_guidance_full_budget_retry=0 execution_mode=CE_PROBE refined_iteration_count=2
+[IGC-PHASE-TRANSITION] iteration=1 from=REFINED to=NATIVE_FALLBACK status=PLANNER_FAILED reason=refined_candidate_planner_failed
+[IGC-ITERATION-PHASE] iteration=2 phase=NATIVE_FALLBACK fallback_counts_as_iteration=1 generated_full_fallback=disabled
+[IGC-INDEPENDENT-FULL-FALLBACK] iteration=2 planner=iGC phase=pre_writer_native_resolution status=OK message=planner=iGC artifact_type=PDDL_PAIR library_alias=iGC-Benchmark-succes domain=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/d3.pddl problem=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/p3.pddl domain_rule=public-domain-basename:d3.pddl
+[IGC-INDEPENDENT-FULL-FALLBACK] iteration=2 planner=iGC phase=native_copy status=OK artifact_type=PDDL_PAIR source_domain=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/d3.pddl source_problem=/root/workspace/research/CE-planner/test/.native-fallback/iGC-Benchmark-succes/uts-cycle/p3.pddl source_al= source_theory_names= source_al_files=0 candidate_domain=/root/workspace/research/CE-planner/runs/run_509/iter_0002/native_fallback_igc_domain.pddl candidate_problem=/root/workspace/research/CE-planner/runs/run_509/iter_0002/native_fallback_igc_problem.pddl library_alias=iGC-Benchmark-succes rule=public-domain-basename:d3.pddl copy={domain={copied byte-identically bytes=1020};problem={copied byte-identically bytes=654}} native_benchmark_file_used=1 generated_pddl_conversion_used=0 counterexample_renderer_used=0 refined_writer_used=0
+[IGC-WRITER] iteration=2 mode=NATIVE_BENCHMARK_DIRECT syntax=gc_igc_adaptive_generalized_cgcff_direct_oneof_or_no_unknown counterexamples=2 visible_worlds=2 raw_mapped_atoms=0 mapped_atoms=0 skipped_internal_atoms=0 skipped_removed_variables=0 fixed_true=0 fixed_false=0 varying=0 unknown=0 oneof=0 or=4 cgcff_components=0 cgcff_selected=0 cgcff_deleted_redundant_singleton_dnfs=0 selectors=0 selector_implications=0 icpces_complements=0 explicit_world_literals=0 reordered_worlds=0 support_alternatives=0 promoted_anchor_atoms=0 status=OK
+[IGC-ADAPTIVE-LAYER4] iteration=2 group_close=1 semantic_close=1 alt_ratio=1.000 alt=0/0 oneof=0/0 or=4/4 selected=0 plateau=0 plateau_streak=0 profile=native-benchmark-direct
+[IGC-VALIDATE] NATIVE_BENCHMARK_DIRECT: byte-identical planner-native benchmark pair; generated writer and all CE PDDL adapters are bypassed; final CNF/Kissat verifier remains authoritative status=OK
+[IGC-GC-FAMILY-WORLDS] planner=iGC iteration=2 applied=0 strategy=native_closed_world_oneof worlds=2 status=OK message=direct GC/iGC benchmark-compatible world encoding
+[IGC-PDDL-PAIR] iteration=2 mode=NATIVE_READ_ONLY status=OK message=SKIPPED_NATIVE_DIRECT: native success-library pair is handed unchanged to its original planner frontend
+[iGC-RUNNER] planner_native_direct=1 pddl_rewrite=disabled
+[iGC-RUNNER] runtime=/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner_work -> runtime /root/workspace/research/CE-planner/iGC
+[iGC-RUNNER] pddl_policy=dnf_aligned_shared_gc_igc_input problem=/root/workspace/research/CE-planner/runs/run_509/iter_0002/native_fallback_igc_problem.pddl
+[iGC-RUNNER] frontend_command=( cd '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner_work' && rm -f trans_file output.sas output belief oneof oneof_initial oneofcombine all.groups test.groups finalplan C_Plan result result.* runtime-normalization.json && 'python2' '/root/workspace/research/CE-planner/iGC/lama/translate/translate.py' '/root/workspace/research/CE-planner/runs/run_509/iter_0002/native_fallback_igc_domain.pddl' '/root/workspace/research/CE-planner/runs/run_509/iter_0002/native_fallback_igc_problem.pddl' > trans_file && test -s output.sas && ./preprocess < output.sas && test -s output ) > '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner.stdout' 2> '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner.stderr'
+[iGC-RUNNER][frontend] process_start pid=524 pgid=524 sid=524 timeout=3600
+[iGC-RUNNER][frontend] process_end pid=524 elapsed=0.101
+[iGC-RUNNER] normalization=disabled_native_direct; original translator/preprocessor artifacts retained byte-for-byte
+[iGC-RUNNER] search_command=( cd '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner_work' && ./search 'fF' '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner_work/result' false < output ) >> '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner.stdout' 2>> '/root/workspace/research/CE-planner/runs/run_509/iter_0002/planner.stderr'
+[iGC-RUNNER][search] process_start pid=529 pgid=529 sid=529 timeout=3600
+[iGC-RUNNER][search] process_end pid=529 elapsed=0.101
+[IGC-PLANNER] planner=iGC iteration=2 status=OK timeout=3600 elapsed=0 ce_guidance_trial=0 ce_guidance_full_budget_retry=0 execution_mode=CE_PROBE refined_iteration_count=2
+[IGC-MAP] actions=3 status=OK
+[IGC-ADAPTIVE-SEMANTIC-CLOSURE] iteration=2 planner=iGC relevance_symbols=7 added=1 source=goal_and_failed_candidate_plan
+[IGC-SAMPLE-VERIFY] iteration=2 worlds=2 status=OK message=explicit SAS sample-goal check skipped for this planner/goal shape; full verifier remains authoritative
+[CNF-版本] improve4_p0p1p2p3_p4_p5_p6_p61_p7_p71_p8active_stage1_countfix
+[CNF-验证] ===== 开始一次 CNF 编码构造 =====
+[CNF-验证] 开始构造初始 belief CNF，isfirst=true
+[CNF-静态基座] 已恢复静态基座: vars=45, clauses=67
+[CNF-验证] 开始构造计划失败 CNF，计划长度=3
+[CNF-变量] 新建事实变量 id=46, 含义=(var10=0, t=3)
+[CNF-变量] 新建事实变量 id=47, 含义=(var8=0, t=3)
+[CNF-变量] 新建事实变量 id=48, 含义=(var4=0, t=3)
+[CNF-变量] 复用事实变量 id=46, 含义=(var10=0, t=3)
+[CNF-变量] 复用事实变量 id=14, 含义=(var2=0, t=0)
+[CNF-变量] 新建事实变量 id=49, 含义=(var6=0, t=2)
+[CNF-变量] 新建辅助变量 id=50, 类型=1, 含义=回归ADD支持 (var10=0, t=3)
+[CNF-子句] 新增子句 #68, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=3)} OR (var2=0, t=0)
+[CNF-子句] 新增子句 #69, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=3)} OR (var6=0, t=2)
+[CNF-子句] 新增子句 #70, 类型=7, 长度=3, 说明=回归ADD支持 (var10=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=2) OR ¬(var2=0, t=0) OR aux#50{回归ADD支持 (var10=0, t=3)}
+[CNF-门] 构造AND门 out=x50, 输入数量=2, 说明=回归ADD支持 (var10=0, t=3)
+[CNF-变量] 复用事实变量 id=16, 含义=(var7=0, t=0)
+[CNF-变量] 新建事实变量 id=51, 含义=(var14=0, t=2)
+[CNF-变量] 新建辅助变量 id=52, 类型=1, 含义=回归ADD支持 (var10=0, t=3)
+[CNF-子句] 新增子句 #71, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=3)} OR (var7=0, t=0)
+[CNF-子句] 新增子句 #72, 类型=7, 长度=2, 说明=回归ADD支持 (var10=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=3)} OR (var14=0, t=2)
+[CNF-子句] 新增子句 #73, 类型=7, 长度=3, 说明=回归ADD支持 (var10=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var14=0, t=2) OR ¬(var7=0, t=0) OR aux#52{回归ADD支持 (var10=0, t=3)}
+[CNF-门] 构造AND门 out=x52, 输入数量=2, 说明=回归ADD支持 (var10=0, t=3)
+[CNF-变量] 新建事实变量 id=53, 含义=(var10=0, t=2)
+[CNF-子句] 新增子句 #74, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var10=0, t=3) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var10=0, t=3) OR aux#50{回归ADD支持 (var10=0, t=3)} OR aux#52{回归ADD支持 (var10=0, t=3)} OR (var10=0, t=2)
+[CNF-子句] 新增子句 #75, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#50{回归ADD支持 (var10=0, t=3)} OR (var10=0, t=3)
+[CNF-子句] 新增子句 #76, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#52{回归ADD支持 (var10=0, t=3)} OR (var10=0, t=3)
+[CNF-子句] 新增子句 #77, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var10=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var10=0, t=2) OR (var10=0, t=3)
+[CNF-变量] 复用事实变量 id=47, 含义=(var8=0, t=3)
+[CNF-变量] 复用事实变量 id=10, 含义=(var0=0, t=0)
+[CNF-变量] 复用事实变量 id=49, 含义=(var6=0, t=2)
+[CNF-变量] 新建辅助变量 id=54, 类型=1, 含义=回归ADD支持 (var8=0, t=3)
+[CNF-子句] 新增子句 #78, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=3)} OR (var0=0, t=0)
+[CNF-子句] 新增子句 #79, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=3)} OR (var6=0, t=2)
+[CNF-子句] 新增子句 #80, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var6=0, t=2) OR ¬(var0=0, t=0) OR aux#54{回归ADD支持 (var8=0, t=3)}
+[CNF-门] 构造AND门 out=x54, 输入数量=2, 说明=回归ADD支持 (var8=0, t=3)
+[CNF-变量] 复用事实变量 id=26, 含义=(var9=0, t=0)
+[CNF-变量] 新建事实变量 id=55, 含义=(var5=0, t=2)
+[CNF-变量] 新建辅助变量 id=56, 类型=1, 含义=回归ADD支持 (var8=0, t=3)
+[CNF-子句] 新增子句 #81, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=3)} OR (var9=0, t=0)
+[CNF-子句] 新增子句 #82, 类型=7, 长度=2, 说明=回归ADD支持 (var8=0, t=3) : out -> in
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=3)} OR (var5=0, t=2)
+[CNF-子句] 新增子句 #83, 类型=7, 长度=3, 说明=回归ADD支持 (var8=0, t=3) : all in -> out
+[CNF-子句] 内容: ¬(var5=0, t=2) OR ¬(var9=0, t=0) OR aux#56{回归ADD支持 (var8=0, t=3)}
+[CNF-门] 构造AND门 out=x56, 输入数量=2, 说明=回归ADD支持 (var8=0, t=3)
+[CNF-变量] 新建事实变量 id=57, 含义=(var8=0, t=2)
+[CNF-子句] 新增子句 #84, 类型=10, 长度=4, 说明=回归无DEL直接OR等价 (var8=0, t=3) : lhs -> OR(rhs)
+[CNF-子句] 内容: ¬(var8=0, t=3) OR aux#54{回归ADD支持 (var8=0, t=3)} OR aux#56{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=2)
+[CNF-子句] 新增子句 #85, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#54{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=3)
+[CNF-子句] 新增子句 #86, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬aux#56{回归ADD支持 (var8=0, t=3)} OR (var8=0, t=3)
+[CNF-子句] 新增子句 #87, 类型=10, 长度=2, 说明=回归无DEL直接OR等价 (var8=0, t=3) : rhs_lit -> lhs
+[CNF-子句] 内容: ¬(var8=0, t=2) OR (var8=0, t=3)
+[CNF-变量] 复用事实变量 id=48, 含义=(var4=0, t=3)
+[CNF-变量] 复用事实变量 id=20, 含义=(var12=0, t=0)
+[CNF-变量] 复用事实变量 id=51, 含义=(var14=0, t=2)
+[CNF-变量] 新建辅助变量 id=58, 类型=1, 含义=回归ADD支持 (var4=0, t=3)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=3)} OR (var12=0, t=0)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=3)} OR (var14=0, t=2)
+[CNF-子句] 内容: ¬(var14=0, t=2) OR ¬(var12=0, t=0) OR aux#58{回归ADD支持 (var4=0, t=3)}
+[CNF-门] 构造AND门 out=x58, 输入数量=2, 说明=回归ADD支持 (var4=0, t=3)
+[CNF-变量] 复用事实变量 id=22, 含义=(var16=0, t=0)
+[CNF-变量] 复用事实变量 id=55, 含义=(var5=0, t=2)
+[CNF-变量] 新建辅助变量 id=59, 类型=1, 含义=回归ADD支持 (var4=0, t=3)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=3)} OR (var16=0, t=0)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=3)} OR (var5=0, t=2)
+[CNF-子句] 内容: ¬(var5=0, t=2) OR ¬(var16=0, t=0) OR aux#59{回归ADD支持 (var4=0, t=3)}
+[CNF-门] 构造AND门 out=x59, 输入数量=2, 说明=回归ADD支持 (var4=0, t=3)
+[CNF-变量] 新建事实变量 id=60, 含义=(var4=0, t=2)
+[CNF-子句] 内容: ¬(var4=0, t=3) OR aux#58{回归ADD支持 (var4=0, t=3)} OR aux#59{回归ADD支持 (var4=0, t=3)} OR (var4=0, t=2)
+[CNF-子句] 内容: ¬aux#58{回归ADD支持 (var4=0, t=3)} OR (var4=0, t=3)
+[CNF-子句] 内容: ¬aux#59{回归ADD支持 (var4=0, t=3)} OR (var4=0, t=3)
+[CNF-子句] 内容: ¬(var4=0, t=2) OR (var4=0, t=3)
+[CNF-变量] 复用事实变量 id=49, 含义=(var6=0, t=2)
+[CNF-变量] 复用事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 新建事实变量 id=61, 含义=(var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=62, 类型=1, 含义=回归ADD支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=2)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=2)} OR (var14=0, t=1)
+[CNF-子句] 内容: ¬(var14=0, t=1) OR ¬(var11=0, t=0) OR aux#62{回归ADD支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x62, 输入数量=2, 说明=回归ADD支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 新建事实变量 id=63, 含义=(var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=64, 类型=1, 含义=回归ADD支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=2)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=2)} OR (var5=0, t=1)
+[CNF-子句] 内容: ¬(var5=0, t=1) OR ¬(var17=0, t=0) OR aux#64{回归ADD支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x64, 输入数量=2, 说明=回归ADD支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 新建事实变量 id=65, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=66, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=2)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var1=0, t=0) OR aux#66{回归DEL支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x66, 输入数量=2, 说明=回归DEL支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 复用事实变量 id=65, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=67, 类型=1, 含义=回归DEL支持 (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=2)} OR (var3=0, t=0)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=2)} OR (var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR ¬(var3=0, t=0) OR aux#67{回归DEL支持 (var6=0, t=2)}
+[CNF-门] 构造AND门 out=x67, 输入数量=2, 说明=回归DEL支持 (var6=0, t=2)
+[CNF-变量] 复用事实变量 id=65, 含义=(var6=0, t=1)
+[CNF-变量] 新建辅助变量 id=68, 类型=2, 含义=回归ADD_OR (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=2)} OR aux#68{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=2)} OR aux#68{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#68{回归ADD_OR (var6=0, t=2)} OR aux#62{回归ADD支持 (var6=0, t=2)} OR aux#64{回归ADD支持 (var6=0, t=2)}
+[CNF-门] 构造OR门 out=x68, 输入数量=2, 说明=回归ADD_OR (var6=0, t=2)
+[CNF-变量] 新建辅助变量 id=69, 类型=2, 含义=回归DEL_OR (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=2)} OR aux#69{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=2)} OR aux#69{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#69{回归DEL_OR (var6=0, t=2)} OR aux#66{回归DEL支持 (var6=0, t=2)} OR aux#67{回归DEL支持 (var6=0, t=2)}
+[CNF-门] 构造OR门 out=x69, 输入数量=2, 说明=回归DEL_OR (var6=0, t=2)
+[CNF-子句] 内容: ¬aux#69{回归DEL_OR (var6=0, t=2)} OR ¬(var6=0, t=2)
+[CNF-子句] 内容: ¬(var6=0, t=2) OR (var6=0, t=1) OR aux#68{回归ADD_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=2) OR aux#69{回归DEL_OR (var6=0, t=2)}
+[CNF-子句] 内容: ¬aux#68{回归ADD_OR (var6=0, t=2)} OR (var6=0, t=2) OR aux#69{回归DEL_OR (var6=0, t=2)}
+[CNF-变量] 复用事实变量 id=55, 含义=(var5=0, t=2)
+[CNF-变量] 复用事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=61, 含义=(var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=70, 类型=1, 含义=回归ADD支持 (var5=0, t=2)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var5=0, t=2)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var5=0, t=2)} OR (var14=0, t=1)
+[CNF-子句] 内容: ¬(var14=0, t=1) OR ¬(var13=0, t=0) OR aux#70{回归ADD支持 (var5=0, t=2)}
+[CNF-门] 构造AND门 out=x70, 输入数量=2, 说明=回归ADD支持 (var5=0, t=2)
+[CNF-变量] 复用事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=63, 含义=(var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=71, 类型=1, 含义=回归DEL支持 (var5=0, t=2)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var5=0, t=2)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var5=0, t=2)} OR (var5=0, t=1)
+[CNF-子句] 内容: ¬(var5=0, t=1) OR ¬(var15=0, t=0) OR aux#71{回归DEL支持 (var5=0, t=2)}
+[CNF-门] 构造AND门 out=x71, 输入数量=2, 说明=回归DEL支持 (var5=0, t=2)
+[CNF-变量] 复用事实变量 id=63, 含义=(var5=0, t=1)
+[CNF-变量] 新建辅助变量 id=72, 类型=2, 含义=回归ADD_OR (var5=0, t=2)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=2)} OR aux#72{回归ADD_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var5=0, t=2)} OR aux#72{回归ADD_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬aux#72{回归ADD_OR (var5=0, t=2)} OR aux#67{回归DEL支持 (var6=0, t=2)} OR aux#70{回归ADD支持 (var5=0, t=2)}
+[CNF-门] 构造OR门 out=x72, 输入数量=2, 说明=回归ADD_OR (var5=0, t=2)
+[CNF-变量] 新建辅助变量 id=73, 类型=2, 含义=回归DEL_OR (var5=0, t=2)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=2)} OR aux#73{回归DEL_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var5=0, t=2)} OR aux#73{回归DEL_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬aux#73{回归DEL_OR (var5=0, t=2)} OR aux#64{回归ADD支持 (var6=0, t=2)} OR aux#71{回归DEL支持 (var5=0, t=2)}
+[CNF-门] 构造OR门 out=x73, 输入数量=2, 说明=回归DEL_OR (var5=0, t=2)
+[CNF-子句] 内容: ¬aux#73{回归DEL_OR (var5=0, t=2)} OR ¬(var5=0, t=2)
+[CNF-子句] 内容: ¬(var5=0, t=2) OR (var5=0, t=1) OR aux#72{回归ADD_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬(var5=0, t=1) OR (var5=0, t=2) OR aux#73{回归DEL_OR (var5=0, t=2)}
+[CNF-子句] 内容: ¬aux#72{回归ADD_OR (var5=0, t=2)} OR (var5=0, t=2) OR aux#73{回归DEL_OR (var5=0, t=2)}
+[CNF-变量] 复用事实变量 id=51, 含义=(var14=0, t=2)
+[CNF-变量] 复用事实变量 id=61, 含义=(var14=0, t=1)
+[CNF-变量] 新建辅助变量 id=74, 类型=2, 含义=回归ADD_OR (var14=0, t=2)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=2)} OR aux#74{回归ADD_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var5=0, t=2)} OR aux#74{回归ADD_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬aux#74{回归ADD_OR (var14=0, t=2)} OR aux#66{回归DEL支持 (var6=0, t=2)} OR aux#71{回归DEL支持 (var5=0, t=2)}
+[CNF-门] 构造OR门 out=x74, 输入数量=2, 说明=回归ADD_OR (var14=0, t=2)
+[CNF-变量] 新建辅助变量 id=75, 类型=2, 含义=回归DEL_OR (var14=0, t=2)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=2)} OR aux#75{回归DEL_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var5=0, t=2)} OR aux#75{回归DEL_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬aux#75{回归DEL_OR (var14=0, t=2)} OR aux#62{回归ADD支持 (var6=0, t=2)} OR aux#70{回归ADD支持 (var5=0, t=2)}
+[CNF-门] 构造OR门 out=x75, 输入数量=2, 说明=回归DEL_OR (var14=0, t=2)
+[CNF-子句] 内容: ¬aux#75{回归DEL_OR (var14=0, t=2)} OR ¬(var14=0, t=2)
+[CNF-子句] 内容: ¬(var14=0, t=2) OR (var14=0, t=1) OR aux#74{回归ADD_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬(var14=0, t=1) OR (var14=0, t=2) OR aux#75{回归DEL_OR (var14=0, t=2)}
+[CNF-子句] 内容: ¬aux#74{回归ADD_OR (var14=0, t=2)} OR (var14=0, t=2) OR aux#75{回归DEL_OR (var14=0, t=2)}
+[CNF-变量] 复用事实变量 id=53, 含义=(var10=0, t=2)
+[CNF-变量] 新建事实变量 id=76, 含义=(var10=0, t=1)
+[CNF-子句] 内容: ¬(var10=0, t=2) OR aux#67{回归DEL支持 (var6=0, t=2)} OR aux#70{回归ADD支持 (var5=0, t=2)} OR (var10=0, t=1)
+[CNF-子句] 内容: ¬aux#67{回归DEL支持 (var6=0, t=2)} OR (var10=0, t=2)
+[CNF-子句] 内容: ¬aux#70{回归ADD支持 (var5=0, t=2)} OR (var10=0, t=2)
+[CNF-子句] 内容: ¬(var10=0, t=1) OR (var10=0, t=2)
+[CNF-变量] 复用事实变量 id=57, 含义=(var8=0, t=2)
+[CNF-变量] 新建事实变量 id=77, 含义=(var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=2) OR aux#66{回归DEL支持 (var6=0, t=2)} OR aux#71{回归DEL支持 (var5=0, t=2)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#66{回归DEL支持 (var6=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 内容: ¬aux#71{回归DEL支持 (var5=0, t=2)} OR (var8=0, t=2)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=2)
+[CNF-变量] 复用事实变量 id=60, 含义=(var4=0, t=2)
+[CNF-变量] 新建事实变量 id=78, 含义=(var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=2) OR aux#62{回归ADD支持 (var6=0, t=2)} OR aux#64{回归ADD支持 (var6=0, t=2)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬aux#62{回归ADD支持 (var6=0, t=2)} OR (var4=0, t=2)
+[CNF-子句] 内容: ¬aux#64{回归ADD支持 (var6=0, t=2)} OR (var4=0, t=2)
+[CNF-子句] 内容: ¬(var4=0, t=1) OR (var4=0, t=2)
+[CNF-变量] 复用事实变量 id=65, 含义=(var6=0, t=1)
+[CNF-变量] 复用事实变量 id=17, 含义=(var11=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=79, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#79{回归ADD支持 (var6=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#79{回归ADD支持 (var6=0, t=1)} OR (var11=0, t=0)
+[CNF-子句] 内容: ¬(var11=0, t=0) OR ¬(var14=0, t=0) OR aux#79{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x79, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=25, 含义=(var17=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=80, 类型=1, 含义=回归ADD支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#80{回归ADD支持 (var6=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#80{回归ADD支持 (var6=0, t=1)} OR (var17=0, t=0)
+[CNF-子句] 内容: ¬(var17=0, t=0) OR ¬(var5=0, t=0) OR aux#80{回归ADD支持 (var6=0, t=1)}
+[CNF-门] 构造AND门 out=x80, 输入数量=2, 说明=回归ADD支持 (var6=0, t=1)
+[CNF-变量] 复用事实变量 id=13, 含义=(var1=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=81, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var6=0, t=1)} OR (var1=0, t=0)
+[CNF-子句] 内容: ¬(var1=0, t=0) OR ¬(var6=0, t=0) OR aux#81{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=11, 含义=(var3=0, t=0)
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=82, 类型=1, 含义=回归DEL支持 (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var6=0, t=1)} OR (var6=0, t=0)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var6=0, t=1)} OR (var3=0, t=0)
+[CNF-子句] 内容: ¬(var3=0, t=0) OR ¬(var6=0, t=0) OR aux#82{回归DEL支持 (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=1, 含义=(var6=0, t=0)
+[CNF-变量] 新建辅助变量 id=83, 类型=2, 含义=回归ADD_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#79{回归ADD支持 (var6=0, t=1)} OR aux#83{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#80{回归ADD支持 (var6=0, t=1)} OR aux#83{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#83{回归ADD_OR (var6=0, t=1)} OR aux#79{回归ADD支持 (var6=0, t=1)} OR aux#80{回归ADD支持 (var6=0, t=1)}
+[CNF-变量] 新建辅助变量 id=84, 类型=2, 含义=回归DEL_OR (var6=0, t=1)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var6=0, t=1)} OR aux#84{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var6=0, t=1)} OR aux#84{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#84{回归DEL_OR (var6=0, t=1)} OR aux#81{回归DEL支持 (var6=0, t=1)} OR aux#82{回归DEL支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#84{回归DEL_OR (var6=0, t=1)} OR ¬(var6=0, t=1)
+[CNF-子句] 内容: ¬(var6=0, t=1) OR (var6=0, t=0) OR aux#83{回归ADD_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬(var6=0, t=0) OR (var6=0, t=1) OR aux#84{回归DEL_OR (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#83{回归ADD_OR (var6=0, t=1)} OR (var6=0, t=1) OR aux#84{回归DEL_OR (var6=0, t=1)}
+[CNF-变量] 复用事实变量 id=63, 含义=(var5=0, t=1)
+[CNF-变量] 复用事实变量 id=19, 含义=(var13=0, t=0)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=85, 类型=1, 含义=回归ADD支持 (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#85{回归ADD支持 (var5=0, t=1)} OR (var14=0, t=0)
+[CNF-子句] 内容: ¬aux#85{回归ADD支持 (var5=0, t=1)} OR (var13=0, t=0)
+[CNF-子句] 内容: ¬(var13=0, t=0) OR ¬(var14=0, t=0) OR aux#85{回归ADD支持 (var5=0, t=1)}
+[CNF-变量] 复用事实变量 id=23, 含义=(var15=0, t=0)
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=86, 类型=1, 含义=回归DEL支持 (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var5=0, t=1)} OR (var5=0, t=0)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var5=0, t=1)} OR (var15=0, t=0)
+[CNF-子句] 内容: ¬(var15=0, t=0) OR ¬(var5=0, t=0) OR aux#86{回归DEL支持 (var5=0, t=1)}
+[CNF-变量] 复用事实变量 id=7, 含义=(var5=0, t=0)
+[CNF-变量] 新建辅助变量 id=87, 类型=2, 含义=回归ADD_OR (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var6=0, t=1)} OR aux#87{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#85{回归ADD支持 (var5=0, t=1)} OR aux#87{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#87{回归ADD_OR (var5=0, t=1)} OR aux#82{回归DEL支持 (var6=0, t=1)} OR aux#85{回归ADD支持 (var5=0, t=1)}
+[CNF-变量] 新建辅助变量 id=88, 类型=2, 含义=回归DEL_OR (var5=0, t=1)
+[CNF-子句] 内容: ¬aux#80{回归ADD支持 (var6=0, t=1)} OR aux#88{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var5=0, t=1)} OR aux#88{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#88{回归DEL_OR (var5=0, t=1)} OR aux#80{回归ADD支持 (var6=0, t=1)} OR aux#86{回归DEL支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#88{回归DEL_OR (var5=0, t=1)} OR ¬(var5=0, t=1)
+[CNF-子句] 内容: ¬(var5=0, t=1) OR (var5=0, t=0) OR aux#87{回归ADD_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬(var5=0, t=0) OR (var5=0, t=1) OR aux#88{回归DEL_OR (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#87{回归ADD_OR (var5=0, t=1)} OR (var5=0, t=1) OR aux#88{回归DEL_OR (var5=0, t=1)}
+[CNF-变量] 复用事实变量 id=61, 含义=(var14=0, t=1)
+[CNF-变量] 复用事实变量 id=4, 含义=(var14=0, t=0)
+[CNF-变量] 新建辅助变量 id=89, 类型=2, 含义=回归ADD_OR (var14=0, t=1)
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var6=0, t=1)} OR aux#89{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var5=0, t=1)} OR aux#89{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#89{回归ADD_OR (var14=0, t=1)} OR aux#81{回归DEL支持 (var6=0, t=1)} OR aux#86{回归DEL支持 (var5=0, t=1)}
+[CNF-变量] 新建辅助变量 id=90, 类型=2, 含义=回归DEL_OR (var14=0, t=1)
+[CNF-子句] 内容: ¬aux#79{回归ADD支持 (var6=0, t=1)} OR aux#90{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#85{回归ADD支持 (var5=0, t=1)} OR aux#90{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#90{回归DEL_OR (var14=0, t=1)} OR aux#79{回归ADD支持 (var6=0, t=1)} OR aux#85{回归ADD支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#90{回归DEL_OR (var14=0, t=1)} OR ¬(var14=0, t=1)
+[CNF-子句] 内容: ¬(var14=0, t=1) OR (var14=0, t=0) OR aux#89{回归ADD_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬(var14=0, t=0) OR (var14=0, t=1) OR aux#90{回归DEL_OR (var14=0, t=1)}
+[CNF-子句] 内容: ¬aux#89{回归ADD_OR (var14=0, t=1)} OR (var14=0, t=1) OR aux#90{回归DEL_OR (var14=0, t=1)}
+[CNF-变量] 复用事实变量 id=76, 含义=(var10=0, t=1)
+[CNF-变量] 复用事实变量 id=8, 含义=(var10=0, t=0)
+[CNF-子句] 内容: ¬(var10=0, t=1) OR (var10=0, t=0) OR aux#82{回归DEL支持 (var6=0, t=1)} OR aux#85{回归ADD支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#82{回归DEL支持 (var6=0, t=1)} OR (var10=0, t=1)
+[CNF-子句] 内容: ¬aux#85{回归ADD支持 (var5=0, t=1)} OR (var10=0, t=1)
+[CNF-子句] 内容: ¬(var10=0, t=0) OR (var10=0, t=1)
+[CNF-变量] 复用事实变量 id=77, 含义=(var8=0, t=1)
+[CNF-变量] 复用事实变量 id=5, 含义=(var8=0, t=0)
+[CNF-子句] 内容: ¬(var8=0, t=1) OR (var8=0, t=0) OR aux#81{回归DEL支持 (var6=0, t=1)} OR aux#86{回归DEL支持 (var5=0, t=1)}
+[CNF-子句] 内容: ¬aux#81{回归DEL支持 (var6=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬aux#86{回归DEL支持 (var5=0, t=1)} OR (var8=0, t=1)
+[CNF-子句] 内容: ¬(var8=0, t=0) OR (var8=0, t=1)
+[CNF-变量] 复用事实变量 id=78, 含义=(var4=0, t=1)
+[CNF-变量] 复用事实变量 id=2, 含义=(var4=0, t=0)
+[CNF-子句] 内容: ¬(var4=0, t=1) OR (var4=0, t=0) OR aux#79{回归ADD支持 (var6=0, t=1)} OR aux#80{回归ADD支持 (var6=0, t=1)}
+[CNF-子句] 内容: ¬aux#79{回归ADD支持 (var6=0, t=1)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬aux#80{回归ADD支持 (var6=0, t=1)} OR (var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=0) OR (var4=0, t=1)
+[CNF-子句] 内容: ¬(var4=0, t=3) OR ¬(var8=0, t=3) OR ¬(var10=0, t=3)
+[CNF-计时] init_build_ms=0
+[CNF-计时] goal_regression_build_ms=1
+[CNF-计时] preprocess_ms=0
+[CNF-汇总] CNF构造耗时(ms)=1
+[CNF-验证] ===== CNF 编码构造结束 =====
+[CNF-化简] 单输入AND折叠次数=0
+[CNF-化简] 单输入OR折叠次数=0
+[CNF-化简] 门输入去重删除字面量次数=0
+[CNF-化简] AND门互补折叠次数=0
+[CNF-化简] OR门互补折叠次数=0
+[CNF-化简] AND门结构共享复用次数=0
+[CNF-化简] OR门结构共享复用次数=0
+[CNF-化简] 纯保持事实快捷编码次数=0
+[CNF-化简] 无DEL直接OR等价次数=9
+[CNF-化简] 无ADD直接AND等价次数=0
+[CNF-化简] 无条件ADD快捷编码次数=0
+[CNF-化简] 无条件DEL快捷编码次数=0
+[CNF-化简] 被无条件项支配而跳过的ADD支持项数=0
+[CNF-化简] 被无条件项支配而跳过的DEL支持项数=0
+[CNF-化简] 延迟prev创建并避免无用前驱变量次数=0
+[CNF-化简] 一般情形直接子句编码次数=6
+[CNF-化简] time0确定变量紧凑编码次数=0
+[CNF-化简] time0完整oneof/OR全域覆盖并吸收次数=0
+[CNF-化简] time0单变量候选组直接文字编码次数=0
+[CNF-化简] 跳过重复子句次数=0
+[CNF-化简] 估计少建辅助变量=0
+[CNF-化简] 估计少加子句=0
+[CNF-缓存] 变量骨架缓存命中次数=12
+[CNF-缓存] 变量骨架缓存未命中次数=3
+[CNF-缓存] 变量桶内处理值请求次数=15
+[CNF-缓存] 实例化ADD支持项次数=30
+[CNF-缓存] 实例化DEL支持项次数=12
+[CNF-缓存] 支持项门缓存命中次数=24
+[CNF-缓存] 支持项门缓存未命中次数=18
+[CNF-缓存] 持久变量骨架缓存大小=6 -> 9
+[CNF-缓存] support term pool 复用命中次数=0, pool_size=12
+[CNF-化简] persistence别名命中次数=12
+[CNF-化简] persistence时间别名累计跨度=18
+[CNF-化简] persistence纯保持重言式跳过次数=0
+[CNF-跨轮] 动作影响摘要 build_count=2, cache_size=2
+[CNF-跨轮] 后缀摘要 build_count=3, reuse_count=0
+[CNF-跨轮] 本轮复用公共后缀步数=0, 本轮重建前缀步数=3
+[CNF-跨轮] 动作无关快速纯保持次数=0
+[CNF-跨轮] 后缀跳跃查询次数=78, 累计跳过步数=36
+[CNF-跨轮] persistence变化向量建立次数=18, 变化项总数=30
+[CNF-跨轮] 回归调度插入事实数=24, 实际处理事实数=24, time0落地事实数=33
+[CNF-P8-count] logical_schedule_attempts=36, inserted=15, suppressed=0, active_attempts=0, boundary_allowed=0
+[CNF-P5] 固定长度子句快速路径已启用，hotpath诊断计数=on
+[CNF-P6] REG_EQUIV热路径去重旁路=on, and2旁路次数=0, no-dedup追加子句数=0
+[CNF-P7] scheduled外层vector已启用, layer_vector_size=4, resize_count=0
+[CNF-P7.1] detail门事件逐条日志上限=20/轮，仅保留汇总计数用于分析
+[CNF-P8-check] frontier重放校验=on, common_suffix=0, compared=0, equal=0, mismatch=0, skipped=0
+[CNF-P8-active] frontier调度复用=off, replay_layers=0, replay_buckets=0, replay_facts=0, suppressed=0, allowed=0, attempts=0
+[CNF-P1] plan_size=3, regression_loop_scanned_steps=3, active_layers=3, processed_buckets=15
+[CNF-P1] AND门请求次数=18, OR门请求次数=12, 空support项=0, 非空support项=18
+[CNF-P2] 回归case记录使用次数=15, case早退出次数=0
+[CNF-P3] 公共后缀change-point复用数=0, 前缀扫描步数=3, 后缀重放步数=0
+[CNF-P4] noADD单DEL直连=0, noDEL单ADD直连=0, 无条件ADD单DEL直连=0
+[CNF-P4] 一般情形单ADD绕过OR=0, 一般情形单DEL绕过OR=0, 层swap次数=3
+[CNF-P4] branch_lit_vector_hit=0, branch_lit_vector_miss=42
+[CNF-汇总] 事实变量数=51
+[CNF-汇总] 辅助变量数=39
+[CNF-汇总] 变量总数=90
+[CNF-汇总] 子句总数=218
+[CNF-汇总] 根条件变量数=3
+[CNF-汇总] 回归最终唯一事实数=18
+[CNF-汇总] 回归层峰值事实数=6
+[Kissat] 开始装载CNF，子句总数=218
+[Kissat] 开始求解...
+[Kissat] 求解结果: SAT，发现反例。
+[Kissat-模型] 开始恢复 t=0 反例状态。
+[Kissat-模型] 恢复: var6 = 0
+[Kissat-模型] 恢复: var4 = 0
+[Kissat-模型] 恢复: var14 = 0
+[Kissat-模型] 恢复: var8 = 0
+[Kissat-模型] 恢复: var5 = 0
+[Kissat-模型] 恢复: var0 = 0
+[Kissat-模型] 恢复: var1 = 0
+[Kissat-模型] 恢复: var2 = 0
+[Kissat-模型] 恢复: var7 = 0
+[Kissat-模型] 恢复: var11 = 0
+[Kissat-模型] 恢复: var12 = 0
+[Kissat-模型] 恢复: var16 = 0
+[Kissat-模型] 恢复: var15 = 0
+[Kissat-模型] 恢复: var17 = 0
+[Kissat-模型] 恢复: var9 = 0
+[Kissat-模型] 恢复: var13 = 1
+[Kissat-模型] 恢复: var3 = 1
+[Kissat-模型] 恢复: var10 = 1
+[Kissat-模型] 恢复完成，共恢复 18 个 time0 变量。
+[CNF-Kissat] load_ms=0
+[CNF-Kissat] solve_ms=0
+[CNF-Kissat] extract_ms=0
+[CNF-Kissat] total_solver_ms=0
+[IGC-VERIFY] iteration=2 plan_len=3 status=COUNTEREXAMPLE build_ms=1 solve_ms=0 extract_ms=0
+[IGC-PHASE-TRANSITION] iteration=2 from=NATIVE_FALLBACK to=TERMINATE status=COUNTEREXAMPLE reason=native_candidate_rejected_by_full_verifier direct_native_mode=0 native_fallback_final_attempt=1
+[IGC-CEGIS] final_status=COUNTEREXAMPLE
+Command exited with non-zero status 3
+	Command being timed: "/usr/bin/timeout --signal=TERM --kill-after=10s 120 bash /root/workspace/research/CE-planner/plan-cegis-igc /root/workspace/research/CE-planner/test/uts-cycle/d3.pddl /root/workspace/research/CE-planner/test/uts-cycle/p3.pddl /root/workspace/research/CE-planner/result_output_batch_ce/example-igc/uts-cycle/p3/result.plan false"
+	User time (seconds): 0.19
+	System time (seconds): 0.12
+	Percent of CPU this job got: 44%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 32356
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3
+	Minor (reclaiming a frame) page faults: 29884
+	Voluntary context switches: 137
+	Involuntary context switches: 183
+	Swaps: 0
+	File system inputs: 8456
+	File system outputs: 1328
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 3
+
+[结束时间] 2026-09-24 23:44:23
+[耗时秒] 1
+[退出码] 3
+[final_status] COUNTEREXAMPLE
+[最终状态] FAIL

@@ -1,0 +1,25 @@
+#!/bin/sh
+set -eu
+export IGC_CANDIDATE_PLANNER=t0
+export IGC_REFINED_MODE="${IGC_REFINED_MODE:-structured}"
+if [ -z "${IGC_T0_DIR:-}" ]; then
+    if [ -x "$PWD/T0/translator-t0" ]; then
+        IGC_T0_DIR=$PWD/T0
+    elif [ -x "$PWD/t0/translator-t0" ]; then
+        IGC_T0_DIR=$PWD/t0
+    elif [ -x "$PWD/translator/translator/translator-t0" ]; then
+        IGC_T0_DIR=$PWD/translator/translator
+    elif [ -x "$PWD/translator/translator-t0" ]; then
+        IGC_T0_DIR=$PWD/translator
+    elif [ -x "$PWD/t0-planner/translator/translator/translator-t0" ]; then
+        IGC_T0_DIR=$PWD/t0-planner/translator/translator
+    else
+        IGC_T0_DIR=$PWD/translator/translator
+    fi
+fi
+export IGC_T0_DIR
+export IGC_T0_EXEC="${IGC_T0_EXEC:-$IGC_T0_DIR/translator-t0}"
+export IGC_T0_ARGS="${IGC_T0_ARGS:--f}"
+export IGC_T0_PYTHON="${IGC_T0_PYTHON:-python2}"
+export IGC_CANDIDATE_TIMEOUT="${IGC_CANDIDATE_TIMEOUT:-${IGC_T0_TIMEOUT:-3600}}"
+exec ./plan-cegis "$@"

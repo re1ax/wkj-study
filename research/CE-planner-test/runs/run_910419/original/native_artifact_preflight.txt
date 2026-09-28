@@ -1,0 +1,7 @@
+version=v16-cff-cee-native-library
+planner=cff
+available=1
+status=OK
+artifact_type=PDDL_PAIR
+execution_mode=CE_PROBE
+message=planner=CFF artifact_type=PDDL_PAIR library_alias=CFF-Benchmark-succes domain=/root/workspace/research/CE-planner/test/.native-fallback/CFF-Benchmark-succes/blocks/domain.pddl problem=/root/workspace/research/CE-planner/test/.native-fallback/CFF-Benchmark-succes/blocks/b2.pddl domain_rule=shared:domain.pddl

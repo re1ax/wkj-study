@@ -1,0 +1,22 @@
+(define (domain grid)
+;(:requirements  :strips)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (key-shape ?k - object  ?s - object  ?x - interpretation)  (lock-shape ?x - object  ?s - object  ?x - interpretation)  (key ?k - object  ?x - interpretation)  (open ?x - object  ?x - interpretation)  (located-robot ?x - object  ?x - interpretation)  (place ?p - object  ?x - interpretation)  (locked ?x - object  ?x - interpretation)  (arm-empty ?x - interpretation)  (shape ?s - object  ?x - interpretation)  (holding ?k - object  ?x - interpretation)  (conn ?x - object  ?y - object  ?x - interpretation)  (located ?r - object  ?x - object  ?x - interpretation)) 
+(:action move
+:parameters (?curpos  - object ?nextpos  - object )
+:precondition (forall (?interpr - interpretation)(and   (place ?curpos ?interpr)  (place ?nextpos ?interpr)  (located-robot ?curpos ?interpr)  (conn ?curpos ?nextpos ?interpr)  (open ?nextpos ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located-robot ?nextpos ?interpr))(forall (?interpr - interpretation) (not   (located-robot ?curpos ?interpr)))))
+(:action pickup
+:parameters (?curpos  - object ?key  - object )
+:precondition (forall (?interpr - interpretation)(and   (place ?curpos ?interpr)  (key ?key ?interpr)  (located-robot ?curpos ?interpr)  (located ?key ?curpos ?interpr)  (arm-empty ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (holding ?key ?interpr))(forall (?interpr - interpretation) (not   (located ?key ?curpos ?interpr)))(forall (?interpr - interpretation) (not   (arm-empty ?interpr)))))
+(:action putdown
+:parameters (?curpos  - object ?key  - object )
+:precondition (forall (?interpr - interpretation)(and   (place ?curpos ?interpr)  (key ?key ?interpr)  (located-robot ?curpos ?interpr)  (holding ?key ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (arm-empty ?interpr))(forall (?interpr - interpretation)   (located ?key ?curpos ?interpr))(forall (?interpr - interpretation) (not   (holding ?key ?interpr)))))
+(:action unlock
+:parameters (?curpos  - object ?lockpos  - object ?key  - object ?shape  - object )
+:precondition (forall (?interpr - interpretation)(and   (place ?curpos ?interpr)  (place ?lockpos ?interpr)  (key ?key ?interpr)  (shape ?shape ?interpr)  (conn ?curpos ?lockpos ?interpr)  (key-shape ?key ?shape ?interpr)  (located-robot ?curpos ?interpr)  (holding ?key ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (lock-shape ?lockpos ?shape ?interpr) (and   (open ?lockpos ?interpr)(not   (locked ?lockpos ?interpr)))))))
+
+)

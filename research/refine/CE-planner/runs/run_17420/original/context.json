@@ -1,0 +1,13 @@
+{
+  "schema_version": "igc-context-v1",
+  "context_id": "fnv1a64:c2f91ab299f21c2c",
+  "domain_path": "/tmp/igc-normalized-pddl-17406/domain.normalized.pddl",
+  "problem_path": "/tmp/igc-normalized-pddl-17406/problem.normalized.pddl",
+  "variables": [
+    {"index": 0, "name": "var4", "domain": 2, "original_value": 0},
+    {"index": 1, "name": "var3", "domain": 2, "original_value": 0},
+    {"index": 2, "name": "var2", "domain": 2, "original_value": 0},
+    {"index": 3, "name": "var1", "domain": 2, "original_value": 0},
+    {"index": 4, "name": "var0", "domain": 2, "original_value": 1}
+  ]
+}

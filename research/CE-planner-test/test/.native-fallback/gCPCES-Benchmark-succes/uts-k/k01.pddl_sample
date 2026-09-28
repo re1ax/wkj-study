@@ -1,0 +1,21 @@
+(define (problem temp)(:domain uts)(:objects 
+   n1  - node 
+   n2  - node 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+)
+(:init (true)
+  (located n2 int1)
+  (edge n1 n2 int1)
+  (edge n2 n1 int1)
+  (edge n1 n2 int2)
+  (visited n2 int2)
+  (edge n2 n1 int2)
+  (visited n1 int2)
+  (located n1 int2)
+  (edge n1 n2 int3)
+  (edge n2 n1 int3)
+  (located n1 int3)
+)
+(:goal (forall (?interpr - interpretation)(and   (visited n1 ?interpr)  (visited n2 ?interpr)))))

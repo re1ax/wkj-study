@@ -1,0 +1,26 @@
+{
+  "schema_version": "igc-context-v1",
+  "context_id": "fnv1a64:bd125a7d7bc754e3",
+  "domain_path": "/tmp/igc-normalized-pddl-257/domain.normalized.pddl",
+  "problem_path": "/tmp/igc-normalized-pddl-257/problem.normalized.pddl",
+  "variables": [
+    {"index": 0, "name": "var16", "domain": 2, "original_value": 1},
+    {"index": 1, "name": "var14", "domain": 2, "original_value": 1},
+    {"index": 2, "name": "var12", "domain": 2, "original_value": 1},
+    {"index": 3, "name": "var10", "domain": 2, "original_value": 1},
+    {"index": 4, "name": "var9", "domain": 2, "original_value": 1},
+    {"index": 5, "name": "var7", "domain": 2, "original_value": 1},
+    {"index": 6, "name": "var6", "domain": 2, "original_value": 1},
+    {"index": 7, "name": "var4", "domain": 2, "original_value": 1},
+    {"index": 8, "name": "var3", "domain": 2, "original_value": 1},
+    {"index": 9, "name": "var2", "domain": 2, "original_value": 1},
+    {"index": 10, "name": "var1", "domain": 2, "original_value": 1},
+    {"index": 11, "name": "var0", "domain": 2, "original_value": 1},
+    {"index": 12, "name": "var11", "domain": 2, "original_value": 1},
+    {"index": 13, "name": "var8", "domain": 2, "original_value": 1},
+    {"index": 14, "name": "var15", "domain": 2, "original_value": 1},
+    {"index": 15, "name": "var17", "domain": 2, "original_value": 1},
+    {"index": 16, "name": "var13", "domain": 2, "original_value": 1},
+    {"index": 17, "name": "var5", "domain": 2, "original_value": 1}
+  ]
+}

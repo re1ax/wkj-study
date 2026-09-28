@@ -1,0 +1,80 @@
+(define (problem temp)(:domain grid)(:objects 
+   f0-0f  - object 
+   f1-0f  - object 
+   f2-0f  - object 
+   f0-1f  - object 
+   f1-1f  - object 
+   f2-1f  - object 
+   f0-2f  - object 
+   f1-2f  - object 
+   f2-2f  - object 
+   shape0  - object 
+   shape1  - object 
+   shape2  - object 
+   key0-0  - object 
+   key1-0  - object 
+   key2-0  - object 
+   int1  - interpretation 
+)
+(:init (true)
+  (key key0-0 int1)
+  (key-shape key1-0 shape1 int1)
+  (conn f1-0f f0-0f int1)
+  (conn f2-1f f2-2f int1)
+  (open f2-2f int1)
+  (shape shape0 int1)
+  (conn f1-1f f1-2f int1)
+  (place f1-1f int1)
+  (conn f0-2f f0-1f int1)
+  (shape shape1 int1)
+  (lock-shape f1-0f shape0 int1)
+  (located key0-0 f2-2f int1)
+  (conn f0-1f f1-1f int1)
+  (conn f1-1f f0-1f int1)
+  (place f1-2f int1)
+  (conn f2-1f f1-1f int1)
+  (conn f1-0f f2-0f int1)
+  (open f0-1f int1)
+  (conn f1-2f f1-1f int1)
+  (lock-shape f0-0f shape0 int1)
+  (conn f1-1f f1-0f int1)
+  (place f2-2f int1)
+  (located-robot f2-2f int1)
+  (conn f1-0f f1-1f int1)
+  (key-shape key0-0 shape0 int1)
+  (conn f0-0f f1-0f int1)
+  (conn f0-1f f0-2f int1)
+  (conn f0-2f f1-2f int1)
+  (located key2-0 f2-1f int1)
+  (key key1-0 int1)
+  (place f0-2f int1)
+  (key-shape key2-0 shape2 int1)
+  (open f0-2f int1)
+  (open f1-2f int1)
+  (locked f1-1f int1)
+  (arm-empty int1)
+  (place f0-0f int1)
+  (lock-shape f1-1f shape0 int1)
+  (open f2-1f int1)
+  (place f2-0f int1)
+  (place f0-1f int1)
+  (place f1-0f int1)
+  (place f2-1f int1)
+  (conn f2-2f f2-1f int1)
+  (located key1-0 f1-1f int1)
+  (shape shape2 int1)
+  (conn f0-0f f0-1f int1)
+  (conn f1-2f f0-2f int1)
+  (conn f0-1f f0-0f int1)
+  (conn f2-1f f2-0f int1)
+  (conn f2-0f f2-1f int1)
+  (open f2-0f int1)
+  (locked f1-0f int1)
+  (conn f2-2f f1-2f int1)
+  (conn f1-1f f2-1f int1)
+  (locked f0-0f int1)
+  (conn f2-0f f1-0f int1)
+  (key key2-0 int1)
+  (conn f1-2f f2-2f int1)
+)
+(:goal (forall (?interpr - interpretation)(and   (located key0-0 f2-0f ?interpr)  (located key1-0 f1-1f ?interpr)  (located key2-0 f2-0f ?interpr)))))

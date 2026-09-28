@@ -1,0 +1,21 @@
+(define (problem temp)(:domain cleaner)(:objects 
+   r0  - r 
+   r1  - r 
+   o0  - object 
+   o1  - object 
+   o2  - object 
+   o3  - object 
+   o4  - object 
+   int1  - interpretation 
+)
+(:init (true)
+  (OBJECT o0 int1)
+  (OBJECT o2 int1)
+  (OBJECT o4 int1)
+  (ROOM r1 int1)
+  (ROOM r0 int1)
+  (position r0 int1)
+  (OBJECT o3 int1)
+  (OBJECT o1 int1)
+)
+(:goal (forall (?interpr - interpretation)(and   (cleaned r0 o0 ?interpr)  (cleaned r0 o1 ?interpr)  (cleaned r0 o2 ?interpr)  (cleaned r0 o3 ?interpr)  (cleaned r0 o4 ?interpr)  (cleaned r1 o0 ?interpr)  (cleaned r1 o1 ?interpr)  (cleaned r1 o2 ?interpr)  (cleaned r1 o3 ?interpr)  (cleaned r1 o4 ?interpr)))))

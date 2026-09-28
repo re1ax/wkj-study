@@ -1,0 +1,44 @@
+T1-CGCFF reconstruct-problem trace
+counterexamples=2 components=7 extracted_literals=40 separated_literals=16
+component 0 kind=oneof alternatives_before=6
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=25:0:1;35:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=24:0:1;32:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=26:0:1;34:0:1;
+  alt 3 status=COMMON_FALSE contains_separated_y=0 term_signature=28:0:1;31:0:1;
+  alt 4 status=COMMON_FALSE contains_separated_y=0 term_signature=29:0:1;33:0:1;
+  alt 5 status=COMMON_FALSE contains_separated_y=0 term_signature=27:0:1;30:0:1;
+  summary common_true=1 common_false=5 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 1 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=15:0:1;20:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=11:0:1;17:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 2 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=1:0:1;4:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=22:0:1;23:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 3 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=12:0:1;7:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=0:0:1;18:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 4 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=6:0:1;9:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=14:0:1;8:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 5 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;2:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=13:0:1;19:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_oneof_common_true
+component 6 kind=oneof alternatives_before=2
+  alt 0 status=COMMON_VARYING contains_separated_y=1 term_signature=21:0:1;5:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=16:0:1;3:0:1;
+  summary common_true=0 common_false=0 varying=2 varying_without_y=0 selected=2
+  common_literals_promoted=0
+  residual_alternatives=2
+  action=t1_emit_residual_term_oneof_as_supported_or_cnf
+t1_cff_semantic_closure:enabled=1;planner=t1;verifier_counterexample=1;verifier_y=14;relevance_symbols=9;components=0;closure_added=0;rule=action_goal_anchor_closure;thresholds=none

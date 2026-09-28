@@ -1,0 +1,28 @@
+CONTENT: This package contains the executable version of DNF and bechnmarks used for the paper submitted to AIJ December, 2012.
+
+This also includes a set of benchmarks in action language (.AL) (obtained after running the input theory translator) that DNF can run directly. 
+There is a bug in the translator for DNF, CNF, and PIP, e.g., it does not translate correctly for problems with or-clauses in the goal. In that case,
+one can use the AL files.
+
+dnf_run: this directory contains the input theory translator in prolog and DNF exec file. DNF can be executed on PDDL benchmarks in this directory using the following command:
+
+./run_cpah.sh domain.pddl problem.pddl.
+
+
+USAGE:
+
+Please read README.txt in the directory for each domain to use correct files for each planner.
+One can run DNF for a problem in PDDL or AL files:
+
+1. To run DNF on a problem in PDDL, go to dnf_run and execute the following command: 
+		./run_cpah.sh domain.pddl problem.pddl
+where domain.pddl and problem.pddl are the file names of the domain and the problem to be run.
+
+Since the translator contains some bugs and it may not work properly with some PDDL files, in this case, you may try with the AL files or contact me at sto@cs.nmsu.edu.
+
+2. To run DNF on a problem in AL, execute the following command:
+./dnf path/problem.al
+
+Where path is the path specifying the location of the file and  
+problem.al is the file name in AL format. For example, to run dispose-4-4.al file in the same directory, you can type:
+./dnf dispose-4-4.al

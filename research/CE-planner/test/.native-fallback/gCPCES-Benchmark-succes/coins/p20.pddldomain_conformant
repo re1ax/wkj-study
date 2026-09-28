@@ -1,0 +1,34 @@
+(define (domain coins)
+;(:requirements  :conditional-effects :equality :typing)
+(:types  object - object  elevator - object  floor - object  pos - object  coin - object  interpretation - object )
+(:predicates (true)   (in ?e - elevator  ?f - floor  ?x - interpretation)  (dec_f ?f - floor  ?g - floor  ?x - interpretation)  (dec_p ?p - pos  ?q - pos  ?x - interpretation)  (located ?f - floor  ?p - pos  ?x - interpretation)  (shaft ?e - elevator  ?p - pos  ?x - interpretation)  (have ?c - coin  ?x - interpretation)  (inside ?e - elevator  ?x - interpretation)  (coin-located ?c - coin  ?f - floor  ?p - pos  ?x - interpretation)) 
+(:action collect
+:parameters (?c  - coin ?f  - floor ?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?f ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (coin-located ?c ?f ?p ?interpr) (and   (have ?c ?interpr)(not   (coin-located ?c ?f ?p ?interpr)))))))
+(:action go-down
+:parameters (?e  - elevator ?f  - floor ?nf  - floor )
+:precondition (forall (?interpr - interpretation)(and   (dec_f ?f ?nf ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (in ?e ?f ?interpr) (and   (in ?e ?nf ?interpr)(not   (in ?e ?f ?interpr)))))))
+(:action go-up
+:parameters (?e  - elevator ?f  - floor ?nf  - floor )
+:precondition (forall (?interpr - interpretation)(and   (dec_f ?nf ?f ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (in ?e ?f ?interpr) (and   (in ?e ?nf ?interpr)(not   (in ?e ?f ?interpr)))))))
+(:action move-left
+:parameters (?f  - floor ?p  - pos ?np  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?f ?p ?interpr)  (dec_p ?p ?np ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?f ?np ?interpr))(forall (?interpr - interpretation) (not   (located ?f ?p ?interpr)))))
+(:action move-right
+:parameters (?f  - floor ?p  - pos ?np  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?f ?p ?interpr)  (dec_p ?np ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?f ?np ?interpr))(forall (?interpr - interpretation) (not   (located ?f ?p ?interpr)))))
+(:action step-in
+:parameters (?e  - elevator ?f  - floor ?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?f ?p ?interpr)  (shaft ?e ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (in ?e ?f ?interpr) (and   (inside ?e ?interpr)(not   (located ?f ?p ?interpr)))))))
+(:action step-out
+:parameters (?e  - elevator ?f  - floor ?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (inside ?e ?interpr)  (shaft ?e ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (in ?e ?f ?interpr) (and   (located ?f ?p ?interpr)(not   (inside ?e ?interpr)))))))
+
+)

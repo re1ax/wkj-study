@@ -1,0 +1,137 @@
+begin_groups
+39
+group
+1
+7 0 low 1 x1 
+group
+1
+32 0 high 1 dummy-hi 
+group
+2
+0 1 normal-mode 0 
+31 0 goal-ok-15 0 
+group
+2
+0 1 normal-mode 0 
+22 0 goal-ok-06 0 
+group
+2
+0 1 normal-mode 0 
+18 0 goal-ok-08 0 
+group
+1
+26 0 low 1 z1 
+group
+2
+27 0 goal-ok-04 0 
+0 1 normal-mode 0 
+group
+2
+0 1 normal-mode 0 
+10 0 goal-ok-07 0 
+group
+1
+4 0 high 1 t 
+group
+1
+5 0 low 1 f 
+group
+2
+0 1 normal-mode 0 
+25 0 goal-ok-09 0 
+group
+2
+16 0 goal-ok-03 0 
+0 1 normal-mode 0 
+group
+2
+21 0 goal-ok-13 0 
+0 1 normal-mode 0 
+group
+2
+0 1 normal-mode 0 
+24 0 goal-ok-11 0 
+group
+2
+0 1 normal-mode 0 
+1 0 goal-ok-01 0 
+group
+2
+0 1 normal-mode 0 
+29 0 goal-ok-02 0 
+group
+2
+6 0 goal-ok-05 0 
+0 1 normal-mode 0 
+group
+1
+9 0 low 1 y1 
+group
+2
+35 0 goal-ok-12 0 
+0 1 normal-mode 0 
+group
+2
+0 1 normal-mode 0 
+36 0 goal-ok-00 0 
+group
+1
+12 0 low 1 r2 
+group
+2
+20 0 goal-ok-14 0 
+0 1 normal-mode 0 
+group
+1
+0 1 normal-mode 0 
+group
+2
+0 1 normal-mode 0 
+2 0 goal-ok-16 0 
+group
+1
+8 0 low 1 z2 
+group
+1
+15 0 low 1 r1 
+group
+2
+0 1 normal-mode 0 
+0 0 goal-ok-10 0 
+group
+1
+17 0 high 1 tmp1 
+group
+1
+19 0 high 1 x1 
+group
+1
+23 0 low 1 t 
+group
+1
+3 0 high 1 tmp2 
+group
+1
+33 0 high 1 z2 
+group
+1
+14 0 high 1 z1 
+group
+1
+28 0 high 1 r2 
+group
+1
+11 0 low 1 tmp1 
+group
+1
+30 0 high 1 r1 
+group
+1
+13 0 low 1 tmp2 
+group
+1
+34 0 high 1 y1 
+group
+1
+37 0 high 1 f 
+end_groups

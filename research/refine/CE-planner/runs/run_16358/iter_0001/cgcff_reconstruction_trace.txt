@@ -1,0 +1,54 @@
+CGCFF reconstruct-problem trace
+counterexamples=2 components=6 extracted_literals=15 separated_literals=8
+component 0 kind=oneof alternatives_before=3
+  alt 0 status=COMMON_FALSE contains_separated_y=0 term_signature=8:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=4:0:1;
+  alt 2 status=COMMON_VARYING contains_separated_y=1 term_signature=5:0:1;
+  summary common_true=0 common_false=1 varying=2 varying_without_y=0 selected=2
+  common_literals_promoted=0
+  residual_alternatives=2
+  action=emit_residual_atomic_oneof
+component 1 kind=oneof alternatives_before=3
+  alt 0 status=COMMON_VARYING contains_separated_y=1 term_signature=4:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=7:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;
+  semantic_closure_added=1 rule=action_goal_anchor_closure
+  summary common_true=0 common_false=1 varying=2 varying_without_y=0 selected=3
+  common_literals_promoted=0
+  residual_alternatives=3
+  action=emit_residual_atomic_oneof
+component 2 kind=oneof alternatives_before=3
+  alt 0 status=COMMON_VARYING contains_separated_y=1 term_signature=4:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=9:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=1:0:1;
+  semantic_closure_added=1 rule=action_goal_anchor_closure
+  summary common_true=0 common_false=1 varying=2 varying_without_y=0 selected=3
+  common_literals_promoted=0
+  residual_alternatives=3
+  action=emit_residual_atomic_oneof
+component 3 kind=oneof alternatives_before=3
+  alt 0 status=COMMON_VARYING contains_separated_y=1 term_signature=5:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=6:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=1:0:1;
+  semantic_closure_added=1 rule=action_goal_anchor_closure
+  summary common_true=0 common_false=1 varying=2 varying_without_y=0 selected=3
+  common_literals_promoted=0
+  residual_alternatives=3
+  action=emit_residual_atomic_oneof
+component 4 kind=oneof alternatives_before=3
+  alt 0 status=COMMON_VARYING contains_separated_y=1 term_signature=5:0:1;
+  alt 1 status=COMMON_VARYING contains_separated_y=1 term_signature=0:0:1;
+  alt 2 status=COMMON_FALSE contains_separated_y=0 term_signature=10:0:1;
+  semantic_closure_added=1 rule=action_goal_anchor_closure
+  summary common_true=0 common_false=1 varying=2 varying_without_y=0 selected=3
+  common_literals_promoted=0
+  residual_alternatives=3
+  action=emit_residual_atomic_oneof
+component 5 kind=or alternatives_before=2
+  alt 0 status=COMMON_TRUE contains_separated_y=1 term_signature=1:0:0;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=10:0:0;
+  semantic_closure_added=2 rule=action_goal_anchor_closure
+  summary common_true=2 common_false=0 varying=0 varying_without_y=0 selected=2
+  action=promote_dnf_common_true count=2
+cross_component_safety_or_preserve:enabled=1;preserved=1;rule=retained_oneof_no_good_clause
+t1_cff_semantic_closure:enabled=1;planner=cff;verifier_counterexample=1;verifier_y=5;relevance_symbols=5;components=5;closure_added=6;rule=action_goal_anchor_closure;thresholds=none

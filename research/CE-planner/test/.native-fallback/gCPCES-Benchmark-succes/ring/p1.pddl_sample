@@ -1,0 +1,9 @@
+(define (problem temp)(:domain d-ring-1)(:objects 
+   w1  - window 
+   int1  - interpretation 
+)
+(:init (true)
+  (pos w1 int1)
+  (open w1 int1)
+)
+(:goal (forall (?interpr - interpretation)(and   (locked w1 ?interpr)))))

@@ -1,0 +1,95 @@
+(define (problem to-trash-2-8-nodisappear)
+(:domain to-trash)
+
+ (:objects 
+    p1-1
+    p1-2
+    p2-1
+    p2-2
+
+ - pos 
+    )
+   (:init
+(and
+
+    
+
+
+         (handempty)
+         (located p1-1)
+
+     (adj p1-1 p2-1)
+     (adj p2-1 p1-1)
+
+     (adj p1-2 p2-2)
+     (adj p2-2 p1-2)
+
+
+     (adj p1-1 p1-2)
+     (adj p1-2 p1-1)
+
+     (adj p2-1 p2-2)
+     (adj p2-2 p2-1)
+
+
+     (oneof
+        (obj-located o1 p1-1)
+        (obj-located o1 p1-2)
+        (obj-located o1 p2-1)
+        (obj-located o1 p2-2)
+     )
+     (oneof
+        (obj-located o2 p1-1)
+        (obj-located o2 p1-2)
+        (obj-located o2 p2-1)
+        (obj-located o2 p2-2)
+     )
+     (oneof
+        (obj-located o3 p1-1)
+        (obj-located o3 p1-2)
+        (obj-located o3 p2-1)
+        (obj-located o3 p2-2)
+     )
+     (oneof
+        (obj-located o4 p1-1)
+        (obj-located o4 p1-2)
+        (obj-located o4 p2-1)
+        (obj-located o4 p2-2)
+     )
+     (oneof
+        (obj-located o5 p1-1)
+        (obj-located o5 p1-2)
+        (obj-located o5 p2-1)
+        (obj-located o5 p2-2)
+     )
+     (oneof
+        (obj-located o6 p1-1)
+        (obj-located o6 p1-2)
+        (obj-located o6 p2-1)
+        (obj-located o6 p2-2)
+     )
+     (oneof
+        (obj-located o7 p1-1)
+        (obj-located o7 p1-2)
+        (obj-located o7 p2-1)
+        (obj-located o7 p2-2)
+     )
+     (oneof
+        (obj-located o8 p1-1)
+        (obj-located o8 p1-2)
+        (obj-located o8 p2-1)
+        (obj-located o8 p2-2)
+     )
+
+    )
+    
+)
+    (:goal (and     (obj-located o1 p1-1)
+    (obj-located o2 p1-1)
+    (obj-located o3 p1-1)
+    (obj-located o4 p1-1)
+    (obj-located o5 p1-1)
+    (obj-located o6 p1-1)
+    (obj-located o7 p1-1)
+    (obj-located o8 p1-1)
+)))

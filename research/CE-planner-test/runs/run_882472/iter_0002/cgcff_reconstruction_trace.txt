@@ -1,0 +1,2 @@
+independent_full_fallback:choice=native-artifact-direct;planner=T1;artifact_type=PDDL_PAIR;source_domain=/root/workspace/research/CE-planner/test/.native-fallback/T1-Benchmark-succes/blocks/domain.pddl;source_problem=/root/workspace/research/CE-planner/test/.native-fallback/T1-Benchmark-succes/blocks/b3.pddl;source_al=;source_theory_names=;rule=shared:domain.pddl;generated_pddl_conversion=off;counterexample_renderer=off;refined_writer=off;planner_specific_pddl_adapter=off
+oneof_alternative_audit:source=rendered_pddl;selected=28;original=28;rendered_oneof_groups=7

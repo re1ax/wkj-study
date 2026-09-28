@@ -1,0 +1,5 @@
+DNF version 1.0 - Built date: Wed Jan  2 12:43:24 MST 2013
+Building domain...
+ERROR: Literal cpa_visited(cpa_n2) is undeclared.
+Check the fluent declaration.
+

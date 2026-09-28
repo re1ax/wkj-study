@@ -1,0 +1,38 @@
+(define (domain look-and-grab)
+;(:requirements  :strips :typing)
+(:types  object - object  pos - object  obj - object  interpretation - object )
+(:constants 
+   o1  - obj 
+   p1-1  - pos 
+   p1-2  - pos 
+   p2-1  - pos 
+   p2-2  - pos 
+)
+
+(:predicates (true)   (located ?i - pos  ?x - interpretation)  (holding ?o - obj  ?x - interpretation)  (obj-located ?o - obj  ?i - pos  ?x - interpretation)  (handempty ?x - interpretation)  (adj ?i - pos  ?j - pos  ?x - interpretation)) 
+(:action move
+:parameters (?i  - pos ?j  - pos )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?j ?interpr))(forall (?interpr - interpretation) (not   (located ?i ?interpr)))))
+(:action pickup-1-1-look-3
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (located p1-1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 p1-1 ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-2 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-2 ?interpr)))))))
+(:action pickup-1-2-look-3
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (located p1-2 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 p1-2 ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-2 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-2 ?interpr)))))))
+(:action pickup-2-1-look-3
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (located p2-1 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 p2-1 ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-2 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-2 ?interpr)))))))
+(:action pickup-2-2-look-3
+:parameters ()
+:precondition (forall (?interpr - interpretation)(and   (located p2-2 ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 p2-2 ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p1-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p1-2 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-1 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-1 ?interpr)))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 p2-2 ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 p2-2 ?interpr)))))))
+(:action putdown
+:parameters (?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 ?p ?interpr))))))
+
+)

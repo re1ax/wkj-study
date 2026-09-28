@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Alice",
+    "score": 90,
+    "city": "Shanghai"
+  },
+  {
+    "name": "Bob",
+    "score": 78,
+    "city": "Beijing"
+  },
+  {
+    "name": "Cindy",
+    "score": 95,
+    "city": "Shanghai"
+  },
+  {
+    "name": "Tom",
+    "score": 60,
+    "city": "Shenzhen"
+  }
+]

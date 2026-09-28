@@ -1,0 +1,10 @@
+Coins (elevators) generator.
+Author: Blai Bonet
+
+make
+usage: comm --stages <n> --packets <m>
+
+
+GCLAMA: p*_3.pddl
+
+cff and T1: ff-*

@@ -1,0 +1,1 @@
+blocks/b3  EXIT_CODE=127 MISSING_SUCCESS_MARKER  log=/root/workspace/research/CE-planner/test_logs_ce/example-t1/blocks/b3.log

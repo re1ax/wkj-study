@@ -1,0 +1,8 @@
+CGCFF reconstruct-problem trace
+counterexamples=1 components=1 extracted_literals=4 separated_literals=3
+component 0 kind=or alternatives_before=2
+  alt 0 status=COMMON_FALSE contains_separated_y=1 term_signature=1:0:0;3:0:1;
+  alt 1 status=COMMON_TRUE contains_separated_y=1 term_signature=0:0:1;2:0:1;
+  summary common_true=1 common_false=1 varying=0 varying_without_y=0 selected=0
+  action=promote_dnf_common_true count=1
+t1_cff_semantic_closure:enabled=1;planner=cff;verifier_counterexample=0;verifier_y=0;relevance_symbols=1;components=0;closure_added=0;rule=action_goal_anchor_closure;thresholds=none

@@ -1,0 +1,91 @@
+(define (domain forest)
+(:types  object - object  location - object  prob - object  sub_location - object  log_location - object  package - object  truck - object  plane - object  city - object  block - object  interpretation - object )
+(:constants 
+   x1  - location 
+   y1  - location 
+   x2  - location 
+   y2  - location 
+   grid  - prob 
+   logistics  - prob 
+   blocksworld  - prob 
+   a  - block 
+   b  - block 
+   c  - block 
+   t1  - truck 
+   t2  - truck 
+   a1  - plane 
+   p1  - package 
+   l11  - log_location 
+   l12  - log_location 
+   l21  - log_location 
+   l22  - log_location 
+   c1  - city 
+   c2  - city 
+)
+
+(:predicates (true)   (succ_loc ?loc1 - location  ?loc2 - location  ?x - interpretation)  (s_on_table ?b - block  ?l - location  ?x - interpretation)  (s_city_loc ?loc - log_location  ?c - city  ?x - interpretation)  (s_empty ?l - location  ?x - interpretation)  (s_airport_loc ?loc - log_location  ?x - interpretation)  (s_on ?b1 - block  ?b2 - block  ?l - location  ?x - interpretation)  (located ?loc - location  ?x - interpretation)  (neq ?l1 - log_location  ?l - log_location  ?x - interpretation)  (s_plane_at ?t - plane  ?loc - log_location  ?l - location  ?x - interpretation)  (s_goal_y ?loc - sub_location  ?l - location  ?x - interpretation)  (s_succ_loc ?loc1 - sub_location  ?loc2 - sub_location  ?x - interpretation)  (s_pkg_at ?p - package  ?loc - log_location  ?l - location  ?x - interpretation)  (s_pkg_in_a ?p - package  ?a - plane  ?l - location  ?x - interpretation)  (s_pkg_in_t ?p - package  ?t - truck  ?l - location  ?x - interpretation)  (s_goal_x ?loc - sub_location  ?l - location  ?x - interpretation)  (prob_at ?loc - location  ?p - prob  ?x - interpretation)  (s_holding ?b - block  ?l - location  ?x - interpretation)  (s_clear ?b - block  ?l - location  ?x - interpretation)  (s_at_y ?loc - sub_location  ?l - location  ?x - interpretation)  (solved ?loc - location  ?x - interpretation)  (s_at_x ?loc - sub_location  ?l - location  ?x - interpretation)  (s_truck_at ?t - truck  ?loc - log_location  ?l - location  ?x - interpretation)) 
+(:action down-y
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (located y2 ?interpr)  (solved y2 ?interpr)) (and (not   (located y2 ?interpr))  (located y1 ?interpr))))))
+(:action down_x
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (located x2 ?interpr)  (solved x2 ?interpr)) (and (not   (located x2 ?interpr))  (located x1 ?interpr))))))
+(:action load_plane
+:parameters (?a  - plane ?p  - package ?loc  - log_location ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_plane_at ?a ?loc ?l ?interpr)  (s_pkg_at ?p ?loc ?l ?interpr)) (and   (s_pkg_in_a ?p ?a ?l ?interpr)(not   (s_pkg_at ?p ?loc ?l ?interpr)))))))
+(:action load_truck
+:parameters (?t  - truck ?p  - package ?loc  - log_location ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_truck_at ?t ?loc ?l ?interpr)  (s_pkg_at ?p ?loc ?l ?interpr)) (and   (s_pkg_in_t ?p ?t ?l ?interpr)(not   (s_pkg_at ?p ?loc ?l ?interpr)))))))
+(:action move_plane
+:parameters (?a  - plane ?loc1  - log_location ?loc2  - log_location ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_plane_at ?a ?loc1 ?l ?interpr)  (s_airport_loc ?loc1 ?interpr)  (s_airport_loc ?loc2 ?interpr)  (neq ?loc1 ?loc2 ?interpr)) (and (not   (s_plane_at ?a ?loc1 ?l ?interpr))  (s_plane_at ?a ?loc2 ?l ?interpr))))))
+(:action move_truck
+:parameters (?t  - truck ?loc1  - log_location ?loc2  - log_location ?c  - city ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_truck_at ?t ?loc1 ?l ?interpr)  (s_city_loc ?loc1 ?c ?interpr)  (s_city_loc ?loc2 ?c ?interpr)  (neq ?loc1 ?loc2 ?interpr)) (and (not   (s_truck_at ?t ?loc1 ?l ?interpr))  (s_truck_at ?t ?loc2 ?l ?interpr))))))
+(:action pickup
+:parameters (?b1  - block ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc blocksworld ?interpr)  (located ?loc ?interpr)  (s_empty ?loc ?interpr)  (s_clear ?b1 ?loc ?interpr)) (and (not   (s_on_table ?b1 ?loc ?interpr))  (s_holding ?b1 ?loc ?interpr)(not   (s_clear ?b1 ?loc ?interpr))(not   (s_empty ?loc ?interpr)))))))
+(:action putdown
+:parameters (?b1  - block ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc blocksworld ?interpr)  (located ?loc ?interpr)  (s_holding ?b1 ?loc ?interpr)) (and   (s_on_table ?b1 ?loc ?interpr)(not   (s_holding ?b1 ?loc ?interpr))  (s_clear ?b1 ?loc ?interpr)  (s_empty ?loc ?interpr))))))
+(:action s_down_x
+:parameters (?sloc1x  - sub_location ?sloc1y  - sub_location ?sloc2x  - sub_location ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc grid ?interpr)  (located ?loc ?interpr)  (s_succ_loc ?sloc2x ?sloc1x ?interpr)  (s_at_x ?sloc1x ?loc ?interpr)  (s_at_y ?sloc1y ?loc ?interpr)) (and   (s_at_x ?sloc2x ?loc ?interpr)(not   (s_at_x ?sloc1x ?loc ?interpr)))))))
+(:action s_down_y
+:parameters (?sloc1x  - sub_location ?sloc1y  - sub_location ?sloc2y  - sub_location ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc grid ?interpr)  (located ?loc ?interpr)  (s_succ_loc ?sloc2y ?sloc1y ?interpr)  (s_at_x ?sloc1x ?loc ?interpr)  (s_at_y ?sloc1y ?loc ?interpr)) (and   (s_at_y ?sloc2y ?loc ?interpr)(not   (s_at_y ?sloc1y ?loc ?interpr)))))))
+(:action s_up_x
+:parameters (?sloc1x  - sub_location ?sloc1y  - sub_location ?sloc2x  - sub_location ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc grid ?interpr)  (located ?loc ?interpr)  (s_succ_loc ?sloc1x ?sloc2x ?interpr)  (s_at_x ?sloc1x ?loc ?interpr)  (s_at_y ?sloc1y ?loc ?interpr)) (and   (s_at_x ?sloc2x ?loc ?interpr)(not   (s_at_x ?sloc1x ?loc ?interpr)))))))
+(:action s_up_y
+:parameters (?sloc1x  - sub_location ?sloc1y  - sub_location ?sloc2y  - sub_location ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc grid ?interpr)  (located ?loc ?interpr)  (s_succ_loc ?sloc1y ?sloc2y ?interpr)  (s_at_x ?sloc1x ?loc ?interpr)  (s_at_y ?sloc1y ?loc ?interpr)) (and   (s_at_y ?sloc2y ?loc ?interpr)(not   (s_at_y ?sloc1y ?loc ?interpr)))))))
+(:action solve_blocksworld
+:parameters (?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc blocksworld ?interpr)  (located ?loc ?interpr)  (s_on a b ?loc ?interpr)  (s_on b c ?loc ?interpr)) (and   (solved ?loc ?interpr))))))
+(:action solve_grid
+:parameters (?slocx  - sub_location ?slocy  - sub_location ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc grid ?interpr)  (located ?loc ?interpr)  (s_at_x ?slocx ?loc ?interpr)  (s_at_y ?slocy ?loc ?interpr)  (s_goal_x ?slocx ?loc ?interpr)  (s_goal_y ?slocy ?loc ?interpr)) (and   (solved ?loc ?interpr))))))
+(:action solve_logistics
+:parameters (?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_pkg_at p1 l22 ?l ?interpr)) (and   (solved ?l ?interpr))))))
+(:action stack
+:parameters (?b1  - block ?b2  - block ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc blocksworld ?interpr)  (located ?loc ?interpr)  (s_holding ?b1 ?loc ?interpr)  (s_clear ?b2 ?loc ?interpr)) (and   (s_on ?b1 ?b2 ?loc ?interpr)(not   (s_holding ?b1 ?loc ?interpr))(not   (s_clear ?b2 ?loc ?interpr))  (s_clear ?b1 ?loc ?interpr)  (s_empty ?loc ?interpr))))))
+(:action unload_plane
+:parameters (?a  - plane ?p  - package ?loc  - log_location ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_plane_at ?a ?loc ?l ?interpr)  (s_pkg_in_a ?p ?a ?l ?interpr)) (and   (s_pkg_at ?p ?loc ?l ?interpr)(not   (s_pkg_in_a ?p ?a ?l ?interpr)))))))
+(:action unload_truck
+:parameters (?t  - truck ?p  - package ?loc  - log_location ?l  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?l logistics ?interpr)  (located ?l ?interpr)  (s_truck_at ?t ?loc ?l ?interpr)  (s_pkg_in_t ?p ?t ?l ?interpr)) (and   (s_pkg_at ?p ?loc ?l ?interpr)(not   (s_pkg_in_t ?p ?t ?l ?interpr)))))))
+(:action unstack
+:parameters (?b1  - block ?b2  - block ?loc  - location )
+:effect (and (forall (?interpr - interpretation) (when (and   (prob_at ?loc blocksworld ?interpr)  (located ?loc ?interpr)  (s_empty ?loc ?interpr)  (s_clear ?b1 ?loc ?interpr)  (s_on ?b1 ?b2 ?loc ?interpr)) (and (not   (s_on ?b1 ?b2 ?loc ?interpr))  (s_holding ?b1 ?loc ?interpr)  (s_clear ?b2 ?loc ?interpr)(not   (s_clear ?b1 ?loc ?interpr))(not   (s_empty ?loc ?interpr)))))))
+(:action up_x
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (located x1 ?interpr)  (solved x1 ?interpr)) (and (not   (located x1 ?interpr))  (located x2 ?interpr))))))
+(:action up_y
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (located y1 ?interpr)  (solved y1 ?interpr)) (and (not   (located y1 ?interpr))  (located y2 ?interpr))))))
+
+)

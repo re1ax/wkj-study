@@ -1,0 +1,25 @@
+(define (domain emptyroom)
+;(:requirements  :typing :equality)
+(:types  object - object  pos - object  interpretation - object )
+(:constants 
+   p1  - pos 
+   p2  - pos 
+   p3  - pos 
+   p4  - pos 
+)
+
+(:predicates (true)   (x ?p - pos  ?x - interpretation)  (y ?p - pos  ?x - interpretation)) 
+(:action down
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (y p1 ?interpr) (and (not   (y p1 ?interpr))  (y p2 ?interpr))))(forall (?interpr - interpretation) (when   (y p2 ?interpr) (and (not   (y p2 ?interpr))  (y p3 ?interpr))))(forall (?interpr - interpretation) (when   (y p3 ?interpr) (and (not   (y p3 ?interpr))  (y p4 ?interpr))))))
+(:action left
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (x p2 ?interpr) (and (not   (x p2 ?interpr))  (x p1 ?interpr))))(forall (?interpr - interpretation) (when   (x p3 ?interpr) (and (not   (x p3 ?interpr))  (x p2 ?interpr))))(forall (?interpr - interpretation) (when   (x p4 ?interpr) (and (not   (x p4 ?interpr))  (x p3 ?interpr))))))
+(:action right
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (x p1 ?interpr) (and (not   (x p1 ?interpr))  (x p2 ?interpr))))(forall (?interpr - interpretation) (when   (x p2 ?interpr) (and (not   (x p2 ?interpr))  (x p3 ?interpr))))(forall (?interpr - interpretation) (when   (x p3 ?interpr) (and (not   (x p3 ?interpr))  (x p4 ?interpr))))))
+(:action up
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (y p2 ?interpr) (and (not   (y p2 ?interpr))  (y p1 ?interpr))))(forall (?interpr - interpretation) (when   (y p3 ?interpr) (and (not   (y p3 ?interpr))  (y p2 ?interpr))))(forall (?interpr - interpretation) (when   (y p4 ?interpr) (and (not   (y p4 ?interpr))  (y p3 ?interpr))))))
+
+)

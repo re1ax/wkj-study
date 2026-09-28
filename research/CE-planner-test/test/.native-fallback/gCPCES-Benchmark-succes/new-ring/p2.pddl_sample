@@ -1,0 +1,9 @@
+(define (problem temp)(:domain d-ring-new-2)(:objects 
+   w1  - window 
+   w2  - window 
+   int1  - interpretation 
+)
+(:init (true)
+  (pos w1 int1)
+)
+(:goal (forall (?interpr - interpretation)(and (or   (locked w1 ?interpr)  (locker_damaged w1 ?interpr))(or   (locked w2 ?interpr)  (locker_damaged w2 ?interpr))  (closed w1 ?interpr)  (closed w2 ?interpr)))))

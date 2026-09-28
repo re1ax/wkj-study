@@ -1,0 +1,38 @@
+Parsing... /tmp/igc-normalized-pddl-495/domain.normalized.pddl
+/root/workspace/research/CE-planner/runs/run_509/iter_0001/refined_igc_problem.pddl
+parse task...
+  Atom edge_label(n2, n0, l1)
+  Atom edge_label(n2, n1, l2)
+  Conjunction
+    Atom edge_label(n2, n0, l1)
+    Atom edge_label(n2, n1, l2)
+  Conjunction
+    Atom edge_label(n2, n0, l2)
+    Atom edge_label(n2, n1, l1)
+parse
+Atom at_node(n2)
+Atom visited(n2)
+Atom edge_label(n0, n1, l2)
+Atom edge_label(n0, n2, l1)
+Atom edge_label(n1, n2, l2)
+Atom edge_label(n1, n0, l1)
+<pddl.conditions.Conjunction object at 0x7c2d87dfbc50>
+<pddl.conditions.Conjunction object at 0x7c2d87dfbd50>
+after parse
+Atom at_node(n2)
+Atom visited(n2)
+Atom edge_label(n0, n1, l2)
+Atom edge_label(n0, n2, l1)
+Atom edge_label(n1, n2, l2)
+Atom edge_label(n1, n0, l1)
+<pddl.conditions.Conjunction object at 0x7c2d87dfbc50>
+<pddl.conditions.Conjunction object at 0x7c2d87dfbd50>
+Atom =(n0, n0)
+Atom =(n1, n1)
+Atom =(n2, n2)
+Atom =(l1, l1)
+Atom =(l2, l2)
+[0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program...

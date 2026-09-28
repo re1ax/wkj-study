@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export JOBS="${JOBS:-2}"
+
+usage() {
+    cat <<'EOF'
+Usage: ./build
+
+Runs the complete Ubuntu reproduction setup:
+  1. restore executable bits and install/check dependencies
+  2. perform a clean project build
+  3. verify the installation
+
+SICStus is optional. Its installer may be downloaded from the official site
+and requires the reviewer's own license. Set SICSTUS_SKIP=1 to skip it.
+EOF
+}
+
+case "${1:-}" in
+    "") ;;
+    -h|--help) usage; exit 0 ;;
+    *) usage >&2; exit 2 ;;
+esac
+
+echo "==> [0/3] Restoring executable permissions"
+bash "$SCRIPT_DIR/scripts/restore-executable-bits.sh"
+
+echo
+echo "==> [1/3] Preparing Ubuntu dependencies"
+"$SCRIPT_DIR/setup.sh" --install
+
+echo
+echo "==> [2/3] Performing a clean build"
+"$SCRIPT_DIR/build.sh" --clean
+
+echo
+echo "==> [3/3] Checking the installation"
+"$SCRIPT_DIR/check-installation.sh"
+
+echo
+echo "CE-planner is ready. Run: ./run-tests"

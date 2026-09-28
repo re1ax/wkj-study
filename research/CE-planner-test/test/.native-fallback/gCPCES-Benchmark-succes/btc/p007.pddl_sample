@@ -1,0 +1,31 @@
+(define (problem temp)(:domain btc)(:objects 
+   b0  - bomb 
+   p0  - package 
+   p1  - package 
+   p2  - package 
+   p3  - package 
+   p4  - package 
+   p5  - package 
+   p6  - package 
+   t0  - toilet 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+   int6  - interpretation 
+   int7  - interpretation 
+   int8  - interpretation 
+)
+(:init (true)
+  (in p0 b0 int1)
+  (in p1 b0 int2)
+  (in p0 b0 int3)
+  (clog t0 int3)
+  (in p2 b0 int4)
+  (in p3 b0 int5)
+  (in p4 b0 int6)
+  (in p5 b0 int7)
+  (in p6 b0 int8)
+)
+(:goal (forall (?interpr - interpretation)(and   (defused b0 ?interpr)))))

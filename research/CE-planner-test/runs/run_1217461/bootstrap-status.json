@@ -1,0 +1,7 @@
+{
+  "status": "COUNTEREXAMPLE",
+  "verifier_oneof_source": "oneof_initial",
+  "build_ms": 1,
+  "solve_ms": 0,
+  "extract_ms": 0
+}

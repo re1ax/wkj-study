@@ -1,0 +1,27 @@
+(define (domain grid)
+;(:requirements  :strips :typing)
+(:types  object - object  num - object  interpretation - object )
+(:constants 
+   zero  - num 
+   one  - num 
+   two  - num 
+)
+
+(:predicates (true)   (canmove ?x - interpretation)  (x ?i - num  ?x - interpretation)  (y ?i - num  ?x - interpretation)) 
+(:action can_move
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (x two ?interpr)  (y one ?interpr)) (and (not   (canmove ?interpr)))))(forall (?interpr - interpretation) (when (or (not   (x two ?interpr))(not   (y one ?interpr))) (and   (canmove ?interpr))))))
+(:action east
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (x zero ?interpr)  (canmove ?interpr)) (and   (x one ?interpr)(not   (x zero ?interpr)))))(forall (?interpr - interpretation) (when (and   (x one ?interpr)  (canmove ?interpr)) (and   (x two ?interpr)(not   (x one ?interpr)))))))
+(:action north
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (y one ?interpr)  (canmove ?interpr)) (and   (y zero ?interpr)(not   (y one ?interpr)))))(forall (?interpr - interpretation) (when (and   (y two ?interpr)  (canmove ?interpr)) (and   (y one ?interpr)(not   (y two ?interpr)))))))
+(:action south
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (y zero ?interpr)  (canmove ?interpr)) (and   (y one ?interpr)(not   (y zero ?interpr)))))(forall (?interpr - interpretation) (when (and   (y one ?interpr)  (canmove ?interpr)) (and   (y two ?interpr)(not   (y one ?interpr)))))))
+(:action west
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (not   (canmove ?interpr)))(forall (?interpr - interpretation) (when (and   (x one ?interpr)  (canmove ?interpr)) (and   (x zero ?interpr)(not   (x one ?interpr)))))(forall (?interpr - interpretation) (when (and   (x two ?interpr)  (canmove ?interpr)) (and   (x one ?interpr)(not   (x two ?interpr)))))))
+
+)

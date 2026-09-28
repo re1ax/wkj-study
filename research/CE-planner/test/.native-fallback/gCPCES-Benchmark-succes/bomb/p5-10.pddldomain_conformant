@@ -1,0 +1,13 @@
+(define (domain bomb)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (armed ?x - object  ?x - interpretation)  (clogged ?x - object  ?x - interpretation)  (bomb ?x - object  ?x - interpretation)  (toilet ?x - object  ?x - interpretation)) 
+(:action dunk
+:parameters (?bomb  - object ?toilet  - object )
+:precondition (forall (?interpr - interpretation)(and   (bomb ?bomb ?interpr)  (toilet ?toilet ?interpr)(not   (clogged ?toilet ?interpr))))
+:effect (and (forall (?interpr - interpretation)   (clogged ?toilet ?interpr))(forall (?interpr - interpretation) (when   (armed ?bomb ?interpr) (and (not   (armed ?bomb ?interpr)))))))
+(:action flush
+:parameters (?toilet  - object )
+:precondition (forall (?interpr - interpretation)(and   (toilet ?toilet ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (clogged ?toilet ?interpr) (and (not   (clogged ?toilet ?interpr)))))))
+
+)

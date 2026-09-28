@@ -1,0 +1,4 @@
+status=OK
+worlds=1
+actions=3
+message=candidate is executable and goal-reaching in all 1 accumulated sampled worlds

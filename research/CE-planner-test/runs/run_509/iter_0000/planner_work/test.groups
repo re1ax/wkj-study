@@ -1,0 +1,18 @@
+var0:
+  0: Atom at_node(n0)
+  1: <none of those>
+var1:
+  0: Atom visited(n1)
+  1: <none of those>
+var2:
+  0: Atom at_node(n1)
+  1: <none of those>
+var3:
+  0: Atom visited(n2)
+  1: <none of those>
+var4:
+  0: Atom visited(n0)
+  1: <none of those>
+var5:
+  0: Atom at_node(n2)
+  1: <none of those>

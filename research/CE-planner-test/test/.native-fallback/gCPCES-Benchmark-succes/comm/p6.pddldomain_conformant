@@ -1,0 +1,30 @@
+(define (domain comm)
+;(:requirements  :negative-preconditions :typing :equality)
+(:types  object - object  packet - object  stage - object  interpretation - object )
+(:constants 
+   s0  - stage 
+)
+
+(:predicates (true)   (next-stage ?s - stage  ?t - stage  ?x - interpretation)  (ok ?p - packet  ?x - interpretation)  (noisy ?p - packet  ?x - interpretation)  (read ?p - packet  ?x - interpretation)  (seq-number ?p - packet  ?s - stage  ?x - interpretation)  (in-channel ?p - packet  ?x - interpretation)  (bad ?p - packet  ?x - interpretation)  (current-stage ?s - stage  ?x - interpretation)) 
+(:action advance
+:parameters (?s  - stage ?t  - stage )
+:precondition (forall (?interpr - interpretation)(and   (next-stage ?s ?t ?interpr)  (current-stage ?s ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (current-stage ?t ?interpr))(forall (?interpr - interpretation) (not   (current-stage ?s ?interpr)))))
+(:action certify
+:parameters (?p  - packet )
+:precondition (forall (?interpr - interpretation)(and   (read ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (noisy ?p ?interpr) (and   (bad ?p ?interpr))))(forall (?interpr - interpretation) (when (not   (noisy ?p ?interpr)) (and   (ok ?p ?interpr))))))
+(:action obtain
+:parameters (?p  - packet ?s  - stage )
+:precondition (forall (?interpr - interpretation)(and   (seq-number ?p ?s ?interpr)  (current-stage ?s ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (in-channel ?p ?interpr) (and (not   (in-channel ?p ?interpr))  (read ?p ?interpr))))))
+(:action request-copy
+:parameters (?p  - packet ?s  - stage )
+:precondition (forall (?interpr - interpretation)(and   (current-stage ?s ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (bad ?p ?interpr)  (seq-number ?p ?s ?interpr)) (and   (in-channel ?p ?interpr)(not   (read ?p ?interpr))(not   (noisy ?p ?interpr))(not   (bad ?p ?interpr)))))))
+(:action reset
+:parameters (?s  - stage )
+:precondition (forall (?interpr - interpretation)(and   (current-stage ?s ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (current-stage s0 ?interpr))(forall (?interpr - interpretation) (not   (current-stage ?s ?interpr)))))
+
+)

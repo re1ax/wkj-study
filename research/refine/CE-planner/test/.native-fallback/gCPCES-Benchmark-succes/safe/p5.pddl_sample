@@ -1,0 +1,20 @@
+(define (problem temp)(:domain safe)(:objects 
+   c1  - object 
+   c2  - object 
+   c3  - object 
+   c4  - object 
+   c5  - object 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+   int5  - interpretation 
+)
+(:init (true)
+  (right-combination c1 int1)
+  (right-combination c2 int2)
+  (right-combination c3 int3)
+  (right-combination c4 int4)
+  (right-combination c5 int5)
+)
+(:goal (forall (?interpr - interpretation)(and   (safe-open ?interpr)))))

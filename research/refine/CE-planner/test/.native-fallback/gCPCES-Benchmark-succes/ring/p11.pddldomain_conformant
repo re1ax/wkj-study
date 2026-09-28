@@ -1,0 +1,32 @@
+(define (domain d-ring-11)
+;(:requirements  :typing :equality)
+(:types  object - object  window - object  interpretation - object )
+(:constants 
+   w1  - window 
+   w2  - window 
+   w3  - window 
+   w4  - window 
+   w5  - window 
+   w6  - window 
+   w7  - window 
+   w8  - window 
+   w9  - window 
+   w10  - window 
+   w11  - window 
+)
+
+(:predicates (true)   (pos ?w - window  ?x - interpretation)  (closed ?w - window  ?x - interpretation)  (open ?w - window  ?x - interpretation)  (locked ?w - window  ?x - interpretation)) 
+(:action bwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (pos w11 ?interpr)(not   (pos w1 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w2 ?interpr) (and   (pos w1 ?interpr)(not   (pos w2 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w3 ?interpr) (and   (pos w2 ?interpr)(not   (pos w3 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w4 ?interpr) (and   (pos w3 ?interpr)(not   (pos w4 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w5 ?interpr) (and   (pos w4 ?interpr)(not   (pos w5 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w6 ?interpr) (and   (pos w5 ?interpr)(not   (pos w6 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w7 ?interpr) (and   (pos w6 ?interpr)(not   (pos w7 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w8 ?interpr) (and   (pos w7 ?interpr)(not   (pos w8 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w9 ?interpr) (and   (pos w8 ?interpr)(not   (pos w9 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w10 ?interpr) (and   (pos w9 ?interpr)(not   (pos w10 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w11 ?interpr) (and   (pos w10 ?interpr)(not   (pos w11 ?interpr)))))))
+(:action close
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (closed w1 ?interpr))))(forall (?interpr - interpretation) (when   (pos w2 ?interpr) (and   (closed w2 ?interpr))))(forall (?interpr - interpretation) (when   (pos w3 ?interpr) (and   (closed w3 ?interpr))))(forall (?interpr - interpretation) (when   (pos w4 ?interpr) (and   (closed w4 ?interpr))))(forall (?interpr - interpretation) (when   (pos w5 ?interpr) (and   (closed w5 ?interpr))))(forall (?interpr - interpretation) (when   (pos w6 ?interpr) (and   (closed w6 ?interpr))))(forall (?interpr - interpretation) (when   (pos w7 ?interpr) (and   (closed w7 ?interpr))))(forall (?interpr - interpretation) (when   (pos w8 ?interpr) (and   (closed w8 ?interpr))))(forall (?interpr - interpretation) (when   (pos w9 ?interpr) (and   (closed w9 ?interpr))))(forall (?interpr - interpretation) (when   (pos w10 ?interpr) (and   (closed w10 ?interpr))))(forall (?interpr - interpretation) (when   (pos w11 ?interpr) (and   (closed w11 ?interpr))))))
+(:action fwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (pos w1 ?interpr) (and   (pos w2 ?interpr)(not   (pos w1 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w2 ?interpr) (and   (pos w3 ?interpr)(not   (pos w2 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w3 ?interpr) (and   (pos w4 ?interpr)(not   (pos w3 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w4 ?interpr) (and   (pos w5 ?interpr)(not   (pos w4 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w5 ?interpr) (and   (pos w6 ?interpr)(not   (pos w5 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w6 ?interpr) (and   (pos w7 ?interpr)(not   (pos w6 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w7 ?interpr) (and   (pos w8 ?interpr)(not   (pos w7 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w8 ?interpr) (and   (pos w9 ?interpr)(not   (pos w8 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w9 ?interpr) (and   (pos w10 ?interpr)(not   (pos w9 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w10 ?interpr) (and   (pos w11 ?interpr)(not   (pos w10 ?interpr)))))(forall (?interpr - interpretation) (when   (pos w11 ?interpr) (and   (pos w1 ?interpr)(not   (pos w11 ?interpr)))))))
+(:action lock
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (pos w1 ?interpr)  (closed w1 ?interpr)) (and   (locked w1 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w2 ?interpr)  (closed w2 ?interpr)) (and   (locked w2 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w3 ?interpr)  (closed w3 ?interpr)) (and   (locked w3 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w4 ?interpr)  (closed w4 ?interpr)) (and   (locked w4 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w5 ?interpr)  (closed w5 ?interpr)) (and   (locked w5 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w6 ?interpr)  (closed w6 ?interpr)) (and   (locked w6 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w7 ?interpr)  (closed w7 ?interpr)) (and   (locked w7 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w8 ?interpr)  (closed w8 ?interpr)) (and   (locked w8 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w9 ?interpr)  (closed w9 ?interpr)) (and   (locked w9 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w10 ?interpr)  (closed w10 ?interpr)) (and   (locked w10 ?interpr))))(forall (?interpr - interpretation) (when (and   (pos w11 ?interpr)  (closed w11 ?interpr)) (and   (locked w11 ?interpr))))))
+
+)

@@ -1,0 +1,54 @@
+(define (problem temp)(:domain coins)(:objects 
+   e0  - elevator 
+   e1  - elevator 
+   f0  - floor 
+   f1  - floor 
+   p0  - pos 
+   p1  - pos 
+   c0  - coin 
+   c1  - coin 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+)
+(:init (true)
+  (in e1 f0 int1)
+  (in e0 f0 int1)
+  (shaft e0 p0 int1)
+  (located f0 p0 int1)
+  (coin-located c0 f1 p0 int1)
+  (shaft e1 p1 int1)
+  (coin-located c1 f1 p0 int1)
+  (dec_p p1 p0 int1)
+  (dec_f f1 f0 int1)
+  (in e0 f0 int2)
+  (shaft e0 p0 int2)
+  (coin-located c1 f1 p1 int2)
+  (located f0 p0 int2)
+  (in e1 f1 int2)
+  (dec_f f1 f0 int2)
+  (coin-located c0 f1 p0 int2)
+  (shaft e1 p1 int2)
+  (dec_p p1 p0 int2)
+  (located f0 p0 int3)
+  (in e0 f1 int3)
+  (in e1 f0 int3)
+  (dec_p p1 p0 int3)
+  (shaft e0 p0 int3)
+  (coin-located c1 f1 p0 int3)
+  (dec_f f1 f0 int3)
+  (coin-located c0 f1 p0 int3)
+  (shaft e1 p1 int3)
+  (shaft e1 p1 int4)
+  (located f0 p0 int4)
+  (in e0 f1 int4)
+  (in e1 f0 int4)
+  (coin-located c0 f1 p1 int4)
+  (dec_p p1 p0 int4)
+  (shaft e0 p0 int4)
+  (coin-located c1 f1 p0 int4)
+  (dec_f f1 f0 int4)
+  (located f1 p0 int4)
+)
+(:goal (forall (?interpr - interpretation)(and   (have c0 ?interpr)  (have c1 ?interpr)))))

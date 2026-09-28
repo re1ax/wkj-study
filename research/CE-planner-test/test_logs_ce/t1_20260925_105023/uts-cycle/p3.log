@@ -1,0 +1,137 @@
+[开始时间] 2026-09-25 10:50:23
+[项目根目录] /root/workspace/research/CE-planner-test
+[候选规划器] t1
+[启动脚本] /root/workspace/research/CE-planner-test/plan-cegis-t1
+[benchmark] uts-cycle
+[case_name] p3
+[pair_suffix] 3
+[domain] /root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl
+[problem] /root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl
+[result_file] /root/workspace/research/CE-planner-test/result_output_batch_ce/t1_20260925_105023/uts-cycle/p3/result.plan
+[display_flag] false
+[timeout_sec] 3600
+[memory_limit] 16G
+[memory_limit_kb] 16777216
+[success_marker_configured] yes
+[快捷键] Ctrl+B=跳过本例；Ctrl+C=终止整批
+
+[IGC-PDDL-NORMALIZE] typed_dash_rewrites=0 domain=/tmp/igc-normalized-pddl-8743/domain.normalized.pddl problem=/tmp/igc-normalized-pddl-8743/problem.normalized.pddl
+[IGC-FALLBACK-CONFIG] version=v16-cff-cee-native-library profile=stable planner=t1 runtime=isolated
+[IGC-FALLBACK-CONFIG] state_machine=NATIVE_PREFLIGHT,CE_ONLY_OR_CE_PROBE,PROBE_BUDGET_TO_NATIVE fallback_counts_as_iteration=1
+[IGC-FALLBACK-CONFIG] native_only=1 native_direct=1 generated_full_fallback=0
+[IGC-FALLBACK-CONFIG] new_counterexample_triggers_native=0 force_native_first=0
+[IGC-FALLBACK-CONFIG] refined_time_gate=1 legacy_refined_timeout=180 candidate_timeout=3600
+[IGC-FALLBACK-CONFIG] ce_only_total_budget=3600 probe_single_override=auto probe_max_iterations_override=auto probe_total_override=auto
+[IGC-FALLBACK-CONFIG] native_benchmark_root=/root/workspace/research/CE-planner-test/test public_domain=uts-cycle public_problem=p3.pddl
+[IGC-FALLBACK-CONFIG] public_source_domain=/root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl public_source_problem=/root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl
+1. Running translator
+[TRANSLATOR-FAILED] rc=1
+Parsing... /tmp/igc-normalized-pddl-8743/domain.normalized.pddl
+/tmp/igc-normalized-pddl-8743/problem.normalized.pddl
+parse task...
+  Atom at_node(n0)
+  Atom visited(n0)
+  Conjunction
+    Atom at_node(n0)
+    Atom visited(n0)
+  Conjunction
+    Atom at_node(n1)
+    Atom visited(n1)
+  Conjunction
+    Atom at_node(n2)
+    Atom visited(n2)
+  Atom edge_label(n0, n1, l1)
+  Atom edge_label(n0, n2, l2)
+  Conjunction
+    Atom edge_label(n0, n1, l1)
+    Atom edge_label(n0, n2, l2)
+  Conjunction
+    Atom edge_label(n0, n1, l2)
+    Atom edge_label(n0, n2, l1)
+  Atom edge_label(n1, n2, l1)
+  Atom edge_label(n1, n0, l2)
+  Conjunction
+    Atom edge_label(n1, n2, l1)
+    Atom edge_label(n1, n0, l2)
+  Conjunction
+    Atom edge_label(n1, n2, l2)
+    Atom edge_label(n1, n0, l1)
+  Atom edge_label(n2, n0, l1)
+  Atom edge_label(n2, n1, l2)
+  Conjunction
+    Atom edge_label(n2, n0, l1)
+    Atom edge_label(n2, n1, l2)
+  Conjunction
+    Atom edge_label(n2, n0, l2)
+    Atom edge_label(n2, n1, l1)
+parse
+<pddl.conditions.Conjunction object at 0x7cd25139afd0>
+<pddl.conditions.Conjunction object at 0x7cd25139fe10>
+<pddl.conditions.Conjunction object at 0x7cd25139ff50>
+<pddl.conditions.Conjunction object at 0x7cd2513a5110>
+<pddl.conditions.Conjunction object at 0x7cd2513a5250>
+<pddl.conditions.Conjunction object at 0x7cd2513a53d0>
+<pddl.conditions.Conjunction object at 0x7cd2513a5510>
+<pddl.conditions.Conjunction object at 0x7cd2513a5610>
+<pddl.conditions.Conjunction object at 0x7cd2513a56d0>
+after parse
+<pddl.conditions.Conjunction object at 0x7cd25139afd0>
+<pddl.conditions.Conjunction object at 0x7cd25139fe10>
+<pddl.conditions.Conjunction object at 0x7cd25139ff50>
+<pddl.conditions.Conjunction object at 0x7cd2513a5110>
+<pddl.conditions.Conjunction object at 0x7cd2513a5250>
+<pddl.conditions.Conjunction object at 0x7cd2513a53d0>
+<pddl.conditions.Conjunction object at 0x7cd2513a5510>
+<pddl.conditions.Conjunction object at 0x7cd2513a5610>
+<pddl.conditions.Conjunction object at 0x7cd2513a56d0>
+Atom =(n0, n0)
+Atom =(n1, n1)
+Atom =(n2, n2)
+Atom =(l1, l1)
+Atom =(l2, l2)
+[0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program...
+Traceback (most recent call last):
+  File "./lama/translate/translate.py", line 907, in <module>
+    sas_task = pddl_to_sas(task)
+  File "./lama/translate/translate.py", line 346, in pddl_to_sas
+    relaxed_reachable, atoms, actions, axioms = instantiate.explore(task)
+  File "/root/workspace/research/CE-planner-test/lama/translate/instantiate.py", line 80, in explore
+    prog = pddl_to_prolog.translate(task)
+  File "/root/workspace/research/CE-planner-test/lama/translate/pddl_to_prolog.py", line 188, in translate
+    translate_facts(prog, task)
+  File "/root/workspace/research/CE-planner-test/lama/translate/pddl_to_prolog.py", line 165, in translate_facts
+    assert isinstance(fact, pddl.Atom) or isinstance(fact, pddl.Assign)
+AssertionError
+Command exited with non-zero status 1
+	Command being timed: "/usr/bin/timeout --signal=TERM --kill-after=10s 3600 bash /root/workspace/research/CE-planner-test/plan-cegis-t1 /root/workspace/research/CE-planner-test/test/uts-cycle/d3.pddl /root/workspace/research/CE-planner-test/test/uts-cycle/p3.pddl /root/workspace/research/CE-planner-test/result_output_batch_ce/t1_20260925_105023/uts-cycle/p3/result.plan false"
+	User time (seconds): 0.06
+	System time (seconds): 0.06
+	Percent of CPU this job got: 55%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 11904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7146
+	Voluntary context switches: 50
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 32
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
+
+[结束时间] 2026-09-25 10:50:24
+[耗时秒] 1
+[退出码] 1
+[final_status] NA
+[最终状态] FAIL

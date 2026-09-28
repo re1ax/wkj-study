@@ -1,0 +1,12 @@
+fluent f,g,h,p,q,k;
+
+action a;
+
+a causes f;
+a causes g if k;
+g if f,h;
+g if f,-h;
+k if f;
+p if g,q;
+
+initially -f,-g,-p,-q;

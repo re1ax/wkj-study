@@ -1,0 +1,36 @@
+(define (domain cube)
+;(:requirements  :typing :equality)
+(:types  object - object  pos - object  interpretation - object )
+(:constants 
+   p1  - pos 
+   p2  - pos 
+   p3  - pos 
+   p4  - pos 
+   p5  - pos 
+   p6  - pos 
+   p7  - pos 
+   p8  - pos 
+   p9  - pos 
+)
+
+(:predicates (true)   (x ?p - pos  ?x - interpretation)  (y ?p - pos  ?x - interpretation)  (z ?p - pos  ?x - interpretation)) 
+(:action down
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (y p1 ?interpr) (and (not   (y p1 ?interpr))  (y p2 ?interpr))))(forall (?interpr - interpretation) (when   (y p2 ?interpr) (and (not   (y p2 ?interpr))  (y p3 ?interpr))))(forall (?interpr - interpretation) (when   (y p3 ?interpr) (and (not   (y p3 ?interpr))  (y p4 ?interpr))))(forall (?interpr - interpretation) (when   (y p4 ?interpr) (and (not   (y p4 ?interpr))  (y p5 ?interpr))))(forall (?interpr - interpretation) (when   (y p5 ?interpr) (and (not   (y p5 ?interpr))  (y p6 ?interpr))))(forall (?interpr - interpretation) (when   (y p6 ?interpr) (and (not   (y p6 ?interpr))  (y p7 ?interpr))))(forall (?interpr - interpretation) (when   (y p7 ?interpr) (and (not   (y p7 ?interpr))  (y p8 ?interpr))))(forall (?interpr - interpretation) (when   (y p8 ?interpr) (and (not   (y p8 ?interpr))  (y p9 ?interpr))))))
+(:action in
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (z p1 ?interpr) (and (not   (z p1 ?interpr))  (z p2 ?interpr))))(forall (?interpr - interpretation) (when   (z p2 ?interpr) (and (not   (z p2 ?interpr))  (z p3 ?interpr))))(forall (?interpr - interpretation) (when   (z p3 ?interpr) (and (not   (z p3 ?interpr))  (z p4 ?interpr))))(forall (?interpr - interpretation) (when   (z p4 ?interpr) (and (not   (z p4 ?interpr))  (z p5 ?interpr))))(forall (?interpr - interpretation) (when   (z p5 ?interpr) (and (not   (z p5 ?interpr))  (z p6 ?interpr))))(forall (?interpr - interpretation) (when   (z p6 ?interpr) (and (not   (z p6 ?interpr))  (z p7 ?interpr))))(forall (?interpr - interpretation) (when   (z p7 ?interpr) (and (not   (z p7 ?interpr))  (z p8 ?interpr))))(forall (?interpr - interpretation) (when   (z p8 ?interpr) (and (not   (z p8 ?interpr))  (z p9 ?interpr))))))
+(:action left
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (x p2 ?interpr) (and (not   (x p2 ?interpr))  (x p1 ?interpr))))(forall (?interpr - interpretation) (when   (x p3 ?interpr) (and (not   (x p3 ?interpr))  (x p2 ?interpr))))(forall (?interpr - interpretation) (when   (x p4 ?interpr) (and (not   (x p4 ?interpr))  (x p3 ?interpr))))(forall (?interpr - interpretation) (when   (x p5 ?interpr) (and (not   (x p5 ?interpr))  (x p4 ?interpr))))(forall (?interpr - interpretation) (when   (x p6 ?interpr) (and (not   (x p6 ?interpr))  (x p5 ?interpr))))(forall (?interpr - interpretation) (when   (x p7 ?interpr) (and (not   (x p7 ?interpr))  (x p6 ?interpr))))(forall (?interpr - interpretation) (when   (x p8 ?interpr) (and (not   (x p8 ?interpr))  (x p7 ?interpr))))(forall (?interpr - interpretation) (when   (x p9 ?interpr) (and (not   (x p9 ?interpr))  (x p8 ?interpr))))))
+(:action out
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (z p2 ?interpr) (and (not   (z p2 ?interpr))  (z p1 ?interpr))))(forall (?interpr - interpretation) (when   (z p3 ?interpr) (and (not   (z p3 ?interpr))  (z p2 ?interpr))))(forall (?interpr - interpretation) (when   (z p4 ?interpr) (and (not   (z p4 ?interpr))  (z p3 ?interpr))))(forall (?interpr - interpretation) (when   (z p5 ?interpr) (and (not   (z p5 ?interpr))  (z p4 ?interpr))))(forall (?interpr - interpretation) (when   (z p6 ?interpr) (and (not   (z p6 ?interpr))  (z p5 ?interpr))))(forall (?interpr - interpretation) (when   (z p7 ?interpr) (and (not   (z p7 ?interpr))  (z p6 ?interpr))))(forall (?interpr - interpretation) (when   (z p8 ?interpr) (and (not   (z p8 ?interpr))  (z p7 ?interpr))))(forall (?interpr - interpretation) (when   (z p9 ?interpr) (and (not   (z p9 ?interpr))  (z p8 ?interpr))))))
+(:action right
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (x p1 ?interpr) (and (not   (x p1 ?interpr))  (x p2 ?interpr))))(forall (?interpr - interpretation) (when   (x p2 ?interpr) (and (not   (x p2 ?interpr))  (x p3 ?interpr))))(forall (?interpr - interpretation) (when   (x p3 ?interpr) (and (not   (x p3 ?interpr))  (x p4 ?interpr))))(forall (?interpr - interpretation) (when   (x p4 ?interpr) (and (not   (x p4 ?interpr))  (x p5 ?interpr))))(forall (?interpr - interpretation) (when   (x p5 ?interpr) (and (not   (x p5 ?interpr))  (x p6 ?interpr))))(forall (?interpr - interpretation) (when   (x p6 ?interpr) (and (not   (x p6 ?interpr))  (x p7 ?interpr))))(forall (?interpr - interpretation) (when   (x p7 ?interpr) (and (not   (x p7 ?interpr))  (x p8 ?interpr))))(forall (?interpr - interpretation) (when   (x p8 ?interpr) (and (not   (x p8 ?interpr))  (x p9 ?interpr))))))
+(:action up
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (y p2 ?interpr) (and (not   (y p2 ?interpr))  (y p1 ?interpr))))(forall (?interpr - interpretation) (when   (y p3 ?interpr) (and (not   (y p3 ?interpr))  (y p2 ?interpr))))(forall (?interpr - interpretation) (when   (y p4 ?interpr) (and (not   (y p4 ?interpr))  (y p3 ?interpr))))(forall (?interpr - interpretation) (when   (y p5 ?interpr) (and (not   (y p5 ?interpr))  (y p4 ?interpr))))(forall (?interpr - interpretation) (when   (y p6 ?interpr) (and (not   (y p6 ?interpr))  (y p5 ?interpr))))(forall (?interpr - interpretation) (when   (y p7 ?interpr) (and (not   (y p7 ?interpr))  (y p6 ?interpr))))(forall (?interpr - interpretation) (when   (y p8 ?interpr) (and (not   (y p8 ?interpr))  (y p7 ?interpr))))(forall (?interpr - interpretation) (when   (y p9 ?interpr) (and (not   (y p9 ?interpr))  (y p8 ?interpr))))))
+
+)

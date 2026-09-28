@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+export IGC_CANDIDATE_PLANNER=cpah
+export IGC_REFINED_MODE="${IGC_REFINED_MODE:-structured}"
+export IGC_CPAH_PRESERVE_WORLD_ONEOF="${IGC_CPAH_PRESERVE_WORLD_ONEOF:-0}"
+exec ./plan-cegis "$@"

@@ -1,0 +1,18 @@
+(define (domain blocks)
+;(:requirements  :typing)
+(:types  object - object  block - object  interpretation - object )
+(:predicates (true)   (holding ?x - block  ?x - interpretation)  (clear ?x - block  ?x - interpretation)  (on ?x - block  ?y - block  ?x - interpretation)  (ontable ?x - block  ?x - interpretation)  (handempty ?x - interpretation)) 
+(:action pick-up
+:parameters (?x  - block )
+:effect (and (forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (clear ?x ?interpr)  (ontable ?x ?interpr)) (and (not   (ontable ?x ?interpr))(not   (clear ?x ?interpr))(not   (handempty ?interpr))  (holding ?x ?interpr))))))
+(:action put-down
+:parameters (?x  - block )
+:effect (and (forall (?interpr - interpretation) (when   (holding ?x ?interpr) (and (not   (holding ?x ?interpr))  (clear ?x ?interpr)  (handempty ?interpr)  (ontable ?x ?interpr))))))
+(:action stack
+:parameters (?x  - block ?y  - block )
+:effect (and (forall (?interpr - interpretation) (when (and   (holding ?x ?interpr)  (clear ?y ?interpr)) (and (not   (holding ?x ?interpr))(not   (clear ?y ?interpr))  (clear ?x ?interpr)  (handempty ?interpr)  (on ?x ?y ?interpr))))))
+(:action unstack
+:parameters (?x  - block ?y  - block )
+:effect (and (forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (on ?x ?y ?interpr)  (clear ?x ?interpr)) (and   (holding ?x ?interpr)  (clear ?y ?interpr)(not   (clear ?x ?interpr))(not   (handempty ?interpr))(not   (on ?x ?y ?interpr)))))))
+
+)

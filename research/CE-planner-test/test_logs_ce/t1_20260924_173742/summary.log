@@ -1,0 +1,39 @@
+[开始] ROOT_DIR=/root/workspace/research/CE-planner
+[开始] BENCH_ROOT=/root/workspace/research/CE-planner/test
+[开始] candidate_solver=t1
+[开始] PLAN_SCRIPT=/root/workspace/research/CE-planner/plan-cegis-t1
+[开始] LOG_ROOT=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742
+[开始] RESULT_ROOT=/root/workspace/research/CE-planner/result_output_batch_ce/t1_20260924_173742
+[开始] TIMEOUT_SEC=3600
+[开始] MEMORY_LIMIT=16G
+[开始] MEMORY_LIMIT_KB=16777216
+[开始] SUCCESS_MARKER=[IGC-CEGIS] no counterexample found; final conformant plan accepted.
+[开始] Ctrl+C=终止整批；Ctrl+B=跳过当前测例
+[过滤] benchmarks=uts-cycle
+[过滤] problem=p3
+
+[预扫描] 可运行benchmark数=1
+[预扫描] 可运行用例总数=1
+
+[Benchmark] uts-cycle
+  [FAIL] uts-cycle/p3 exit_code=3 elapsed=0s log=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742/uts-cycle/p3.log
+
+
+[汇总] candidate_solver=t1
+[汇总] 可运行benchmark数=1
+[汇总] 可运行用例总数=1
+[汇总] 实际进入benchmark数=1
+[汇总] 实际运行用例数=1
+[汇总] 成功=0
+[汇总] 失败=1
+[汇总] 超时=0
+[汇总] 内存限制/内存失败=0
+[汇总] Ctrl+B跳过=0
+[汇总] Ctrl+C中断=0
+[汇总] 异常benchmark=0
+[汇总] 总耗时=1s
+[汇总] 日志目录=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742
+[汇总] 结果目录=/root/workspace/research/CE-planner/result_output_batch_ce/t1_20260924_173742
+[汇总] 失败清单=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742/failed_cases.txt
+[汇总] 跳过清单=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742/skipped_cases.txt
+[汇总] 异常清单=/root/workspace/research/CE-planner/test_logs_ce/t1_20260924_173742/anomalies.log

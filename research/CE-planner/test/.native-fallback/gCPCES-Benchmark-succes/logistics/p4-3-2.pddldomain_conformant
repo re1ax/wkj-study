@@ -1,0 +1,30 @@
+(define (domain logistics-strips)
+;(:requirements  :strips)
+(:types  object - object  interpretation - object )
+(:predicates (true)   (TRUCK ?truck - object  ?x - interpretation)  (located ?obj - object  ?loc - object  ?x - interpretation)  (OBJ ?obj - object  ?x - interpretation)  (AIRPLANE ?airplane - object  ?x - interpretation)  (in-city ?obj - object  ?city - object  ?x - interpretation)  (AIRPORT ?airport - object  ?x - interpretation)  (CITY ?city - object  ?x - interpretation)  (in ?obj1 - object  ?obj2 - object  ?x - interpretation)  (LOCATION ?loc - object  ?x - interpretation)) 
+(:action DRIVE-TRUCK
+:parameters (?truck  - object ?loc-from  - object ?loc-to  - object ?city  - object )
+:precondition (forall (?interpr - interpretation)(and   (TRUCK ?truck ?interpr)  (LOCATION ?loc-from ?interpr)  (LOCATION ?loc-to ?interpr)  (CITY ?city ?interpr)  (located ?truck ?loc-from ?interpr)  (in-city ?loc-from ?city ?interpr)  (in-city ?loc-to ?city ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?truck ?loc-to ?interpr))(forall (?interpr - interpretation) (not   (located ?truck ?loc-from ?interpr)))))
+(:action FLY-AIRPLANE
+:parameters (?airplane  - object ?loc-from  - object ?loc-to  - object )
+:precondition (forall (?interpr - interpretation)(and   (AIRPLANE ?airplane ?interpr)  (AIRPORT ?loc-from ?interpr)  (AIRPORT ?loc-to ?interpr)  (located ?airplane ?loc-from ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?airplane ?loc-to ?interpr))(forall (?interpr - interpretation) (not   (located ?airplane ?loc-from ?interpr)))))
+(:action LOAD-AIRPLANE
+:parameters (?obj  - object ?airplane  - object ?loc  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJ ?obj ?interpr)  (AIRPLANE ?airplane ?interpr)  (LOCATION ?loc ?interpr)  (located ?obj ?loc ?interpr)  (located ?airplane ?loc ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (in ?obj ?airplane ?interpr))(forall (?interpr - interpretation) (not   (located ?obj ?loc ?interpr)))))
+(:action LOAD-TRUCK
+:parameters (?obj  - object ?truck  - object ?loc  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJ ?obj ?interpr)  (TRUCK ?truck ?interpr)  (LOCATION ?loc ?interpr)  (located ?truck ?loc ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (located ?obj ?loc ?interpr) (and (not   (located ?obj ?loc ?interpr))  (in ?obj ?truck ?interpr))))))
+(:action UNLOAD-AIRPLANE
+:parameters (?obj  - object ?airplane  - object ?loc  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJ ?obj ?interpr)  (AIRPLANE ?airplane ?interpr)  (LOCATION ?loc ?interpr)  (in ?obj ?airplane ?interpr)  (located ?airplane ?loc ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?obj ?loc ?interpr))(forall (?interpr - interpretation) (not   (in ?obj ?airplane ?interpr)))))
+(:action UNLOAD-TRUCK
+:parameters (?obj  - object ?truck  - object ?loc  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJ ?obj ?interpr)  (TRUCK ?truck ?interpr)  (LOCATION ?loc ?interpr)  (located ?truck ?loc ?interpr)  (in ?obj ?truck ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?obj ?loc ?interpr))(forall (?interpr - interpretation) (not   (in ?obj ?truck ?interpr)))))
+
+)

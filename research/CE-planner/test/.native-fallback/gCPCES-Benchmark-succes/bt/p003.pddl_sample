@@ -1,0 +1,18 @@
+(define (problem temp)(:domain bt)(:objects 
+   b0  - bomb 
+   p0  - package 
+   p1  - package 
+   p2  - package 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+)
+(:init (true)
+  (in p1 b0 int1)
+  (notdefused b0 int1)
+  (in p0 b0 int2)
+  (notdefused b0 int2)
+  (notdefused b0 int3)
+  (in p2 b0 int3)
+)
+(:goal (forall (?interpr - interpretation)(and   (defused b0 ?interpr)))))

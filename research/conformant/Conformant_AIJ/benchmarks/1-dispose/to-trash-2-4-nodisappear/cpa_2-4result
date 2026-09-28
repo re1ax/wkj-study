@@ -1,0 +1,15 @@
+0
+%%
+
+11 cpa_pickup(cpa_p1_1) cpa_move(cpa_p1_1,cpa_p1_2) cpa_putdown(cpa_p1_2) cpa_pickup(cpa_p1_2) cpa_move(cpa_p1_2,cpa_p2_2) cpa_putdown(cpa_p2_2) cpa_pickup(cpa_p2_2) cpa_move(cpa_p2_2,cpa_p2_1) cpa_putdown(cpa_p2_1) cpa_pickup(cpa_p2_1) cpa_move(cpa_p2_1,cpa_p1_1) 
+%%
+linear 12 0 1 2 3 4 5 6 7 8 9 10 0 
+STATISTICS
+---------------------
+Total time: 0.097 (sec) 
+  Reading: 0.018 (sec) [18.95 %]
+  Preprocessing: 0.010 (sec) [10.40 %]
+  Search: 0.068 (sec) [70.65 %]
+Total states allocated: 0
+Total cstate(s): 0
+Total cstate(s) remaining in the queue: 0

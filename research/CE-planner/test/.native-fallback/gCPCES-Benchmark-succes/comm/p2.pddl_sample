@@ -1,0 +1,71 @@
+(define (problem temp)(:domain comm)(:objects 
+   s0  - stage 
+   s1  - stage 
+   s2  - stage 
+   s3  - stage 
+   s4  - stage 
+   s5  - stage 
+   p0  - packet 
+   p1  - packet 
+   p2  - packet 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+   int4  - interpretation 
+)
+(:init (true)
+  (seq-number p0 s0 int1)
+  (in-channel p2 int1)
+  (next-stage s4 s5 int1)
+  (in-channel p1 int1)
+  (in-channel p0 int1)
+  (seq-number p1 s1 int1)
+  (next-stage s0 s1 int1)
+  (current-stage s0 int1)
+  (next-stage s3 s4 int1)
+  (seq-number p2 s2 int1)
+  (next-stage s1 s2 int1)
+  (next-stage s2 s3 int1)
+  (in-channel p2 int2)
+  (in-channel p1 int2)
+  (seq-number p1 s1 int2)
+  (next-stage s4 s5 int2)
+  (current-stage s0 int2)
+  (next-stage s2 s3 int2)
+  (in-channel p0 int2)
+  (seq-number p2 s2 int2)
+  (next-stage s1 s2 int2)
+  (seq-number p0 s0 int2)
+  (next-stage s0 s1 int2)
+  (next-stage s3 s4 int2)
+  (noisy p0 int2)
+  (in-channel p2 int3)
+  (in-channel p1 int3)
+  (seq-number p1 s1 int3)
+  (noisy p2 int3)
+  (next-stage s4 s5 int3)
+  (current-stage s0 int3)
+  (next-stage s2 s3 int3)
+  (in-channel p0 int3)
+  (seq-number p2 s2 int3)
+  (next-stage s1 s2 int3)
+  (seq-number p0 s0 int3)
+  (next-stage s0 s1 int3)
+  (next-stage s3 s4 int3)
+  (seq-number p1 s1 int4)
+  (next-stage s1 s2 int4)
+  (seq-number p0 s0 int4)
+  (next-stage s3 s4 int4)
+  (bad p2 int4)
+  (in-channel p2 int4)
+  (in-channel p1 int4)
+  (next-stage s4 s5 int4)
+  (current-stage s0 int4)
+  (noisy p1 int4)
+  (next-stage s2 s3 int4)
+  (in-channel p0 int4)
+  (seq-number p2 s2 int4)
+  (next-stage s0 s1 int4)
+  (bad p0 int4)
+)
+(:goal (forall (?interpr - interpretation)(and   (ok p0 ?interpr)  (ok p1 ?interpr)  (ok p2 ?interpr)))))

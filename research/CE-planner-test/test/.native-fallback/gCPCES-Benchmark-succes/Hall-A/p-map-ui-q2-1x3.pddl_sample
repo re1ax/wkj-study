@@ -1,0 +1,40 @@
+(define (problem temp)(:domain hall)(:objects 
+   p1  - object 
+   p2  - object 
+   p3  - object 
+   int1  - interpretation 
+   int2  - interpretation 
+   int3  - interpretation 
+)
+(:init (true)
+  (not-obsA-q0 int1)
+  (q0 int1)
+  (y-agent p1 int1)
+  (not-obsB-q1 int1)
+  (x-agent p1 int1)
+  (not-obs--q0 int1)
+  (not-obs--q1 int1)
+  (not-obsB-q0 int1)
+  (not-obsA-q1 int1)
+  (not-obsA-q1 int2)
+  (not-obsB-q1 int2)
+  (q0 int2)
+  (not-obs--q1 int2)
+  (not-obsB-q0 int2)
+  (not-obsA-q0 int2)
+  (not-obs--q0 int2)
+  (x-agent p2 int2)
+  (y-agent p1 int2)
+  (obs- int3)
+  (x-agent p3 int3)
+  (x-agent p1 int3)
+  (not-obsA-q0 int3)
+  (not-obs--q0 int3)
+  (y-agent p1 int3)
+  (not-obsA-q1 int3)
+  (not-obsB-q1 int3)
+  (q0 int3)
+  (not-obs--q1 int3)
+  (not-obsB-q0 int3)
+)
+(:goal (forall (?interpr - interpretation)(and   (x-agent p1 ?interpr)  (visited-A ?interpr)  (visited-B ?interpr)))))

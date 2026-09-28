@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/main.dir/src/main.cpp.o -c /root/workspace/MyProject/MyCache/src/main.cpp",
+  "file": "/root/workspace/MyProject/MyCache/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_lru.dir/tests/test_lru.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_lru.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_lru.cpp",
+  "output": "CMakeFiles/test_lru.dir/tests/test_lru.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_lfu.dir/tests/test_lfu.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_lfu.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_lfu.cpp",
+  "output": "CMakeFiles/test_lfu.dir/tests/test_lfu.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_all_cache_policy.dir/tests/test_all_cache_policy.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_all_cache_policy.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_all_cache_policy.cpp",
+  "output": "CMakeFiles/test_all_cache_policy.dir/tests/test_all_cache_policy.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_thread_safety.dir/tests/test_thread_safety.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_thread_safety.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_thread_safety.cpp",
+  "output": "CMakeFiles/test_thread_safety.dir/tests/test_thread_safety.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_hash_lru.dir/tests/test_hash_lru.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_hash_lru.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_hash_lru.cpp",
+  "output": "CMakeFiles/test_hash_lru.dir/tests/test_hash_lru.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_hash_lfu.dir/tests/test_hash_lfu.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_hash_lfu.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_hash_lfu.cpp",
+  "output": "CMakeFiles/test_hash_lfu.dir/tests/test_hash_lfu.cpp.o"
+},
+{
+  "directory": "/root/workspace/build",
+  "command": "/usr/bin/g++  -I/root/workspace/MyProject/MyCache/include -g -std=gnu++17 -o CMakeFiles/test_lfu_aging.dir/tests/test_lfu_aging.cpp.o -c /root/workspace/MyProject/MyCache/tests/test_lfu_aging.cpp",
+  "file": "/root/workspace/MyProject/MyCache/tests/test_lfu_aging.cpp",
+  "output": "CMakeFiles/test_lfu_aging.dir/tests/test_lfu_aging.cpp.o"
+}
+]

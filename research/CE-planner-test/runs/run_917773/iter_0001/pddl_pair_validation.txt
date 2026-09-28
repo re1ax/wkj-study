@@ -1,0 +1,5 @@
+status=OK
+mode=REFINED_GENERATED
+domain=/root/workspace/research/CE-planner/runs/run_917773/iter_0001/refined_cff_domain.pddl
+problem=/root/workspace/research/CE-planner/runs/run_917773/iter_0001/refined_cff_problem.pddl
+message=domain=uts_cycle_3 predicates=3 objects_and_constants=5; generated init/goal symbols valid

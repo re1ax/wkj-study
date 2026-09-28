@@ -1,0 +1,23 @@
+(define (domain cleaner)
+(:types  object - object  r - object  interpretation - object )
+(:constants 
+   r0  - r 
+   r1  - r 
+   r2  - r 
+   r3  - r 
+   r4  - r 
+)
+
+(:predicates (true)   (position ?x - object  ?x - interpretation)  (ROOM ?r - object  ?x - interpretation)  (cleaned ?r - object  ?o - object  ?x - interpretation)  (OBJECT ?o - object  ?x - interpretation)) 
+(:action back
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position r1 ?interpr) (and   (position r0 ?interpr)(not   (position r1 ?interpr)))))(forall (?interpr - interpretation) (when   (position r2 ?interpr) (and   (position r1 ?interpr)(not   (position r2 ?interpr)))))(forall (?interpr - interpretation) (when   (position r3 ?interpr) (and   (position r2 ?interpr)(not   (position r3 ?interpr)))))(forall (?interpr - interpretation) (when   (position r4 ?interpr) (and   (position r3 ?interpr)(not   (position r4 ?interpr)))))))
+(:action clean
+:parameters (?r  - object ?o  - object )
+:precondition (forall (?interpr - interpretation)(and   (OBJECT ?o ?interpr)  (ROOM ?r ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (position ?r ?interpr) (and   (cleaned ?r ?o ?interpr))))))
+(:action fwd
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position r0 ?interpr) (and   (position r1 ?interpr)(not   (position r0 ?interpr)))))(forall (?interpr - interpretation) (when   (position r1 ?interpr) (and   (position r2 ?interpr)(not   (position r1 ?interpr)))))(forall (?interpr - interpretation) (when   (position r2 ?interpr) (and   (position r3 ?interpr)(not   (position r2 ?interpr)))))(forall (?interpr - interpretation) (when   (position r3 ?interpr) (and   (position r4 ?interpr)(not   (position r3 ?interpr)))))))
+
+)

@@ -1,0 +1,19 @@
+#!/bin/sh
+set -eu
+export IGC_CANDIDATE_PLANNER=pond
+export IGC_REFINED_MODE="${IGC_REFINED_MODE:-structured}"
+if [ -z "${IGC_POND_DIR:-}" ]; then
+    if [ -d "$PWD/pond" ]; then
+        IGC_POND_DIR=$PWD/pond
+    elif [ -d "$PWD/POND" ]; then
+        IGC_POND_DIR=$PWD/POND
+    elif [ -d "$PWD/pond_planner" ]; then
+        IGC_POND_DIR=$PWD/pond_planner
+    else
+        IGC_POND_DIR=$PWD/pond
+    fi
+fi
+export IGC_POND_DIR
+export IGC_POND_EXEC="${IGC_POND_EXEC:-$IGC_POND_DIR/pond}"
+export IGC_POND_ARGS="${IGC_POND_ARGS:--s astar -h card -p fog}"
+exec ./plan-cegis "$@"

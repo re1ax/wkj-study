@@ -1,0 +1,26 @@
+(define (domain raos_keys)
+(:types  object - object  light - object  key - object  interpretation - object )
+(:constants 
+   k0  - key 
+   k1  - key 
+   k2  - key 
+)
+
+(:predicates (true)   (opens ?k - key  ?l - light  ?x - interpretation)  (open ?l - light  ?x - interpretation)  (neq ?l1 - light  ?l2 - light  ?x - interpretation)  (wearing_sunglasses ?x - interpretation)  (not_wearing_sunglasses ?x - interpretation)  (have_key ?k - key  ?x - interpretation)  (key_at ?k - key  ?l - light  ?x - interpretation)  (located ?l - light  ?x - interpretation)) 
+(:action exchange_sunglasses
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (wearing_sunglasses ?interpr) (and (not   (wearing_sunglasses ?interpr))  (not_wearing_sunglasses ?interpr))))(forall (?interpr - interpretation) (when   (not_wearing_sunglasses ?interpr) (and   (wearing_sunglasses ?interpr)(not   (not_wearing_sunglasses ?interpr)))))))
+(:action goto_light
+:parameters (?l1  - light ?l2  - light )
+:precondition (forall (?interpr - interpretation)(and   (neq ?l1 ?l2 ?interpr)  (located ?l1 ?interpr)  (not_wearing_sunglasses ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?l2 ?interpr))(forall (?interpr - interpretation) (not   (located ?l1 ?interpr)))))
+(:action open_gate
+:parameters (?l  - light ?k  - key )
+:precondition (forall (?interpr - interpretation)(and   (located ?l ?interpr)  (not_wearing_sunglasses ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (have_key ?k ?interpr)  (opens ?k ?l ?interpr)) (and   (open ?l ?interpr))))))
+(:action search_under_light
+:parameters (?l  - light )
+:precondition (forall (?interpr - interpretation)(and   (located ?l ?interpr)  (wearing_sunglasses ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (open ?l ?interpr)  (key_at k1 ?l ?interpr)) (and   (have_key k1 ?interpr))))(forall (?interpr - interpretation) (when (and   (open ?l ?interpr)  (key_at k2 ?l ?interpr)) (and   (have_key k2 ?interpr))))))
+
+)

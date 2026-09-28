@@ -1,0 +1,28 @@
+(define (domain or-to-trash)
+;(:requirements  :strips :typing)
+(:types  object - object  pos - object  obj - object  interpretation - object )
+(:constants 
+   o1  - obj 
+   o2  - obj 
+   o3  - obj 
+   o4  - obj 
+   o5  - obj 
+   o6  - obj 
+   o7  - obj 
+)
+
+(:predicates (true)   (located ?i - pos  ?x - interpretation)  (holding ?o - obj  ?x - interpretation)  (obj-located ?o - obj  ?i - pos  ?x - interpretation)  (handempty ?x - interpretation)  (adj ?i - pos  ?j - pos  ?x - interpretation)) 
+(:action move
+:parameters (?i  - pos ?j  - pos )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?j ?interpr))(forall (?interpr - interpretation) (not   (located ?i ?interpr)))))
+(:action pickup
+:parameters (?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o1 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o1 ?interpr)(not   (obj-located o1 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o2 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o2 ?interpr)(not   (obj-located o2 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o2 ?interpr) (and   (handempty ?interpr)(not   (holding o2 ?interpr))  (obj-located o2 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o3 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o3 ?interpr)(not   (obj-located o3 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o3 ?interpr) (and   (handempty ?interpr)(not   (holding o3 ?interpr))  (obj-located o3 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o4 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o4 ?interpr)(not   (obj-located o4 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o4 ?interpr) (and   (handempty ?interpr)(not   (holding o4 ?interpr))  (obj-located o4 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o5 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o5 ?interpr)(not   (obj-located o5 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o5 ?interpr) (and   (handempty ?interpr)(not   (holding o5 ?interpr))  (obj-located o5 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o6 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o6 ?interpr)(not   (obj-located o6 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o6 ?interpr) (and   (handempty ?interpr)(not   (holding o6 ?interpr))  (obj-located o6 ?p ?interpr))))(forall (?interpr - interpretation) (when (and   (handempty ?interpr)  (obj-located o7 ?p ?interpr)) (and (not   (handempty ?interpr))  (holding o7 ?interpr)(not   (obj-located o7 ?p ?interpr)))))(forall (?interpr - interpretation) (when   (holding o7 ?interpr) (and   (handempty ?interpr)(not   (holding o7 ?interpr))  (obj-located o7 ?p ?interpr))))))
+(:action putdown
+:parameters (?p  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?p ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding o1 ?interpr) (and   (handempty ?interpr)(not   (holding o1 ?interpr))  (obj-located o1 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o2 ?interpr) (and   (handempty ?interpr)(not   (holding o2 ?interpr))  (obj-located o2 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o3 ?interpr) (and   (handempty ?interpr)(not   (holding o3 ?interpr))  (obj-located o3 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o4 ?interpr) (and   (handempty ?interpr)(not   (holding o4 ?interpr))  (obj-located o4 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o5 ?interpr) (and   (handempty ?interpr)(not   (holding o5 ?interpr))  (obj-located o5 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o6 ?interpr) (and   (handempty ?interpr)(not   (holding o6 ?interpr))  (obj-located o6 ?p ?interpr))))(forall (?interpr - interpretation) (when   (holding o7 ?interpr) (and   (handempty ?interpr)(not   (holding o7 ?interpr))  (obj-located o7 ?p ?interpr))))))
+
+)

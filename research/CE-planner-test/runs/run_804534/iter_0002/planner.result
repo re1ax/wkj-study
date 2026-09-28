@@ -1,0 +1,69 @@
+;; t1 - A Heuristic Search Conformant Planner
+;; Alexandre Albore, Hector Geffner & Miquel Ramirez (c) 2010
+;; preprocessing=0.000509
+;; domain=BLOCKS
+;; problem=B3
+;; fluents=40
+;; operators=28
+;; size_of_b0_approx=6
+;; heuristic_setup_time=0.0189
+;; initial_heuristic_value=0
+;; search_time=0.684
+;; Plan found:
+(STACK C B)
+(STACK B C)
+(STACK C A)
+(STACK A B)
+(PUT-DOWN B)
+(PUT-DOWN A)
+(UNSTACK A C)
+(STACK A C)
+(UNSTACK C B)
+(PUT-DOWN C)
+(UNSTACK A C)
+(STACK A B)
+(UNSTACK B A)
+(STACK B C)
+(UNSTACK C A)
+(STACK C A)
+(PICK-UP B)
+(UNSTACK B C)
+(PUT-DOWN B)
+(UNSTACK C A)
+(PUT-DOWN C)
+(UNSTACK A B)
+(PUT-DOWN A)
+(UNSTACK B C)
+(PUT-DOWN B)
+(PICK-UP C)
+(STACK C B)
+(PICK-UP A)
+(STACK A C)
+(UNSTACK A C)
+(PUT-DOWN A)
+(UNSTACK C B)
+(PUT-DOWN C)
+(PICK-UP B)
+(STACK B A)
+(PICK-UP C)
+(STACK C B)
+;; plan_length=37
+;; heuristic_computations=157
+;; expanded_ehc=0
+;; generated_ehc=0
+;; expanded_bfs=156
+;; generated_bfs=4760
+;; primary_expansions=81
+;; secondary_expansions=75
+;; tertiary_expansions=0
+;; entailment_tests=260
+;; sat_solver_calls=527
+;; max_num_clauses=3138
+;; problem_inconsistent=no
+;; initial_sample_h=14
+;; initial_card_h=14
+;; avg_dead_models=0
+;; dead_samples_replaced=0
+;; width_1=no
+;; nodes_mem=8.03
+;; b0_mc=0

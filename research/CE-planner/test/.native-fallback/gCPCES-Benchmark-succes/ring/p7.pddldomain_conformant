@@ -1,0 +1,35 @@
+(define (domain ring)
+;(:requirements  :typing :equality)
+(:types  object - object  obj - object  interpretation - object )
+(:constants 
+   pos1  - obj 
+   pos2  - obj 
+   pos3  - obj 
+   pos4  - obj 
+   pos5  - obj 
+   pos6  - obj 
+   pos7  - obj 
+   win1  - obj 
+   win2  - obj 
+   win3  - obj 
+   win4  - obj 
+   win5  - obj 
+   win6  - obj 
+   win7  - obj 
+)
+
+(:predicates (true)   (closed ?x - obj  ?x - interpretation)  (position ?x - obj  ?x - interpretation)  (open ?x - obj  ?x - interpretation)  (locked ?x - obj  ?x - interpretation)) 
+(:action close
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position pos1 ?interpr) (and   (closed win1 ?interpr))))(forall (?interpr - interpretation) (when   (position pos2 ?interpr) (and   (closed win2 ?interpr))))(forall (?interpr - interpretation) (when   (position pos3 ?interpr) (and   (closed win3 ?interpr))))(forall (?interpr - interpretation) (when   (position pos4 ?interpr) (and   (closed win4 ?interpr))))(forall (?interpr - interpretation) (when   (position pos5 ?interpr) (and   (closed win5 ?interpr))))(forall (?interpr - interpretation) (when   (position pos6 ?interpr) (and   (closed win6 ?interpr))))(forall (?interpr - interpretation) (when   (position pos7 ?interpr) (and   (closed win7 ?interpr))))))
+(:action lock
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when (and   (position pos1 ?interpr)  (closed win1 ?interpr)) (and   (locked win1 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos2 ?interpr)  (closed win2 ?interpr)) (and   (locked win2 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos3 ?interpr)  (closed win3 ?interpr)) (and   (locked win3 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos4 ?interpr)  (closed win4 ?interpr)) (and   (locked win4 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos5 ?interpr)  (closed win5 ?interpr)) (and   (locked win5 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos6 ?interpr)  (closed win6 ?interpr)) (and   (locked win6 ?interpr))))(forall (?interpr - interpretation) (when (and   (position pos7 ?interpr)  (closed win7 ?interpr)) (and   (locked win7 ?interpr))))))
+(:action move-down
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position pos1 ?interpr) (and (not   (position pos1 ?interpr))  (position pos7 ?interpr))))(forall (?interpr - interpretation) (when   (position pos2 ?interpr) (and (not   (position pos2 ?interpr))  (position pos1 ?interpr))))(forall (?interpr - interpretation) (when   (position pos3 ?interpr) (and (not   (position pos3 ?interpr))  (position pos2 ?interpr))))(forall (?interpr - interpretation) (when   (position pos4 ?interpr) (and (not   (position pos4 ?interpr))  (position pos3 ?interpr))))(forall (?interpr - interpretation) (when   (position pos5 ?interpr) (and (not   (position pos5 ?interpr))  (position pos4 ?interpr))))(forall (?interpr - interpretation) (when   (position pos6 ?interpr) (and (not   (position pos6 ?interpr))  (position pos5 ?interpr))))(forall (?interpr - interpretation) (when   (position pos7 ?interpr) (and (not   (position pos7 ?interpr))  (position pos6 ?interpr))))))
+(:action move-up
+:parameters ()
+:effect (and (forall (?interpr - interpretation) (when   (position pos1 ?interpr) (and (not   (position pos1 ?interpr))  (position pos2 ?interpr))))(forall (?interpr - interpretation) (when   (position pos2 ?interpr) (and (not   (position pos2 ?interpr))  (position pos3 ?interpr))))(forall (?interpr - interpretation) (when   (position pos3 ?interpr) (and (not   (position pos3 ?interpr))  (position pos4 ?interpr))))(forall (?interpr - interpretation) (when   (position pos4 ?interpr) (and (not   (position pos4 ?interpr))  (position pos5 ?interpr))))(forall (?interpr - interpretation) (when   (position pos5 ?interpr) (and (not   (position pos5 ?interpr))  (position pos6 ?interpr))))(forall (?interpr - interpretation) (when   (position pos6 ?interpr) (and (not   (position pos6 ?interpr))  (position pos7 ?interpr))))(forall (?interpr - interpretation) (when   (position pos7 ?interpr) (and (not   (position pos7 ?interpr))  (position pos1 ?interpr))))))
+
+)

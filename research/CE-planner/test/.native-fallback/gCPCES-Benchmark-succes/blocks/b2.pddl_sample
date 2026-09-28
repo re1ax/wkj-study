@@ -1,0 +1,16 @@
+(define (problem temp)(:domain blocks)(:objects 
+   A  - block 
+   B  - block 
+   int1  - interpretation 
+   int2  - interpretation 
+)
+(:init (true)
+  (clear A int1)
+  (holding B int1)
+  (ontable A int1)
+  (clear A int2)
+  (handempty int2)
+  (on A B int2)
+  (ontable B int2)
+)
+(:goal (forall (?interpr - interpretation)(and   (ontable A ?interpr)  (on B A ?interpr)))))

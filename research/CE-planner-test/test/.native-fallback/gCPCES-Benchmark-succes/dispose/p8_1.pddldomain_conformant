@@ -1,0 +1,18 @@
+(define (domain dispose)
+;(:requirements  :strips :typing)
+(:types  object - object  pos - object  obj - object  interpretation - object )
+(:predicates (true)   (located ?i - pos  ?x - interpretation)  (obj_at ?o - obj  ?i - pos  ?x - interpretation)  (disposed ?o - obj  ?x - interpretation)  (holding ?o - obj  ?x - interpretation)  (trash_at ?x - pos  ?x - interpretation)  (adj ?i - pos  ?j - pos  ?x - interpretation)) 
+(:action drop
+:parameters (?o  - obj ?i  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?i ?interpr)  (trash_at ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (holding ?o ?interpr) (and (not   (holding ?o ?interpr))  (disposed ?o ?interpr))))))
+(:action move
+:parameters (?i  - pos ?j  - pos )
+:precondition (forall (?interpr - interpretation)(and   (adj ?i ?j ?interpr)  (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation)   (located ?j ?interpr))(forall (?interpr - interpretation) (not   (located ?i ?interpr)))))
+(:action pickup
+:parameters (?o  - obj ?i  - pos )
+:precondition (forall (?interpr - interpretation)(and   (located ?i ?interpr)))
+:effect (and (forall (?interpr - interpretation) (when   (obj_at ?o ?i ?interpr) (and   (holding ?o ?interpr)(not   (obj_at ?o ?i ?interpr)))))))
+
+)
